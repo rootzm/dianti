@@ -1,0 +1,59 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "sm_dadianchi",
+    "attributes": [
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "6379117236354069527",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0normalmode",
+            "value": {
+                "type": "String",
+                "stringValue": "On"
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "3040625643448269465",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0ColorTint",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.3199999928474426,
+                    0.3199999928474426,
+                    0.3199999928474426,
+                    1.0
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "33451255657851516",
+        "ingestionId": "12536732106106040758",
+        "targetId": "2708897769"
+    },
+    "variantKeywords": [
+        "layer0normalmode_on"
+    ]
+}

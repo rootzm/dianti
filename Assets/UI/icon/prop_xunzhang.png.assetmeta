@@ -1,0 +1,39 @@
+{
+    "class": "horizon::AssetMetadata",
+    "version": 1,
+    "data": {
+        "id": "6269543977417563515",
+        "pipelineVersion": 1,
+        "assetBuilderSettings": [
+            {
+                "class": "horizon::renderer::tool::TextureAssetBuilderSettings",
+                "version": 10003,
+                "data": {
+                    "target": "tex",
+                    "streamable": false,
+                    "streamCount": 2,
+                    "cpuReadable": false,
+                    "textureSettings": {
+                        "class": "horizon::renderer::tool::TextureAssetBuilderTextureSettings",
+                        "version": 6,
+                        "data": {
+                            "equirectangularToCube": false,
+                            "enableRoughnessConvolution": false,
+                            "premultiplyAlpha": true,
+                            "preserveAlphaCoverage": false,
+                            "alphaCutoff": 0.5,
+                            "renormalizeNormals": false,
+                            "mipFilterType": "Default",
+                            "defaultFormat": "Srgb",
+                            "platformOverrides": []
+                        }
+                    }
+                }
+            }
+        ],
+        "docMeta": {
+            "class": "horizon::DocMetadata",
+            "data": {}
+        }
+    }
+}

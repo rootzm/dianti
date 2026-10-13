@@ -1,0 +1,51 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "m_huojia_01",
+    "attributes": [
+        {
+            "name": "layer0pbrmode",
+            "value": {
+                "type": "String",
+                "stringValue": "ORMTexture"
+            }
+        },
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "11642521281116419815",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0normalmode",
+            "value": {
+                "type": "String",
+                "stringValue": "On"
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "3621600649219015322",
+                    "targetId": "1850524962"
+                }
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

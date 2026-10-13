@@ -1,0 +1,19 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudGameLoadingData">
+  <noesis:LayoutScaler>
+    <Grid>
+      <Image x:Name="Back" Source="/Root;component/Assets/UI/hud_game/loading.jpg" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      <ProgressBar x:Name="Progress" Value="{Binding Path=progress}" Width="500" Height="5" Margin="0,0,0,100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="{Binding Path=showProgress}" Foreground="#FFFFFFFF"/>
+      <TextBlock x:Name="TextProgress" Text="{Binding Path=textProgress}" Margin="0,0,0,105" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="{Binding Path=showProgress}" Foreground="#FFFFFFFF" FontSize="30" TextWrapping="Wrap"/>
+      <TextBlock x:Name="TextVersion" noesis:RichText.Text="{Binding Path=textVersion}" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#FFFFFFFF" FontSize="30" FontWeight="Bold" TextWrapping="Wrap"/>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>

@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "elements": [
+    {"id": "overview_header_img", "type": "image", "src": "./header.png", "fit": "cover"}
+  ]
+}

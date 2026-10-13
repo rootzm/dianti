@@ -1,0 +1,44 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "m_set_zawudui_02",
+    "attributes": [
+        {
+            "name": "layer0pbrmode",
+            "value": {
+                "type": "String",
+                "stringValue": "ORMTexture"
+            }
+        },
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "8303740018248246029",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0ORM",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "7737354404588319330",
+                    "targetId": "1850524962"
+                }
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

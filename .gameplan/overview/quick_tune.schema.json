@@ -1,0 +1,41 @@
+{
+  "version": "1",
+  "elements": [
+    {
+      "id": "qt_grid",
+      "type": "grid",
+      "columns": 2,
+      "minItemWidth": 190,
+      "items": [
+        {
+          "label": "Move Speed", "value": "qt_move_speed",
+          "elements": [
+            {"id": "qt_move_speed", "type": "slider", "label": "Move Speed", "value": 5.0, "min": 1.0, "max": 15.0, "step": 0.5,
+              "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/overview/quick_tune.schema.json, set qt_move_speed to {{qt_move_speed}}]\nSet the character move speed to {{qt_move_speed}} in MovementAbility."}}
+          ]
+        },
+        {
+          "label": "Jump Impulse", "value": "qt_jump_impulse",
+          "elements": [
+            {"id": "qt_jump_impulse", "type": "slider", "label": "Jump Impulse", "value": 5.0, "min": 2.0, "max": 12.0, "step": 0.5,
+              "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/overview/quick_tune.schema.json, set qt_jump_impulse to {{qt_jump_impulse}}]\nSet the character jump impulse to {{qt_jump_impulse}} in JumpAbility."}}
+          ]
+        },
+        {
+          "label": "Camera Distance", "value": "qt_camera_dist",
+          "elements": [
+            {"id": "qt_camera_dist", "type": "slider", "label": "Camera Distance", "value": 8.0, "min": 3.0, "max": 15.0, "step": 0.5,
+              "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/overview/quick_tune.schema.json, set qt_camera_dist to {{qt_camera_dist}}]\nSet the camera targetDistance to {{qt_camera_dist}} in ThirdPersonCamera."}}
+          ]
+        },
+        {
+          "label": "Gravity Strength", "value": "qt_gravity",
+          "elements": [
+            {"id": "qt_gravity", "type": "slider", "label": "Gravity Strength", "value": 9.8, "min": 4.0, "max": 20.0, "step": 0.5,
+              "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/overview/quick_tune.schema.json, set qt_gravity to {{qt_gravity}}]\nSet gravity magnitude to {{qt_gravity}} (gravity = Vec3(0, -{{qt_gravity}}, 0)) in CharacterForceControllerBase."}}
+          ]
+        }
+      ]
+    }
+  ]
+}

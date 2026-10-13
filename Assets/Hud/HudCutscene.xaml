@@ -1,0 +1,34 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudCutsceneData">
+  <noesis:LayoutScaler>
+    <Grid>
+      <!-- Black background -->
+      <Rectangle Fill="#FF000000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+      <!-- Cutscene images (stacked, controlled via opacity binding) -->
+      <Image x:Name="Img1" Source="/Root;component/Assets/UI/Cutscene/cutscene_01.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="{Binding Path=opacity1}"/>
+      <Image x:Name="Img2" Source="/Root;component/Assets/UI/Cutscene/cutscene_02.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="{Binding Path=opacity2}"/>
+      <Image x:Name="Img3" Source="/Root;component/Assets/UI/Cutscene/cutscene_03.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="{Binding Path=opacity3}"/>
+      <Image x:Name="Img4" Source="/Root;component/Assets/UI/Cutscene/cutscene_04.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="{Binding Path=opacity4}"/>
+      <Image x:Name="Img5" Source="/Root;component/Assets/UI/Cutscene/cutscene_05.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="{Binding Path=opacity5}"/>
+      <Image x:Name="Img6" Source="/Root;component/Assets/UI/Cutscene/cutscene_06.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="{Binding Path=opacity6}"/>
+      <Image x:Name="Img7" Source="/Root;component/Assets/UI/Cutscene/cutscene_07.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="{Binding Path=opacity7}"/>
+
+      <!-- Skip button (top-right, below y=250 safe zone) -->
+      <Button x:Name="BtnSkip" Command="{Binding Path=events.OnClickBtnSkip}" Width="200" Height="70" Margin="0,260,60,0" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="0,0,0,0" Template="{DynamicResource BtnAnimNone}">
+        <Grid Width="200" Height="70">
+          <Rectangle RadiusX="10" RadiusY="10" Fill="#66000000" Stroke="#99FFFFFF" StrokeThickness="1"/>
+          <TextBlock Text="SKIP &gt;&gt;" FontSize="36" Foreground="#CCFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+      </Button>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>

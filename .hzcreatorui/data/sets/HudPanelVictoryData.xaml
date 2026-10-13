@@ -1,0 +1,9 @@
+<vdctx:HudPanelVictory xmlns:vdctx="clr-namespace:NoesisStudioInternals">
+  <vdctx:HudPanelVictory.events>
+    <vdctx:HudPanelVictoryEvents>
+      <vdctx:HudPanelVictoryEvents.OnClickBtnNext>
+        <MessageCommand/>
+      </vdctx:HudPanelVictoryEvents.OnClickBtnNext>
+    </vdctx:HudPanelVictoryEvents>
+  </vdctx:HudPanelVictory.events>
+</vdctx:HudPanelVictory>

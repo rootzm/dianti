@@ -1,0 +1,55 @@
+<Class Name="HudGameBackpack">
+  <Property Name="icon1" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="icon2" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="icon3" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="icon4" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="icon5" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="text1" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="text2" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="text3" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="text4" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="text5" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="showItem1Blank" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem2Blank" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem3Blank" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem4Blank" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem5Blank" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem1Icon" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem2Icon" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem3Icon" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem4Icon" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem5Icon" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem1Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem2Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem3Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem4Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem5Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="OnClickBtnBackpack" Type="Command" CommandParameterType=""/>
+  <Property Name="tagRotation" Type="Number" NumberMinValue="0" NumberMaxValue="180" NumberDecimalCount="0"/>
+  <Property Name="showItems" Type="Enum" SubType="Visibility"/>
+  <Property Name="OnClickBtnItem1" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnItem2" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnItem3" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnItem4" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnItem5" Type="Command" CommandParameterType=""/>
+  <Property Name="showUseHint1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showUseHint2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showUseHint3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showUseHint4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showUseHint5" Type="Enum" SubType="Visibility"/>
+  <Property Name="textUseHint1" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="textUseHint2" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="textUseHint3" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="textUseHint4" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="textUseHint5" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="qualityFrame1" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="qualityFrame2" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="qualityFrame3" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="qualityFrame4" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="qualityFrame5" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="showItem1Quality" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem2Quality" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem3Quality" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem4Quality" Type="Enum" SubType="Visibility"/>
+  <Property Name="showItem5Quality" Type="Enum" SubType="Visibility"/>
+</Class>

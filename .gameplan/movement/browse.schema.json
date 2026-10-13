@@ -1,0 +1,37 @@
+{
+  "version": "1",
+  "title": "Movement Browser",
+  "elements": [
+    {
+      "id": "movement_browse_grid",
+      "type": "grid",
+      "minItemWidth": 180,
+      "items": [
+        {
+          "label": "", "value": "ground_locomotion",
+          "onSelect": {"properties": "./properties/ground_locomotion.schema.json", "preview": "./previews/ground_locomotion.schema.json"},
+          "elements": [{"id": "card_ground_locomotion", "type": "image", "src": "./ground_locomotion.png", "fit": "cover", "label": "Ground Locomotion", "value": "Speed, acceleration & damping"}]
+        },
+        {
+          "label": "", "value": "air_control",
+          "onSelect": {"properties": "./properties/air_control.schema.json", "preview": "./previews/air_control.schema.json"},
+          "elements": [{"id": "card_air_control", "type": "image", "src": "./air_control.png", "fit": "cover", "label": "Air Control", "value": "Mid-air steering & feel"}]
+        },
+        {
+          "label": "", "value": "rotation",
+          "onSelect": {"properties": "./properties/rotation.schema.json", "preview": "./previews/rotation.schema.json"},
+          "elements": [{"id": "card_rotation", "type": "image", "src": "./rotation.png", "fit": "cover", "label": "Rotation", "value": "Character turn speed & mode"}]
+        },
+        {
+          "label": "", "value": "slide_lock",
+          "onSelect": {"properties": "./properties/slide_lock.schema.json", "preview": "./previews/slide_lock.schema.json"},
+          "elements": [{"id": "card_slide_lock", "type": "image", "src": "./slide_lock.png", "fit": "cover", "label": "Slide Direction Lock", "value": "Drift prevention & lock threshold"}]
+        }
+      ]
+    }
+  ],
+  "suggestions": [
+    {"id": "sug_mv_add", "label": "Add System", "action": {"type": "prompt", "template": "Suggest a new movement system to add to this controller."}},
+    {"id": "sug_mv_tune", "label": "Balance All", "action": {"type": "prompt", "template": "Review all movement properties and suggest balanced default values."}}
+  ]
+}

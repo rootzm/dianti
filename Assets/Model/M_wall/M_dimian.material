@@ -1,0 +1,87 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "M_dimian",
+    "attributes": [
+        {
+            "name": "layer0normalmode",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    1.0
+                ]
+            }
+        },
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "17034870041684663662",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "14563068889130357258",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0NormalStrength",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.800000011920929
+                ]
+            }
+        },
+        {
+            "name": "scaleOffsetUV0",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    2.0,
+                    2.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        {
+            "name": "layer0NormalMultiplier",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.800000011920929
+                ]
+            }
+        },
+        {
+            "name": "layer0ORM",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "14641862426425697846",
+                    "targetId": "1850524962"
+                }
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

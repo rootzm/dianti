@@ -1,0 +1,27 @@
+{
+  "version": "1",
+  "title": "Project-Wide Controls",
+  "elements": [
+    {"id": "oc_heading", "type": "heading", "value": "Customize", "variant": "caption"},
+    {"id": "oc_physics_mode", "type": "toggle_multisegment", "label": "Physics Mode",
+      "value": "kinematic",
+      "options": [{"label": "Kinematic", "value": "kinematic"}, {"label": "Force-Based", "value": "force"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/overview/category.schema.json, set oc_physics_mode to {{oc_physics_mode}}]\nSet the character controller physics mode to {{oc_physics_mode}}. Kinematic = direct position delta; Force-Based = physics-simulated with momentum (useForceAsInputs in MovementAbility)."}},
+    {"id": "oc_camera_style", "type": "toggle_multisegment", "label": "Camera Style",
+      "value": "standard",
+      "options": [{"label": "Close", "value": "close"}, {"label": "Standard", "value": "standard"}, {"label": "Wide", "value": "wide"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/overview/category.schema.json, set oc_camera_style to {{oc_camera_style}}]\nSet the camera style to {{oc_camera_style}} (adjusts targetDistance and fieldOfView in ThirdPersonCamera)."}},
+    {"id": "ot_heading", "type": "heading", "value": "Tune", "variant": "caption"},
+    {"id": "ot_move_speed", "type": "slider", "label": "Move Speed", "value": 5.0, "min": 1.0, "max": 15.0, "step": 0.5,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/overview/category.schema.json, set ot_move_speed to {{ot_move_speed}}]\nSet moveSpeed to {{ot_move_speed}} in MovementAbility."}},
+    {"id": "ot_jump_impulse", "type": "slider", "label": "Jump Impulse", "value": 5.0, "min": 2.0, "max": 12.0, "step": 0.5,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/overview/category.schema.json, set ot_jump_impulse to {{ot_jump_impulse}}]\nSet jumpImpulse to {{ot_jump_impulse}} in JumpAbility."}},
+    {"id": "ot_gravity", "type": "slider", "label": "Gravity Strength", "value": 9.8, "min": 4.0, "max": 20.0, "step": 0.5,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/overview/category.schema.json, set ot_gravity to {{ot_gravity}}]\nSet gravity to Vec3(0, -{{ot_gravity}}, 0) in CharacterForceControllerBase."}}
+  ],
+  "suggestions": [
+    {"id": "sug_movement", "label": "Tune Movement", "action": {"type": "prompt", "template": "Open the Movement module and show me all tunable properties."}},
+    {"id": "sug_abilities", "label": "Tune Abilities", "action": {"type": "prompt", "template": "Open the Abilities module and show me jump and dash properties."}},
+    {"id": "sug_camera", "label": "Tune Camera", "action": {"type": "prompt", "template": "Open the Camera module and show me all camera tunable properties."}}
+  ]
+}

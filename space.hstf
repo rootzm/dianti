@@ -1,0 +1,2289 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "8641bbb7-840f-42ae-819b-987022fd2b7f",
+            "name": "World",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::WorldPlayerConfigPlatformComponent",
+                        "version": 1,
+                        "data": {
+                            "playerTemplateAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "5577465345056049760",
+                                "targetId": "2719744159"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::ScenePlatformComponent",
+                        "version": 4,
+                        "data": {
+                            "fogColor": {
+                                "r": 0.6299999952316284,
+                                "g": 0.6399999856948853,
+                                "b": 0.6600000262260437,
+                                "a": 1.0
+                            },
+                            "fogStart": 50.0,
+                            "fogEnd": 300.0
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset",
+                    "attributes": [
+                        {
+                            "class": "horizon::EnabledComponentAttribute",
+                            "data": {
+                                "isEnabled": false
+                            }
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PhysicsScenePlatformComponent",
+                        "version": 5,
+                        "data": {
+                            "playerCollisionEventEmitterMode": "OwnerAndServer"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::scene_render_manager::RenderSettingsComponent",
+                        "version": 1,
+                        "data": {
+                            "propDirectLightingMultiplier": 0.009999999776482582,
+                            "propIndirectLightingMultiplier": 0.0010000000474974514,
+                            "propEnableBloom": false,
+                            "propBloomIntensity": 0.009999999776482582,
+                            "propEnableVignette": false,
+                            "propEnableShadows": false,
+                            "propShadowmapDimension": 4096,
+                            "propEnableSSAO": true
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "2a05c82f-5585-4f69-a212-79ed7c37444f",
+            "name": "Camera",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CameraPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "cameraMode": "Custom"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "ThirdPersonCamera",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "16918998534990914903",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "targetDistance": 1.2,
+                            "shoulderHeight": 1.52,
+                            "shoulderOffset": 0.35,
+                            "rotationOffset": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0,
+                                "w": 1.0
+                            },
+                            "translationSpeed": 5.0,
+                            "rotationSpeed": 8.0,
+                            "mouseSensitivity": 100.0,
+                            "minPitch": -80.0,
+                            "maxPitch": 15.0,
+                            "defaultYaw": 0.0,
+                            "defaultPitch": -2.0,
+                            "enableCollision": true,
+                            "collisionRadius": 0.1,
+                            "numRaycastAttempts": 9.0,
+                            "collisionLayers": [
+                                "Layer2"
+                            ],
+                            "fieldOfView": 50.0
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "cd8c7644-fc36-4ec6-85e2-dfb73c1deaf5",
+            "name": "SpawnPoint",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.10000000149011612,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SpawnPointPlatformComponent",
+                        "version": 2,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "b53745be-85a3-49cf-9439-5735ae77e03a",
+            "name": "Systems",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GamePhaseManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "8407389771304410835",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "debugLevelEnable": false,
+                            "debugLevelId": 1.0,
+                            "debugClearSave": false,
+                            "debugEnergyEnable": false,
+                            "currentPhase": "Initialization",
+                            "levelId": 1.0,
+                            "currentEnergy": 0.0,
+                            "maxEnergy": 10.0
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GameEnemyManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "14226025096044478031",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "enemyTemplates": [
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "6156472585880008147",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "12122484204982627204",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "11311778988735737034",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "5461739810002446936",
+                                    "targetId": "2719744159"
+                                }
+                            ],
+                            "baseDelay": 5.0,
+                            "delayReduction": 20.0,
+                            "spawnMultiplier": 2.0,
+                            "spawnBase": 1.0
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GamePropManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "17383241228040091349",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "propTemplates": [
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "14072991862607108361",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "7611836781456168212",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "12518949176288320699",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "1531720629707345129",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "8999983284206570612",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "5410701145215627770",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "851714423794093212",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "3538062669168881091",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "12940478810018276794",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "16820774312943116935",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "17253485821457058821",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "5806806467643659450",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "2654568609384996854",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "11010116455967806469",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "10445417037326918580",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "14897436880366891996",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "11277982470047346012",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "18408524207815616785",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "2288260221993007681",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "12620727347609880818",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "16804942661320251332",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "2855628315543658777",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "14756273466155316879",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "8666913718209074339",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "6469309901868287394",
+                                    "targetId": "2719744159"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "1870199154052091486",
+                                    "targetId": "2719744159"
+                                }
+                            ],
+                            "debugEnable": false
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GamePlayerPropManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "2691473422832811526",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "maxInventorySize": 5.0
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GameDepotManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "8874856428961397848",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GameGuideManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "4048526882506773027",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "tipsText": [
+                                "Use the left joystick to move your character, drag the screen to rotate the camera view.",
+                                "Using the flashlight consumes 1 unit of energy per second."
+                            ]
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudGuideUsableItemServer",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "2598869772905387009",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GuideMarkerManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "14626655712567537450",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "PropSpotRandomizer",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "4940265054070631916",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "AnalyticsManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "9740080530512734339",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "b4f2838b-21a0-47ee-a603-97182e1dc8cb",
+            "name": "SaveServer",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "SaveServer",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "2983364705256917663",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": [
+                {
+                    "class": "horizon::NetworkableTemplateEntityAttribute",
+                    "data": {
+                        "isNetworkable": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8378b096-819f-46c2-a28e-619f525f1333",
+            "name": "SaveClient",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "SaveClient",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "10544292552062442542",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": [
+                {
+                    "class": "horizon::NetworkableTemplateEntityAttribute",
+                    "data": {
+                        "isNetworkable": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1ce928dd-b51e-4075-8341-b7b7aaec35b2",
+            "name": "Hud",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "eb62597b-f40c-4bcf-a5f9-bd6810208aab",
+            "name": "HudGameLoading",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "11823991106437338886",
+                                "targetId": "2149638574"
+                            },
+                            "isBlocking": true,
+                            "renderOrderOffset": 200
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudGameLoading",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "7073406648908925073",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "4b932697-eee9-41c9-a7fc-176a2dbbc7a5",
+            "name": "HudGameBackpack",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "2154370188955674756",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": true,
+                            "renderOrderOffset": 48
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudGameBackpack",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "17813786975991875311",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "2a355388-274d-4264-ae66-4571410e3ddc",
+            "name": "HudGameControls",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "2802851136475133149",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": true,
+                            "renderOrderOffset": 49
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudGameControls",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "9260007604799215341",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "f9d85ab8-b263-4ff8-ab7e-90db35db98d7",
+            "name": "SfxBtnDepot",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "10862578800304220308",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "f1769f00-847c-41a4-8a1a-5dce147169df",
+            "name": "SfxBtnFlash",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "8928362586020572615",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "a7fb35b6-3ef7-456b-a53e-9866f76719c7",
+            "name": "HudGameHpPower",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "4655028501345388618",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": false,
+                            "renderOrderOffset": 50
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudGameHpPower",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "7081056680663161976",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "fontAtlasHp": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "1841529224763379681",
+                                "targetId": "1850524962"
+                            },
+                            "fontAtlasPower": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "13609436497634506536",
+                                "targetId": "1850524962"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "3e496095-5ec6-4f08-ac13-9cabb44fe2c7",
+            "name": "HudGameHurt",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 8.000000953674317,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "12428654783025699584",
+                                "targetId": "2149638574"
+                            },
+                            "renderOrderOffset": 55
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudGameHurt",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "17763884895087923040",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "c7cbba9c-d680-4c7f-9f93-dc86d7a3da5f",
+            "name": "HudGamePower",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "4384898069686401616",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": false,
+                            "renderOrderOffset": 70
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudGamePower",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "1117784455456780209",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "8027ed6a-5680-4350-bfbf-bfae1b66bc91",
+            "name": "HudPanelCharge",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "14042346263166950133",
+                                "targetId": "2149638574"
+                            },
+                            "panelVisibility": true,
+                            "isInteractable": true,
+                            "isBlocking": true,
+                            "renderOrderOffset": 60
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudPanelCharge",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "9930339759410358467",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "2f8548d1-b94e-4cb6-9c91-c7dc46266c06",
+            "name": "SfxCharge",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "1706570843749235180",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "33d7ceab-9d97-4016-8658-8673fa30a003",
+            "name": "SfxChargeDone",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "5236089484095612499",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "3c0f6710-0986-4e3b-8110-cc7cc485962b",
+            "name": "HudPanelDepot",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "2875756888635858192",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": true,
+                            "isBlocking": true,
+                            "renderOrderOffset": 60
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudPanelDepot",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "7037871634045198652",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "bc942508-44b3-404c-8c7a-8f791c03eac2",
+            "name": "HudPanelFail",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "12029107096113682715",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": true,
+                            "isBlocking": true,
+                            "renderOrderOffset": 60
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudPanelFail",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "576415181538563446",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "244cca15-7418-4271-a767-898355678fe9",
+            "name": "SfxFail",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "2780809751144813927",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "fbb151e4-183b-4415-b14d-2d7b605e7ce6",
+            "name": "HudPanelLevelInfo",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "13502756712304048579",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": true,
+                            "isBlocking": true,
+                            "renderOrderOffset": 60
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudPanelLevelInfo",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "4431273258862160232",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "14326cef-7444-499f-b981-9ecd2cab57f4",
+            "name": "HudPanelTips",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "17651315403951551746",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": false,
+                            "renderOrderOffset": 100
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudPanelTips",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "13008852905592112879",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "be11ec81-6730-482e-937b-81a9ba37b5a8",
+            "name": "HudPanelVictory",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "517674981596285719",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": true,
+                            "isBlocking": true,
+                            "renderOrderOffset": 60
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudPanelVictory",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "16215577110760294404",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "a794d3ea-9a92-4253-acb7-73f81ff23fd5",
+            "name": "HudGuideUsableItem",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "6d97529d-273b-4266-aaf1-39c42a431fe0",
+            "name": "HudGuideUsableItem",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "10464780694498121934",
+                                "targetId": "2149638574"
+                            },
+                            "isInteractable": true,
+                            "renderOrderOffset": 200
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudGuideUsableItem",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "17737121985088169869",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "873cde7f-b961-4f6a-8d52-b3b7326f6761",
+            "name": "HudAnnouncementManager",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudAnnouncementManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "13198314550767837579",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "b8f5ed3e-2546-4881-b874-99803c78761e",
+            "name": "SfxAnnounceElevatorArrived",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "8363916244288390488",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "88004e9e-9ec3-4cd9-8317-8731960e33ef",
+            "name": "SfxAnnounceHpLow",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "8547668179877037831",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "717dd225-5055-4bb5-b16f-6e933a42eae3",
+            "name": "SfxAnnouncePowerLow",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "6199317141261198836",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "dfa53f89-d777-468e-ad43-fff6697dd40e",
+            "name": "SfxAnnounceEnergyFull",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "4254234504105901428",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "142d41d0-e802-4095-89dd-1a9028b15bd5",
+            "name": "SfxAnnounceEnergyInsufficient",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "2187138618129784660",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "1ed241b2-54aa-4da7-b7e7-227f36df364d",
+            "name": "SfxAnnounceChargeDone",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "8362012808186839427",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "674c22de-29fe-49d4-84c0-6ab3eb2343c9",
+            "name": "SfxAnnounceCountdownEnd",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "7552215868917538120",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "e315339d-ab01-44f1-96cb-85762c7c0068",
+            "name": "HudGameCountdown",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "578999818437049337",
+                                "targetId": "2149638574"
+                            },
+                            "renderOrderOffset": 52
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudGameCountdownController",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "16390304500152492691",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "bac1148c-d228-4950-b1d4-6c2c2b11f4e8",
+            "name": "HudCutscene",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::CustomUiPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "customUiType": "ScreenSpace",
+                            "xaml": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "6042600516944495822",
+                                "targetId": "2149638574"
+                            },
+                            "panelVisibility": false,
+                            "isInteractable": true,
+                            "isBlocking": true,
+                            "renderOrderOffset": 105
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "HudCutscene",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "7715272855666513126",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "a9bdfc85-3683-403e-90d3-1b39108d477c",
+            "name": "CutsceneBgm",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "18060731163942752520",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "5e30e28d-1efc-4f48-8b3e-2473b2ce2dd4",
+            "name": "Audio",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GameAudio",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "9379343994318116030",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "950ba07d-49a0-48fd-8df9-1946184f2e28",
+            "name": "Bgm",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "1223278342562337513",
+                                "targetId": "1366267635"
+                            },
+                            "loop": true,
+                            "startCondition": "Auto"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "5be98752-0d65-4395-8565-f4ca5e6eb96b",
+            "name": "SfxBtnClick",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "15055808245016684926",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "59865526-e677-4b2a-a623-f5d27133f37e",
+            "name": "SfxEnvElectric",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "10140546444290452724",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "54043da6-dc34-46ca-a36c-e3edef35348e",
+            "name": "SfxEnvMonsterGrowls",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "9241658643964790702",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "f283001b-cf7c-485f-963f-c7b19d6a878f",
+            "name": "SfxEnvSlime",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "15405494413927601765",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "5e6637ee-8c37-44ad-b8b0-cf0198920fd0",
+            "name": "SfxEnvWaterDrops",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "5405597669011758741",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "5590490d-6a49-4b7b-b9e3-347eab884c52",
+            "name": "SfxEnvWnd",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundEmitterType": "NonSpatial",
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "7898395008998407211",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "743e6f21-110d-448f-bca4-ec02d0692b67",
+            "name": "Level",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GameLevelManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "8740273119629105828",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "level0": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "11399076428490716909",
+                                "targetId": "2719744159"
+                            },
+                            "level1": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "13249879298107167772",
+                                "targetId": "2719744159"
+                            },
+                            "level2": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "9482751106061398621",
+                                "targetId": "2719744159"
+                            },
+                            "level3": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "14748737436094860643",
+                                "targetId": "2719744159"
+                            },
+                            "level4": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "916481566816694161",
+                                "targetId": "2719744159"
+                            },
+                            "level5": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "11029269333011022367",
+                                "targetId": "2719744159"
+                            },
+                            "level6": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "11696102185629614214",
+                                "targetId": "2719744159"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "2a05c82f-5585-4f69-a212-79ed7c37444f",
+            "destination": "8641bbb7-840f-42ae-819b-987022fd2b7f"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "cd8c7644-fc36-4ec6-85e2-dfb73c1deaf5",
+            "destination": "8641bbb7-840f-42ae-819b-987022fd2b7f"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "b53745be-85a3-49cf-9439-5735ae77e03a",
+            "destination": "8641bbb7-840f-42ae-819b-987022fd2b7f"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "b4f2838b-21a0-47ee-a603-97182e1dc8cb",
+            "destination": "8641bbb7-840f-42ae-819b-987022fd2b7f"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "8378b096-819f-46c2-a28e-619f525f1333",
+            "destination": "8641bbb7-840f-42ae-819b-987022fd2b7f"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "1ce928dd-b51e-4075-8341-b7b7aaec35b2",
+            "destination": "8641bbb7-840f-42ae-819b-987022fd2b7f"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "eb62597b-f40c-4bcf-a5f9-bd6810208aab",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "4b932697-eee9-41c9-a7fc-176a2dbbc7a5",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "2a355388-274d-4264-ae66-4571410e3ddc",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "f9d85ab8-b263-4ff8-ab7e-90db35db98d7",
+            "destination": "2a355388-274d-4264-ae66-4571410e3ddc"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "f1769f00-847c-41a4-8a1a-5dce147169df",
+            "destination": "2a355388-274d-4264-ae66-4571410e3ddc"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "a7fb35b6-3ef7-456b-a53e-9866f76719c7",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "3e496095-5ec6-4f08-ac13-9cabb44fe2c7",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "c7cbba9c-d680-4c7f-9f93-dc86d7a3da5f",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "8027ed6a-5680-4350-bfbf-bfae1b66bc91",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "2f8548d1-b94e-4cb6-9c91-c7dc46266c06",
+            "destination": "8027ed6a-5680-4350-bfbf-bfae1b66bc91"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "33d7ceab-9d97-4016-8658-8673fa30a003",
+            "destination": "8027ed6a-5680-4350-bfbf-bfae1b66bc91"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "3c0f6710-0986-4e3b-8110-cc7cc485962b",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "bc942508-44b3-404c-8c7a-8f791c03eac2",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "244cca15-7418-4271-a767-898355678fe9",
+            "destination": "bc942508-44b3-404c-8c7a-8f791c03eac2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "fbb151e4-183b-4415-b14d-2d7b605e7ce6",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "14326cef-7444-499f-b981-9ecd2cab57f4",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "be11ec81-6730-482e-937b-81a9ba37b5a8",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "a794d3ea-9a92-4253-acb7-73f81ff23fd5",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "6d97529d-273b-4266-aaf1-39c42a431fe0",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "873cde7f-b961-4f6a-8d52-b3b7326f6761",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "b8f5ed3e-2546-4881-b874-99803c78761e",
+            "destination": "873cde7f-b961-4f6a-8d52-b3b7326f6761"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "88004e9e-9ec3-4cd9-8317-8731960e33ef",
+            "destination": "873cde7f-b961-4f6a-8d52-b3b7326f6761"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "717dd225-5055-4bb5-b16f-6e933a42eae3",
+            "destination": "873cde7f-b961-4f6a-8d52-b3b7326f6761"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "dfa53f89-d777-468e-ad43-fff6697dd40e",
+            "destination": "873cde7f-b961-4f6a-8d52-b3b7326f6761"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "142d41d0-e802-4095-89dd-1a9028b15bd5",
+            "destination": "873cde7f-b961-4f6a-8d52-b3b7326f6761"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "1ed241b2-54aa-4da7-b7e7-227f36df364d",
+            "destination": "873cde7f-b961-4f6a-8d52-b3b7326f6761"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "674c22de-29fe-49d4-84c0-6ab3eb2343c9",
+            "destination": "873cde7f-b961-4f6a-8d52-b3b7326f6761"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "e315339d-ab01-44f1-96cb-85762c7c0068",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "bac1148c-d228-4950-b1d4-6c2c2b11f4e8",
+            "destination": "1ce928dd-b51e-4075-8341-b7b7aaec35b2"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "a9bdfc85-3683-403e-90d3-1b39108d477c",
+            "destination": "bac1148c-d228-4950-b1d4-6c2c2b11f4e8"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "5e30e28d-1efc-4f48-8b3e-2473b2ce2dd4",
+            "destination": "8641bbb7-840f-42ae-819b-987022fd2b7f"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "950ba07d-49a0-48fd-8df9-1946184f2e28",
+            "destination": "5e30e28d-1efc-4f48-8b3e-2473b2ce2dd4"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "5be98752-0d65-4395-8565-f4ca5e6eb96b",
+            "destination": "5e30e28d-1efc-4f48-8b3e-2473b2ce2dd4"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "59865526-e677-4b2a-a623-f5d27133f37e",
+            "destination": "5e30e28d-1efc-4f48-8b3e-2473b2ce2dd4"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "54043da6-dc34-46ca-a36c-e3edef35348e",
+            "destination": "5e30e28d-1efc-4f48-8b3e-2473b2ce2dd4"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "f283001b-cf7c-485f-963f-c7b19d6a878f",
+            "destination": "5e30e28d-1efc-4f48-8b3e-2473b2ce2dd4"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "5e6637ee-8c37-44ad-b8b0-cf0198920fd0",
+            "destination": "5e30e28d-1efc-4f48-8b3e-2473b2ce2dd4"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "5590490d-6a49-4b7b-b9e3-347eab884c52",
+            "destination": "5e30e28d-1efc-4f48-8b3e-2473b2ce2dd4"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "743e6f21-110d-448f-bca4-ec02d0692b67",
+            "destination": "8641bbb7-840f-42ae-819b-987022fd2b7f"
+        }
+    ]
+}

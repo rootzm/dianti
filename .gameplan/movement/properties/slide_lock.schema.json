@@ -1,0 +1,32 @@
+{
+  "version": "1",
+  "title": "Slide Direction Lock",
+  "elements": [
+    {"id": "sl_app_heading", "type": "heading", "value": "Appearance", "variant": "caption"},
+    {"id": "sl_appearance_grid", "type": "grid", "columns": 3, "minItemWidth": 300, "items": [
+      {
+        "label": "", "value": "dynamic",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Dynamic art style to Slide Direction Lock. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "sl_style_dynamic", "type": "image", "src": "./style-slide_lock-dynamic.jpg", "fit": "cover", "label": "Dynamic"}]
+      },
+      {
+        "label": "", "value": "smooth",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Smooth art style to Slide Direction Lock. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "sl_style_smooth", "type": "image", "src": "./style-slide_lock-smooth.jpg", "fit": "cover", "label": "Smooth"}]
+      },
+      {
+        "label": "", "value": "precise",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Precise art style to Slide Direction Lock. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "sl_style_precise", "type": "image", "src": "./style-slide_lock-precise.jpg", "fit": "cover", "label": "Precise"}]
+      }
+    ]},
+    {"id": "slc_heading", "type": "heading", "value": "Customize", "variant": "caption"},
+    {"id": "slc_enabled", "type": "toggle_multisegment", "label": "Direction Lock",
+      "value": "off",
+      "options": [{"label": "Off", "value": "off"}, {"label": "On", "value": "on"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/slide_lock.schema.json, set slc_enabled to {{slc_enabled}}]\nSet slideDirectionLockEnabled to {{slc_enabled}} in MovementAbility."}},
+    {"id": "slt_heading", "type": "heading", "value": "Tune", "variant": "caption"},
+    {"id": "slt_threshold", "type": "slider", "label": "Lock Threshold", "value": 0.3, "min": 0.05, "max": 0.9, "step": 0.05,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/slide_lock.schema.json, set slt_threshold to {{slt_threshold}}]\nSet slideDirectionLockThreshold to {{slt_threshold}} in MovementAbility."}}
+  ]
+}

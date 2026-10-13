@@ -1,0 +1,87 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "m_deng",
+    "attributes": [
+        {
+            "name": "layer0pbrmode",
+            "value": {
+                "type": "String",
+                "stringValue": "ORMTexture"
+            }
+        },
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "3916989227763454750",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0normalmode",
+            "value": {
+                "type": "String",
+                "stringValue": "On"
+            }
+        },
+        {
+            "name": "layer0emissivemode",
+            "value": {
+                "type": "String",
+                "stringValue": "Off"
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "14862915007907146175",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0NormalStrength",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.800000011920929
+                ]
+            }
+        },
+        {
+            "name": "layer0ORM",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "30952996677677480",
+                    "ingestionId": "16714411108852735079",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0NormalMultiplier",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.800000011920929
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

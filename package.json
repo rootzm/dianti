@@ -1,0 +1,19 @@
+{
+  "name": "Neorigin_Elevator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "eslint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Emporium of Wonders",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "10.2.0",
+    "eslint-plugin-mhs-linter": "file:../../doc/eslint/eslint-plugin-mhs-linter.tgz",
+    "@typescript-eslint/eslint-plugin": "8.58.0",
+    "@typescript-eslint/parser": "8.58.0",
+    "eslint-plugin-tsdoc": "0.5.2"
+  }
+}

@@ -1,0 +1,18 @@
+<Class Name="HudGameControls">
+  <Property Name="showIconFlashOn" Type="Enum" SubType="Visibility"/>
+  <Property Name="showIconFlashOff" Type="Enum" SubType="Visibility"/>
+  <Property Name="OnClickBtnFlash" Type="Command" CommandParameterType=""/>
+  <Property Name="showActionRun" Type="Enum" SubType="Visibility"/>
+  <Property Name="showActionSprint" Type="Enum" SubType="Visibility"/>
+  <Property Name="OnClickBtnAction" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnOpenDepot" Type="Command" CommandParameterType=""/>
+  <Property Name="showBtnOpenDepot" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBtnPickup" Type="Enum" SubType="Visibility"/>
+  <Property Name="btnPickupIcon" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="btnPickupTextPower" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="btnPickupTextName" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="OnClickBtnPickup" Type="Command" CommandParameterType=""/>
+  <Property Name="showBtnUse" Type="Enum" SubType="Visibility"/>
+  <Property Name="btnUseIcon" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="OnClickBtnUse" Type="Command" CommandParameterType=""/>
+</Class>

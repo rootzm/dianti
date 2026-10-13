@@ -1,0 +1,38 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "M_CeilingCorrodedMetal_02",
+    "attributes": [
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "11130742164191995192",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "scaleOffsetUV0",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.20000000298023225,
+                    1.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

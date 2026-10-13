@@ -1,0 +1,73 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "radiator",
+    "attributes": [
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "7117270083212012638",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "16198558521489204342",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0normalmode",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    1.0
+                ]
+            }
+        },
+        {
+            "name": "layer0MetallicValue",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    1.0
+                ]
+            }
+        },
+        {
+            "name": "layer0RoughnessValue",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.5
+                ]
+            }
+        },
+        {
+            "name": "layer0NormalMultiplier",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.800000011920929
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

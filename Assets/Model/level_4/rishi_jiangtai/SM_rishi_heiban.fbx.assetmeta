@@ -1,0 +1,187 @@
+{
+    "class": "horizon::AssetMetadata",
+    "version": 2,
+    "data": {
+        "id": "13944647987041392168",
+        "pipelineVersion": 1,
+        "assetBuilderSettings": [
+            {
+                "class": "horizon::DccTemplateAssetBuilderSettings",
+                "version": 10009,
+                "data": {
+                    "target": "template",
+                    "sceneCollisionLayer": "Layer2",
+                    "collisionShape": "TriangleMesh",
+                    "retainAllTransforms": false,
+                    "usePackageNameInIds": false,
+                    "templateRootName": "SM_rishi_heiban",
+                    "retainAllTransformsFixVersion": 2,
+                    "hiddenSceneItemsFixVersion": 1,
+                    "stableRootUuidFixVersion": 2,
+                    "disableRootNodeStringFixVersion": 1
+                }
+            },
+            {
+                "class": "horizon::dcc_asset_processing::DccSceneAssetBuilderSettings",
+                "version": 10015,
+                "data": {
+                    "target": "",
+                    "sourceCoordinateSystem": "RightUpBackward",
+                    "orientationCoordinateSystem": "YUp-RightHanded",
+                    "useNamedBasedLODs": false,
+                    "upsideDownV": false,
+                    "useGlobalScale": true,
+                    "globalScale": 1.0,
+                    "enableAssetReferencing": true,
+                    "importAssetReferencingVersion": 1,
+                    "enableLegacyMaterialConversion": false,
+                    "materialConversionVersion": 1,
+                    "enableFbxUnitConversionAlways": true,
+                    "importErrorHandlingBehavior": 1,
+                    "materialAssignmentHandlingVersion": 1,
+                    "sceneBakingMethod": "UnbakedScene",
+                    "meshPivotMode": "None",
+                    "disableAlwaysCreateDefaultMaterial": true,
+                    "importWindingOrderHandlingVersion": 1,
+                    "uvTransformHandlingVersion": 1
+                }
+            },
+            {
+                "class": "horizon::renderer::tool::MeshAssetBuilderSettings",
+                "version": 10004,
+                "data": {
+                    "target": "mesh",
+                    "lightmapTextureTarget": "",
+                    "materialMapTarget": "materialMap.json",
+                    "streamable": true,
+                    "streamCount": 2,
+                    "instanceGroupID": 0,
+                    "flipBitangent": false,
+                    "meshSettingsList": [
+                        {
+                            "class": "horizon::renderer::tool::MeshAssetBuilderMeshSettings",
+                            "version": 10005,
+                            "data": {
+                                "nodePath": "/RootNode/polySurface182",
+                                "lightmapTextureTarget": "",
+                                "cpuReadable": false,
+                                "shouldParameterizeLightMapTexture": false,
+                                "cullFinalLod": false,
+                                "lodSelectionMetric": "Screen Space Ratio",
+                                "lodSettings": [
+                                    {
+                                        "class": "horizon::renderer::tool::LodSettings",
+                                        "data": {
+                                            "distanceRatio": 1.0,
+                                            "reductionFactor": 1.0,
+                                            "targetError": 0.0
+                                        }
+                                    }
+                                ],
+                                "vertexStrippingConfig": {
+                                    "class": "horizon::renderer::tool::VertexStrippingConfig",
+                                    "data": {
+                                        "normals": "Automatic",
+                                        "texcoord0": "Automatic",
+                                        "texcoord1": "Automatic",
+                                        "texcoord2": "Automatic",
+                                        "texcoord3": "Automatic",
+                                        "vertexColor0": "Automatic",
+                                        "vertexColor1": "Automatic"
+                                    }
+                                },
+                                "materials": [
+                                    {
+                                        "packageOrRemoteId": "0",
+                                        "ingestionId": "2405403058563624086",
+                                        "targetId": "157013062"
+                                    }
+                                ],
+                                "originalMaterials": [
+                                    {
+                                        "class": "horizon::AssetId",
+                                        "data": {
+                                            "packageOrRemoteId": "0",
+                                            "ingestionId": "13944647987041392168",
+                                            "targetId": "1604685701"
+                                        }
+                                    }
+                                ],
+                                "blendShapes": [],
+                                "originallyExportedBlendShapesHash": 503106547
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "class": "horizon::physics::PhysXConvexMeshAssetBuilderSettings",
+                "version": 10001,
+                "data": {
+                    "target": "phys_convex_mesh",
+                    "maxNumConvexHulls": 1,
+                    "maxNumVertsPerConvexHull": 128,
+                    "voxelResolution": 400000,
+                    "allowedVolumeErrorPercentage": 1.0,
+                    "recursionDepth": 10,
+                    "minEdgeLength": 2
+                }
+            },
+            {
+                "class": "horizon::renderer::tool::TextureAssetBuilderSettings",
+                "version": 10003,
+                "data": {
+                    "target": "tex",
+                    "streamable": false,
+                    "streamCount": 2,
+                    "cpuReadable": false,
+                    "textureSettings": {
+                        "class": "horizon::renderer::tool::TextureAssetBuilderTextureSettings",
+                        "version": 7,
+                        "data": {
+                            "equirectangularToCube": false,
+                            "fixEquirectSeam": "fix-if-needed",
+                            "enableRoughnessConvolution": false,
+                            "premultiplyAlpha": false,
+                            "preserveAlphaCoverage": false,
+                            "alphaCutoff": 0.5,
+                            "renormalizeNormals": false,
+                            "mipFilterType": "Default",
+                            "defaultFormat": "Srgb",
+                            "platformOverrides": []
+                        }
+                    },
+                    "sceneEmbeddedTextureSettingsList": [
+                        {
+                            "class": "horizon::renderer::tool::TextureAssetBuilderSceneEmbeddedTextureSettings",
+                            "data": {
+                                "sceneImageName": "SM_rishi_heiban_img0.png",
+                                "sceneImageIndex": 0,
+                                "textureSettings": {
+                                    "class": "horizon::renderer::tool::TextureAssetBuilderTextureSettings",
+                                    "version": 7,
+                                    "data": {
+                                        "equirectangularToCube": false,
+                                        "fixEquirectSeam": "fix-if-needed",
+                                        "enableRoughnessConvolution": false,
+                                        "premultiplyAlpha": false,
+                                        "preserveAlphaCoverage": false,
+                                        "alphaCutoff": 0.5,
+                                        "renormalizeNormals": false,
+                                        "mipFilterType": "Default",
+                                        "defaultFormat": "Srgb",
+                                        "platformOverrides": []
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "docMeta": {
+            "class": "horizon::DocMetadata",
+            "data": {}
+        }
+    }
+}

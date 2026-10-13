@@ -1,0 +1,40 @@
+{
+  "version": "1",
+  "title": "Ground Locomotion",
+  "elements": [
+    {"id": "gl_app_heading", "type": "heading", "value": "Appearance", "variant": "caption"},
+    {"id": "gl_appearance_grid", "type": "grid", "columns": 3, "minItemWidth": 300, "items": [
+      {
+        "label": "", "value": "dynamic",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Dynamic art style to Ground Locomotion. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "gl_style_dynamic", "type": "image", "src": "./style-ground_locomotion-dynamic.jpg", "fit": "cover", "label": "Dynamic"}]
+      },
+      {
+        "label": "", "value": "smooth",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Smooth art style to Ground Locomotion. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "gl_style_smooth", "type": "image", "src": "./style-ground_locomotion-smooth.jpg", "fit": "cover", "label": "Smooth"}]
+      },
+      {
+        "label": "", "value": "precise",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Precise art style to Ground Locomotion. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "gl_style_precise", "type": "image", "src": "./style-ground_locomotion-precise.jpg", "fit": "cover", "label": "Precise"}]
+      }
+    ]},
+    {"id": "glc_heading", "type": "heading", "value": "Customize", "variant": "caption"},
+    {"id": "glc_mode", "type": "toggle_multisegment", "label": "Physics Mode",
+      "value": "kinematic",
+      "options": [{"label": "Kinematic", "value": "kinematic"}, {"label": "Force-Based", "value": "force"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/ground_locomotion.schema.json, set glc_mode to {{glc_mode}}]\nSet ground locomotion physics mode to {{glc_mode}} (useForceAsInputs in MovementAbility)."}},
+    {"id": "glc_accel", "type": "toggle_multisegment", "label": "Acceleration Curve",
+      "value": "enabled",
+      "options": [{"label": "Off (Legacy)", "value": "disabled"}, {"label": "On (Smooth)", "value": "enabled"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/ground_locomotion.schema.json, set glc_accel to {{glc_accel}}]\nSet enableAcceleration to {{glc_accel}} in MovementAbility."}},
+    {"id": "glt_heading", "type": "heading", "value": "Tune", "variant": "caption"},
+    {"id": "glt_move_speed", "type": "slider", "label": "Move Speed", "value": 5.0, "min": 1.0, "max": 15.0, "step": 0.5,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/ground_locomotion.schema.json, set glt_move_speed to {{glt_move_speed}}]\nSet moveSpeed to {{glt_move_speed}} in MovementAbility."}},
+    {"id": "glt_accel_time", "type": "slider", "label": "Acceleration Time (s)", "value": 0.1, "min": 0.02, "max": 1.0, "step": 0.02,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/ground_locomotion.schema.json, set glt_accel_time to {{glt_accel_time}}]\nSet accelerationTime to {{glt_accel_time}} in MovementAbility."}},
+    {"id": "glt_decel_factor", "type": "slider", "label": "Deceleration Factor", "value": 2.0, "min": 0.5, "max": 5.0, "step": 0.25,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/ground_locomotion.schema.json, set glt_decel_factor to {{glt_decel_factor}}]\nSet decelerationFactor to {{glt_decel_factor}} in MovementAbility."}}
+  ]
+}

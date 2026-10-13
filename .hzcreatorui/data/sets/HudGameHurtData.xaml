@@ -1,0 +1,5 @@
+<vdctx:HudGameHurt xmlns:vdctx="clr-namespace:NoesisStudioInternals">
+  <vdctx:HudGameHurt.events>
+    <vdctx:HudGameHurtEvents/>
+  </vdctx:HudGameHurt.events>
+</vdctx:HudGameHurt>

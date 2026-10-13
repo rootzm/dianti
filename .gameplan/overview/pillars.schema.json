@@ -1,0 +1,17 @@
+{
+  "version": "1",
+  "elements": [
+    {
+      "id": "pillars_grid",
+      "type": "grid",
+      "columns": 2,
+      "minItemWidth": 300,
+      "items": [
+        {"label": "Core Idea", "value": "core_idea", "subtitle": "Physics-based third-person controller template — fluid, responsive movement."},
+        {"label": "Gameplay", "value": "gameplay", "subtitle": "Move, jump, and dash through space using camera-relative controls and physics momentum."},
+        {"label": "Mechanics", "value": "mechanics", "subtitle": "Kinematic physics and a rule-based state machine create predictable, tunable movement."},
+        {"label": "Game Feel", "value": "game_feel", "subtitle": "Weighty, grounded, responsive — feels great to move in before content is added."}
+      ]
+    }
+  ]
+}

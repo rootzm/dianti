@@ -1,0 +1,77 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "m_xiushijinshu_02",
+    "attributes": [
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "9847805528695594504",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "vertexcolortint",
+            "value": {
+                "type": "Integers",
+                "intValues": [
+                    "0"
+                ]
+            }
+        },
+        {
+            "name": "uvscale",
+            "value": {
+                "type": "Integers",
+                "intValues": [
+                    "1"
+                ]
+            }
+        },
+        {
+            "name": "layer0MetallicValue",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.6288999915122986
+                ]
+            }
+        },
+        {
+            "name": "layer0RoughnessValue",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.800000011920929
+                ]
+            }
+        },
+        {
+            "name": "scaleOffsetUV0",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.20000000298023225,
+                    0.5,
+                    0.0,
+                    0.0
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "33451255657851516",
+        "ingestionId": "12536732106106040758",
+        "targetId": "2708897769"
+    },
+    "variantKeywords": [
+        "uvscale_on"
+    ]
+}

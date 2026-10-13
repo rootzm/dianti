@@ -1,0 +1,303 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "6e11fcce-485e-fc06-2a88-925cd3061efc",
+            "name": "DoorFrame",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "a2b3c4d5-e6f7-4890-ab12-c3d4e5f6a7b8",
+            "name": "SM_chuansongmen",
+            "type": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "2721369765314055288",
+                "targetId": "2719744159"
+            },
+            "deltas": [
+                {
+                    "sourceId": "6e11fcce-485e-fc06-2a88-925cd3061efc",
+                    "components": [
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "horizon::platform_api::TransformPlatformComponent",
+                                "version": 3,
+                                "data": {
+                                    "localScale": {
+                                        "x": 170.18800354003907,
+                                        "y": 100.0,
+                                        "z": 156.46099853515626
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "attributes": []
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "b3c4d5e6-f7a8-4901-bc23-d4e5f6a7b8c9",
+            "name": "DoorPivot",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.021572599187493326,
+                                "y": -1.2820099592208863,
+                                "z": 0.04573730006814003
+                            },
+                            "localScale": {
+                                "x": 1.6853699684143067,
+                                "y": 1.5013999938964844,
+                                "z": 1.5610699653625489
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PhysicsBodyPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "type": "StaticCollision"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::ColliderBoxPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "halfExtents": {
+                                "x": 0.05000000074505806,
+                                "y": 1.2000000476837159,
+                                "z": 0.5
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "DoorLogic",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "16342811769149955880",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "c4d5e6f7-a8b9-4012-cd34-e5f6a7b8c9d0",
+            "name": "sm_menban",
+            "type": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "4229923204719546382",
+                "targetId": "2719744159"
+            },
+            "deltas": [
+                {
+                    "sourceId": "6e11fcce-485e-fc06-2a88-925cd3061efc",
+                    "components": [
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "horizon::platform_api::TransformPlatformComponent",
+                                "version": 3,
+                                "data": {
+                                    "localPosition": {
+                                        "x": 0.0,
+                                        "y": 1.2000000476837159,
+                                        "z": 0.0
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "attributes": []
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "d5e6f7a8-b9c0-4123-de45-f6a7b8c9d0e1",
+            "name": "TriggerZone",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.05381239205598831,
+                                "y": 2.5533909797668459,
+                                "z": -1.30385160446167e-8
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PhysicsBodyPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "type": "Trigger"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::ColliderBoxPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "halfExtents": {
+                                "x": 1.5,
+                                "y": 1.5,
+                                "z": 1.5
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "DoorTriggerZone",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "15865669123292922229",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "e148b3f0-4393-48d6-9b47-e6a250e35a36",
+            "name": "SfxDoorOpen",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "13429718239524690533",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "009f4add-fbf8-440b-a8b8-3d25991a6433",
+            "name": "SfxDoorClose",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "17457795568323196136",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "a2b3c4d5-e6f7-4890-ab12-c3d4e5f6a7b8",
+            "destination": "6e11fcce-485e-fc06-2a88-925cd3061efc"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "b3c4d5e6-f7a8-4901-bc23-d4e5f6a7b8c9",
+            "destination": "6e11fcce-485e-fc06-2a88-925cd3061efc"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "c4d5e6f7-a8b9-4012-cd34-e5f6a7b8c9d0",
+            "destination": "b3c4d5e6-f7a8-4901-bc23-d4e5f6a7b8c9"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "d5e6f7a8-b9c0-4123-de45-f6a7b8c9d0e1",
+            "destination": "b3c4d5e6-f7a8-4901-bc23-d4e5f6a7b8c9"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "e148b3f0-4393-48d6-9b47-e6a250e35a36",
+            "destination": "b3c4d5e6-f7a8-4901-bc23-d4e5f6a7b8c9"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "009f4add-fbf8-440b-a8b8-3d25991a6433",
+            "destination": "b3c4d5e6-f7a8-4901-bc23-d4e5f6a7b8c9"
+        }
+    ]
+}

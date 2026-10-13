@@ -1,0 +1,46 @@
+{
+  "version": "1",
+  "title": "Movement — Customize & Tune",
+  "elements": [
+    {"id": "ma_heading", "type": "heading", "value": "Appearance", "variant": "caption"},
+    {"id": "movement_appearance_grid", "type": "grid", "columns": 3, "minItemWidth": 300, "items": [
+      {
+        "label": "", "value": "dynamic",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Dynamic art style to the Movement module. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "style_mv_dynamic", "type": "image", "src": "./style-dynamic.jpg", "fit": "cover", "label": "Dynamic"}]
+      },
+      {
+        "label": "", "value": "smooth",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Smooth art style to the Movement module. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "style_mv_smooth", "type": "image", "src": "./style-smooth.jpg", "fit": "cover", "label": "Smooth"}]
+      },
+      {
+        "label": "", "value": "precise",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Precise art style to the Movement module. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "style_mv_precise", "type": "image", "src": "./style-precise.jpg", "fit": "cover", "label": "Precise"}]
+      }
+    ]},
+    {"id": "mc_heading", "type": "heading", "value": "Customize", "variant": "caption"},
+    {"id": "mc_movement_style", "type": "toggle_multisegment", "label": "Movement Mode",
+      "value": "kinematic",
+      "options": [{"label": "Kinematic", "value": "kinematic"}, {"label": "Force-Based", "value": "force"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/category.schema.json, set mc_movement_style to {{mc_movement_style}}]\nSet all character movement to {{mc_movement_style}} mode (useForceAsInputs in MovementAbility)."}},
+    {"id": "mc_strafe_mode", "type": "toggle_multisegment", "label": "Facing Mode",
+      "value": "movement_facing",
+      "options": [{"label": "Face Move Dir", "value": "movement_facing"}, {"label": "Strafe", "value": "strafe"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/category.schema.json, set mc_strafe_mode to {{mc_strafe_mode}}]\nSet character facing mode to {{mc_strafe_mode}} (strafeMode in MovementAbility)."}},
+    {"id": "mc_acceleration", "type": "toggle_multisegment", "label": "Acceleration",
+      "value": "smooth",
+      "options": [{"label": "Instant", "value": "instant"}, {"label": "Smooth", "value": "smooth"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/category.schema.json, set mc_acceleration to {{mc_acceleration}}]\nSet acceleration mode to {{mc_acceleration}} (enableAcceleration in MovementAbility)."}},
+    {"id": "mt_heading", "type": "heading", "value": "Tune", "variant": "caption"},
+    {"id": "mt_move_speed", "type": "slider", "label": "Move Speed", "value": 5.0, "min": 1.0, "max": 15.0, "step": 0.5,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/category.schema.json, set mt_move_speed to {{mt_move_speed}}]\nSet moveSpeed to {{mt_move_speed}} in MovementAbility. Current: accel_time={{mt_accel_time}}, rotation_speed={{mt_rotation_speed}}"}},
+    {"id": "mt_accel_time", "type": "slider", "label": "Acceleration Time", "value": 0.1, "min": 0.02, "max": 1.0, "step": 0.02,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/category.schema.json, set mt_accel_time to {{mt_accel_time}}]\nSet accelerationTime to {{mt_accel_time}} seconds in MovementAbility. Current: move_speed={{mt_move_speed}}"}},
+    {"id": "mt_decel_factor", "type": "slider", "label": "Deceleration Factor", "value": 2.0, "min": 0.5, "max": 5.0, "step": 0.25,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/category.schema.json, set mt_decel_factor to {{mt_decel_factor}}]\nSet decelerationFactor to {{mt_decel_factor}} in MovementAbility."}},
+    {"id": "mt_rotation_speed", "type": "slider", "label": "Rotation Speed", "value": 2.0, "min": 0.5, "max": 10.0, "step": 0.5,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/category.schema.json, set mt_rotation_speed to {{mt_rotation_speed}}]\nSet rotationSpeed to {{mt_rotation_speed}} in MovementAbility."}}
+  ]
+}

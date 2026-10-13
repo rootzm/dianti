@@ -1,0 +1,73 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "dianti_dimian",
+    "attributes": [
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "760305397657431818",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "17210229244330041748",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0RoughnessMultiplier",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.45829999446868899
+                ]
+            }
+        },
+        {
+            "name": "layer0MetallicMultiplier",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.645799994468689
+                ]
+            }
+        },
+        {
+            "name": "layer0NormalMultiplier",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.800000011920929
+                ]
+            }
+        },
+        {
+            "name": "layer0OcclusionMultiplier",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.33329999446868899
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

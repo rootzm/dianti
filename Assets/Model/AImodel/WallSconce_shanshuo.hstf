@@ -1,0 +1,125 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "fe2026b7-f975-457f-9c66-e97a796af08d",
+            "name": "Root",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PointLightPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "maxRange": 10.0,
+                            "intensity": 8.0,
+                            "color": {
+                                "r": 1.0,
+                                "g": 0.8500000238418579,
+                                "b": 0.6000000238418579,
+                                "a": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "WallSconceFlickerComponent",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "15422926653370220235",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "baseIntensity": 8.0,
+                            "minInterval": 1.0,
+                            "maxInterval": 8.0,
+                            "flickerDimFactor": 0.15
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "19cc74a5-0453-4311-ade2-f5380193a5f0",
+            "name": "SconceMesh",
+            "type": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "6850647962502234496",
+                "targetId": "2719744159"
+            },
+            "deltas": [],
+            "attributes": []
+        },
+        {
+            "id": "2789b3f4-c94a-469b-97c8-a4fe01712e83",
+            "name": "PointLight",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.18235161900520326
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PointLightPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "maxRange": 4.0,
+                            "intensity": 14.0,
+                            "color": {
+                                "r": 1.0,
+                                "g": 0.949999988079071,
+                                "b": 0.75,
+                                "a": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "19cc74a5-0453-4311-ade2-f5380193a5f0",
+            "destination": "fe2026b7-f975-457f-9c66-e97a796af08d"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "2789b3f4-c94a-469b-97c8-a4fe01712e83",
+            "destination": "fe2026b7-f975-457f-9c66-e97a796af08d"
+        }
+    ]
+}

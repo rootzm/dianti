@@ -1,0 +1,51 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "34f99d33-d035-448f-85a7-8e8259efde76",
+            "name": "ElectricSparks",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::VfxPlatformComponent",
+                        "version": 2,
+                        "data": {
+                            "vfxAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "5225344776301245263",
+                                "targetId": "1153353245"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": []
+}

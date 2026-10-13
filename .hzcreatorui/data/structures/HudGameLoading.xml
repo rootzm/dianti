@@ -1,0 +1,6 @@
+<Class Name="HudGameLoading">
+  <Property Name="showProgress" Type="Enum" SubType="Visibility"/>
+  <Property Name="progress" Type="Number" NumberMinValue="0" NumberMaxValue="100" NumberDecimalCount="0"/>
+  <Property Name="textProgress" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="textVersion" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+</Class>

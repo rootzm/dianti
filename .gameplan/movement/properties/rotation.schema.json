@@ -1,0 +1,32 @@
+{
+  "version": "1",
+  "title": "Rotation",
+  "elements": [
+    {"id": "rot_app_heading", "type": "heading", "value": "Appearance", "variant": "caption"},
+    {"id": "rot_appearance_grid", "type": "grid", "columns": 3, "minItemWidth": 300, "items": [
+      {
+        "label": "", "value": "dynamic",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Dynamic art style to Rotation. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "rot_style_dynamic", "type": "image", "src": "./style-rotation-dynamic.jpg", "fit": "cover", "label": "Dynamic"}]
+      },
+      {
+        "label": "", "value": "smooth",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Smooth art style to Rotation. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "rot_style_smooth", "type": "image", "src": "./style-rotation-smooth.jpg", "fit": "cover", "label": "Smooth"}]
+      },
+      {
+        "label": "", "value": "precise",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Precise art style to Rotation. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "rot_style_precise", "type": "image", "src": "./style-rotation-precise.jpg", "fit": "cover", "label": "Precise"}]
+      }
+    ]},
+    {"id": "rotc_heading", "type": "heading", "value": "Customize", "variant": "caption"},
+    {"id": "rotc_mode", "type": "toggle_multisegment", "label": "Facing Mode",
+      "value": "movement_facing",
+      "options": [{"label": "Face Move Dir", "value": "movement_facing"}, {"label": "Strafe", "value": "strafe"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/rotation.schema.json, set rotc_mode to {{rotc_mode}}]\nSet strafeMode to {{rotc_mode}} in MovementAbility. Face Move Dir=false, Strafe=true."}},
+    {"id": "rott_heading", "type": "heading", "value": "Tune", "variant": "caption"},
+    {"id": "rott_rotation_speed", "type": "slider", "label": "Rotation Speed", "value": 2.0, "min": 0.5, "max": 10.0, "step": 0.5,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/rotation.schema.json, set rott_rotation_speed to {{rott_rotation_speed}}]\nSet rotationSpeed to {{rott_rotation_speed}} in MovementAbility."}}
+  ]
+}

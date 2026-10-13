@@ -1,0 +1,28 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+	xmlns:local="clr-namespace:horizon.ui_noesis;assembly=ui_noesis"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudGameHpPowerData">
+  <noesis:LayoutScaler>
+    <Grid>
+      <Grid x:Name="LineHp" Width="500" Height="100" Margin="40,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Image x:Name="IconHp" Source="/Root;component/Assets/UI/hud_game/icon_hp.png" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Grid x:Name="TextHp" Width="400" Height="100" Margin="60,0,0,0" HorizontalAlignment="Left">
+					<local:DrawingSurface Width="400" Height="100" Commands="{Binding Path=drawCommandsTextHp}" />
+				</Grid>
+      </Grid>
+      <Grid x:Name="LinePower" Width="500" Height="100" Margin="40,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Image x:Name="IconPower" Source="/Root;component/Assets/UI/hud_game/icon_power.png" Stretch="None" Margin="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Grid x:Name="TextPower" Width="400" Height="100" Margin="60,0,0,0" HorizontalAlignment="Left">
+					<local:DrawingSurface Width="400" Height="100" Commands="{Binding Path=drawCommandsTextPower}" />
+				</Grid>
+      </Grid>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>

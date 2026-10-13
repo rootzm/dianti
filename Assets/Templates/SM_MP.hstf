@@ -1,0 +1,136 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "8dd40e87-05bf-4abd-a26d-54f08f18987b",
+            "name": "PowerPickup",
+            "type": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "1107318698711997431",
+                "targetId": "2719744159"
+            },
+            "deltas": [],
+            "attributes": []
+        },
+        {
+            "id": "c4213b5e-311b-48b8-9095-be0814331590",
+            "name": "SM_jiegouguang_02(1)",
+            "type": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "2638676937083155682",
+                "targetId": "2719744159"
+            },
+            "deltas": [
+                {
+                    "sourceId": "6e11fcce-485e-fc06-2a88-925cd3061efc",
+                    "components": [
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "horizon::platform_api::TransformPlatformComponent",
+                                "version": 3,
+                                "data": {
+                                    "localPosition": {
+                                        "x": -0.010137557983398438,
+                                        "y": 0.000001179459445665998,
+                                        "z": -0.10117340087890625
+                                    },
+                                    "localScale": {
+                                        "x": 2.5344104766845705,
+                                        "y": 2.5344104766845705,
+                                        "z": 2.5344104766845705
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "horizon::platform_api::MaterialPlatformComponent",
+                                "version": 2,
+                                "data": {
+                                    "materials": [
+                                        {
+                                            "packageOrRemoteId": "26782873481315084",
+                                            "ingestionId": "5132276953558110099",
+                                            "targetId": "157013062"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "attributes": []
+                }
+            ],
+            "attributes": []
+        }
+        ,
+        {
+            "id": "a1b2c3d4-2222-4aaa-bbbb-222222222222",
+            "name": "TriggerZone",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PhysicsBodyPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "type": "Trigger"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::ColliderBoxPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "halfExtents": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "RestoreItemTriggerZone",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "13004059583699611897",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "restoreType": "Power",
+                            "restoreAmount": 50
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "c4213b5e-311b-48b8-9095-be0814331590",
+            "destination": "8dd40e87-05bf-4abd-a26d-54f08f18987b/6e11fcce-485e-fc06-2a88-925cd3061efc"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "a1b2c3d4-2222-4aaa-bbbb-222222222222",
+            "destination": "8dd40e87-05bf-4abd-a26d-54f08f18987b"
+        }
+    ]
+}

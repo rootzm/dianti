@@ -1,0 +1,747 @@
+{
+    "version": 2,
+    "graphs": [
+        {
+            "name": "main",
+            "type": "stateMachine",
+            "outputs": [
+                {
+                    "name": "pose",
+                    "type": "pose"
+                }
+            ],
+            ".editor": {
+                "inputNode": {
+                    "position": [
+                        50,
+                        250
+                    ]
+                }
+            },
+            "startingState": "Grounded",
+            "states": [
+                {
+                    "name": "Grounded",
+                    "graph": "Grounded",
+                    "looping": true,
+                    ".editor": {
+                        "position": [
+                            350,
+                            250
+                        ]
+                    }
+                },
+                {
+                    "name": "Jump Start",
+                    "graph": "Jump Start",
+                    ".editor": {
+                        "position": [
+                            650,
+                            -50
+                        ]
+                    }
+                },
+                {
+                    "name": "Jump Loop",
+                    "graph": "Jump Loop",
+                    "looping": true,
+                    ".editor": {
+                        "position": [
+                            1000,
+                            250
+                        ]
+                    }
+                },
+                {
+                    "name": "Jump Land",
+                    "graph": "Jump Land",
+                    ".editor": {
+                        "position": [
+                            650,
+                            150
+                        ]
+                    }
+                },
+                {
+                    "name": "Attack",
+                    "graph": "Attack"
+                }
+            ],
+            "transitions": [
+                {
+                    "from": "Grounded",
+                    "to": "Jump Start",
+                    "event": "JumpTrigger",
+                    "blendTimeSec": 0.05
+                },
+                {
+                    "from": "Grounded",
+                    "to": "Jump Loop",
+                    "blendTimeSec": 0.15,
+                    "conditions": [
+                        {
+                            "variable": "IsRecentlyGrounded",
+                            "value": false,
+                            "operation": "equal"
+                        },
+                        {
+                            "variable": "IsJumping",
+                            "value": false,
+                            "operation": "equal"
+                        }
+                    ]
+                },
+                {
+                    "from": "Grounded",
+                    "to": "Attack",
+                    "event": "Attack",
+                    "blendTimeSec": 0.15
+                },
+                {
+                    "from": "Jump Start",
+                    "to": "Jump Loop",
+                    "blendTimeSec": 0.05,
+                    "conditions": [
+                        {
+                            "variable": "__state_finished",
+                            "value": true,
+                            "operation": "equal"
+                        }
+                    ]
+                },
+                {
+                    "from": "Jump Loop",
+                    "to": "Jump Land",
+                    "blendTimeSec": 0.15,
+                    "conditions": [
+                        {
+                            "variable": "IsGrounded",
+                            "value": true,
+                            "operation": "equal"
+                        }
+                    ]
+                },
+                {
+                    "from": "Jump Land",
+                    "to": "Jump Start",
+                    "event": "JumpTrigger",
+                    "blendTimeSec": 0.05
+                },
+                {
+                    "from": "Jump Land",
+                    "to": "Grounded",
+                    "blendTimeSec": 1.5,
+                    "blendEarly": false,
+                    "freezeDestination": false,
+                    "conditions": [
+                        {
+                            "variable": "Speed",
+                            "value": 0.01,
+                            "operation": "greater"
+                        }
+                    ]
+                },
+                {
+                    "from": "Jump Land",
+                    "to": "Grounded",
+                    "blendTimeSec": 0.05,
+                    "blendEarly": false,
+                    "conditions": [
+                        {
+                            "variable": "__state_finished",
+                            "value": true,
+                            "operation": "equal"
+                        },
+                        {
+                            "variable": "Speed",
+                            "value": 0.01,
+                            "operation": "lessOrEqual"
+                        }
+                    ]
+                },
+                {
+                    "from": "Attack",
+                    "to": "Grounded",
+                    "blendTimeSec": 0.3,
+                    "conditions": [
+                        {
+                            "variable": "__state_finished",
+                            "value": true,
+                            "operation": "equal"
+                        }
+                    ]
+                },
+                {
+                    "from": "Attack",
+                    "to": "Jump Start",
+                    "event": "JumpTrigger",
+                    "blendTimeSec": 0.05
+                }
+            ]
+        },
+        {
+            "name": "Grounded",
+            "type": "dataflow",
+            "inputs": [
+                {
+                    "name": "inputStatePhase",
+                    "type": "float"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "pose",
+                    "type": "pose"
+                }
+            ],
+            ".editor": {
+                "inputNode": {
+                    "position": [
+                        -650,
+                        300
+                    ]
+                },
+                "outputNode": {
+                    "position": [
+                        550,
+                        550
+                    ]
+                }
+            },
+            "nodes": [
+                {
+                    "name": "Blend Space 2D",
+                    "type": "blendSpace2DNode",
+                    "members": {
+                        "looping": true,
+                        "xs": [
+                            0,
+                            -180,
+                            -90,
+                            90,
+                            180,
+                            0,
+                            -180,
+                            -90,
+                            90,
+                            180,
+                            0,
+                            -180,
+                            -90,
+                            90,
+                            180
+                        ],
+                        "ys": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1.5,
+                            1.5,
+                            1.5,
+                            1.5,
+                            1.5,
+                            5,
+                            5,
+                            5,
+                            5,
+                            5
+                        ],
+                        "anims": [
+                            "Idle",
+                            "Idle",
+                            "Idle",
+                            "Idle",
+                            "Idle",
+                            "Walk Fwd",
+                            "Walk Back",
+                            "Walk Right",
+                            "Walk Left",
+                            "Walk Back",
+                            "Run Fwd",
+                            "Run Back",
+                            "Run Right",
+                            "Run Left",
+                            "Run Back"
+                        ]
+                    },
+                    ".editor": {
+                        "position": [
+                            150,
+                            500
+                        ]
+                    }
+                },
+                {
+                    "name": "Speed",
+                    "type": "getDynamicStoreValueFloat",
+                    "members": {
+                        "key": "Speed"
+                    },
+                    ".editor": {
+                        "position": [
+                            -250,
+                            600
+                        ]
+                    }
+                },
+                {
+                    "name": "MovementDirectionYaw",
+                    "type": "getDynamicStoreValueFloat",
+                    "members": {
+                        "key": "MovementDirectionYaw"
+                    },
+                    ".editor": {
+                        "position": [
+                            -250,
+                            500
+                        ]
+                    }
+                }
+            ],
+            "links": [
+                [
+                    "Blend Space 2D:outputPose",
+                    ":pose"
+                ],
+                [
+                    "Speed:outputValue",
+                    "Blend Space 2D:y"
+                ],
+                [
+                    "MovementDirectionYaw:outputValue",
+                    "Blend Space 2D:x"
+                ]
+            ]
+        },
+        {
+            "name": "Jump Start",
+            "type": "dataflow",
+            "inputs": [
+                {
+                    "name": "inputStatePhase",
+                    "type": "float"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "pose",
+                    "type": "pose"
+                }
+            ],
+            ".editor": {
+                "outputNode": {
+                    "position": [
+                        850,
+                        450
+                    ]
+                }
+            },
+            "nodes": [
+                {
+                    "name": "Jump_Start",
+                    "type": "getAnimationVariable",
+                    "members": {
+                        "variable": "Jump Start"
+                    },
+                    ".editor": {
+                        "position": [
+                            50,
+                            450
+                        ]
+                    }
+                },
+                {
+                    "name": "sampleAnim",
+                    "type": "sampleAnim",
+                    ".editor": {
+                        "position": [
+                            450,
+                            450
+                        ]
+                    }
+                }
+            ],
+            "links": [
+                [
+                    "Jump_Start:outputAnim",
+                    "sampleAnim:inputClip"
+                ],
+                [
+                    "sampleAnim:outputPose",
+                    ":pose"
+                ]
+            ]
+        },
+        {
+            "name": "Jump Loop",
+            "type": "dataflow",
+            "inputs": [
+                {
+                    "name": "inputStatePhase",
+                    "type": "float"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "pose",
+                    "type": "pose"
+                }
+            ],
+            ".editor": {
+                "outputNode": {
+                    "position": [
+                        850,
+                        450
+                    ]
+                }
+            },
+            "nodes": [
+                {
+                    "name": "Jump_Loop",
+                    "type": "getAnimationVariable",
+                    "members": {
+                        "variable": "Jump Loop"
+                    },
+                    ".editor": {
+                        "position": [
+                            50,
+                            450
+                        ]
+                    }
+                },
+                {
+                    "name": "sampleAnim",
+                    "type": "sampleAnim",
+                    "members": {
+                        "looping": true
+                    },
+                    ".editor": {
+                        "position": [
+                            450,
+                            450
+                        ]
+                    }
+                }
+            ],
+            "links": [
+                [
+                    "Jump_Loop:outputAnim",
+                    "sampleAnim:inputClip"
+                ],
+                [
+                    "sampleAnim:outputPose",
+                    ":pose"
+                ]
+            ]
+        },
+        {
+            "name": "Jump Land",
+            "type": "dataflow",
+            "inputs": [
+                {
+                    "name": "inputStatePhase",
+                    "type": "float"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "pose",
+                    "type": "pose"
+                }
+            ],
+            ".editor": {
+                "inputNode": {
+                    "position": [
+                        100,
+                        250
+                    ]
+                },
+                "outputNode": {
+                    "position": [
+                        900,
+                        450
+                    ]
+                }
+            },
+            "nodes": [
+                {
+                    "name": "Jump_Land",
+                    "type": "getAnimationVariable",
+                    "members": {
+                        "variable": "Jump Land"
+                    },
+                    ".editor": {
+                        "position": [
+                            100,
+                            450
+                        ]
+                    }
+                },
+                {
+                    "name": "sampleAnim",
+                    "type": "sampleAnim",
+                    ".editor": {
+                        "position": [
+                            500,
+                            450
+                        ]
+                    }
+                }
+            ],
+            "links": [
+                [
+                    "Jump_Land:outputAnim",
+                    "sampleAnim:inputClip"
+                ],
+                [
+                    "sampleAnim:outputPose",
+                    ":pose"
+                ]
+            ]
+        },
+        {
+            "name": "Attack",
+            "type": "dataflow",
+            "inputs": [
+                {
+                    "name": "inputStatePhase",
+                    "type": "float"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "pose",
+                    "type": "pose"
+                }
+            ],
+            "nodes": [
+                {
+                    "name": "Attack",
+                    "type": "getAnimationVariable",
+                    "members": {
+                        "variable": "Attack"
+                    },
+                    ".editor": {
+                        "position": [
+                            50,
+                            100
+                        ]
+                    }
+                },
+                {
+                    "name": "sampleAnim",
+                    "type": "sampleAnim",
+                    "members": {
+                        "looping": false
+                    },
+                    ".editor": {
+                        "position": [
+                            400,
+                            250
+                        ]
+                    }
+                }
+            ],
+            "links": [
+                [
+                    "Attack:outputAnim",
+                    "sampleAnim:inputClip"
+                ],
+                [
+                    ":inputStatePhase",
+                    "sampleAnim:inputPhase"
+                ],
+                [
+                    "sampleAnim:outputPose",
+                    ":pose"
+                ]
+            ]
+        }
+    ],
+    "variables": [
+        {
+            "type": "assetId",
+            "name": "Idle",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "1212538537511580518",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "float",
+            "name": "Speed",
+            "source": "gameplay",
+            "default": 0
+        },
+        {
+            "type": "assetId",
+            "name": "Jump Start",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "17478911601262365302",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "assetId",
+            "name": "Jump Loop",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "15792382780326048948",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "bool",
+            "name": "IsGrounded",
+            "source": "gameplay",
+            "default": true
+        },
+        {
+            "type": "assetId",
+            "name": "Jump Land",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "15391402587345049780",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "bool",
+            "name": "IsJumping",
+            "source": "gameplay",
+            "default": false
+        },
+        {
+            "type": "bool",
+            "name": "ShouldStrafe",
+            "source": "gameplay",
+            "default": false
+        },
+        {
+            "type": "float",
+            "name": "MovementDirectionYaw",
+            "source": "gameplay",
+            "default": 0
+        },
+        {
+            "type": "assetId",
+            "name": "Walk Fwd",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "8704413762000152230",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "assetId",
+            "name": "Walk Back",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "189931315346305009",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "assetId",
+            "name": "Walk Left",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "8616849113132576321",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "assetId",
+            "name": "Walk Right",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "9991040243975865030",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "assetId",
+            "name": "Run Fwd",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "14846706714003067515",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "assetId",
+            "name": "Run Back",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "16335045035043714691",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "assetId",
+            "name": "Run Left",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "13425192650089834277",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "assetId",
+            "name": "Run Right",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "5525027859423819874",
+                "targetId": "3829385675"
+            }
+        },
+        {
+            "type": "bool",
+            "name": "IsAlive",
+            "source": "gameplay",
+            "default": true
+        },
+        {
+            "type": "bool",
+            "name": "IsRecentlyGrounded",
+            "source": "gameplay",
+            "default": true
+        },
+        {
+            "type": "assetId",
+            "name": "Attack",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "4571320941933362184",
+                "targetId": "3829385675"
+            }
+        }
+    ],
+    "hierarchy": {
+        "packageOrRemoteId": "26782873481315084",
+        "ingestionId": "1883160312878163452",
+        "targetId": "3998529611"
+    },
+    "mesh": {
+        "packageOrRemoteId": "26782873481315084",
+        "ingestionId": "1883160312878163452",
+        "targetId": "3641888952"
+    }
+}

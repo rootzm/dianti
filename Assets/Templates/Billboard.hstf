@@ -1,0 +1,88 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "38bb8105-f248-4789-a291-7260819d5275",
+            "name": "Billboard",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "Billboard",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "7037888319572852966",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "62429e43-e7a1-4550-af16-89e9bf46171e",
+            "name": "Text",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::WorldTextPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "text": "Name: Enemey#1\nState: Idle",
+                            "horizontalOrigin": "Center",
+                            "verticalOrigin": "Bottom",
+                            "alignment": "Left",
+                            "font": {
+                                "packageOrRemoteId": "30952996677677480",
+                                "ingestionId": "7157868883677346338",
+                                "targetId": "2311362061"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": 0.0,
+                                "y": 3.1415927410125734,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 0.25,
+                                "y": 0.25,
+                                "z": 0.25
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "62429e43-e7a1-4550-af16-89e9bf46171e",
+            "destination": "38bb8105-f248-4789-a291-7260819d5275"
+        }
+    ]
+}

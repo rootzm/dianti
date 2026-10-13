@@ -1,0 +1,6 @@
+<vdctx:HudGameLoading xmlns:vdctx="clr-namespace:NoesisStudioInternals"
+  showProgress="Visible" progress="10" textProgress="10%" textVersion="ver 1.0.2">
+  <vdctx:HudGameLoading.events>
+    <vdctx:HudGameLoadingEvents/>
+  </vdctx:HudGameLoading.events>
+</vdctx:HudGameLoading>

@@ -1,0 +1,57 @@
+{
+    "id": "81e0663b-70df-4641-a896-aa5d891c0906",
+    "defaultTemplateAssetId": {
+        "packageOrRemoteId": "26782873481315084",
+        "ingestionId": "9283196365134439043",
+        "targetId": "2719744159"
+    },
+    "organizationId": "661087583756217",
+    "organizationName": "Emporium of Wonders",
+    "organizationScope": "emporiumofwonders",
+    "worldId": "1156839960847641",
+    "collisionLayers": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "playerSettings": {
+        "__attr__": {
+            "__version__": {
+                "version": 2
+            }
+        },
+        "avatarMax": 1
+    },
+    "editorVersion": "189.0.0.14.654",
+    "starterWorldType": "BP_BLANK_2D_GAME",
+    "remotePackageId": "27354166964254188"
+}

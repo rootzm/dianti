@@ -1,0 +1,53 @@
+{
+    "class": "horizon::AssetMetadata",
+    "version": 1,
+    "data": {
+        "id": "12659383553363337201",
+        "pipelineVersion": 1,
+        "assetBuilderSettings": [
+            {
+                "class": "horizon::renderer::tool::TextureAssetBuilderSettings",
+                "version": 10003,
+                "data": {
+                    "target": "tex",
+                    "streamable": false,
+                    "streamCount": 0,
+                    "cpuReadable": false,
+                    "textureSettings": {
+                        "class": "horizon::renderer::tool::TextureAssetBuilderTextureSettings",
+                        "version": 6,
+                        "data": {
+                            "equirectangularToCube": false,
+                            "fixEquirectSeam": "fix-if-needed",
+                            "enableRoughnessConvolution": false,
+                            "premultiplyAlpha": false,
+                            "preserveAlphaCoverage": false,
+                            "alphaCutoff": 0.5,
+                            "renormalizeNormals": false,
+                            "mipFilterType": "Default",
+                            "defaultFormat": "Linear",
+                            "platformOverrides": [
+                                {
+                                    "class": "horizon::renderer::tool::TextureAssetBuilderPlatformOverride",
+                                    "data": {
+                                        "platform": "",
+                                        "settings": {
+                                            "class": "horizon::renderer::tool::TextureAssetBuilderPlatformSettings",
+                                            "data": {
+                                                "textureFormat": "R8G8B8A8Unorm",
+                                                "generateMips": true,
+                                                "highQualityCompression": false,
+                                                "desiredWidth": 0,
+                                                "desiredHeight": 0
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

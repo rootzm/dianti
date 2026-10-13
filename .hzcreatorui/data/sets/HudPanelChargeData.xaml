@@ -1,0 +1,28 @@
+<vdctx:HudPanelCharge xmlns:vdctx="clr-namespace:NoesisStudioInternals"
+  Text1="100" Text2="100" Text3="100" Text4="100" Text5="100" showBlank1="Visible" showBlank2="Visible" showBlank3="Visible" showBlank4="Visible" showBlank5="Visible" Icon1="studio:///Root;component/Assets/UI/icon/prop_pc.png" showIcon1="Visible" show1Select="Visible" showIcon2="Visible" showIcon3="Visible" showIcon4="Visible" showIcon5="Visible" show2Select="Visible" show3Select="Visible" show4Select="Visible" show5Select="Visible" Icon2="studio:///Root;component/Assets/UI/icon/prop_pc.png" Icon3="studio:///Root;component/Assets/UI/icon/prop_pc.png" Icon4="studio:///Root;component/Assets/UI/icon/prop_pc.png" Icon5="studio:///Root;component/Assets/UI/icon/prop_pc.png" showAnimChargeFlash1="Visible" showAnimChargeFlash2="Visible" showAnimChargeFlash3="Visible" showAnimChargeFlash4="Visible" showAnimChargeFlash5="Visible" showAnimChargeFlashBall="Visible">
+  <vdctx:HudPanelCharge.events>
+    <vdctx:HudPanelChargeEvents>
+      <vdctx:HudPanelChargeEvents.OnClickBtnItem1>
+        <MessageCommand/>
+      </vdctx:HudPanelChargeEvents.OnClickBtnItem1>
+      <vdctx:HudPanelChargeEvents.OnClickBtnItem2>
+        <MessageCommand/>
+      </vdctx:HudPanelChargeEvents.OnClickBtnItem2>
+      <vdctx:HudPanelChargeEvents.OnClickBtnItem3>
+        <MessageCommand/>
+      </vdctx:HudPanelChargeEvents.OnClickBtnItem3>
+      <vdctx:HudPanelChargeEvents.OnClickBtnItem4>
+        <MessageCommand/>
+      </vdctx:HudPanelChargeEvents.OnClickBtnItem4>
+      <vdctx:HudPanelChargeEvents.OnClickBtnItem5>
+        <MessageCommand/>
+      </vdctx:HudPanelChargeEvents.OnClickBtnItem5>
+      <vdctx:HudPanelChargeEvents.OnClickBtnClose>
+        <MessageCommand/>
+      </vdctx:HudPanelChargeEvents.OnClickBtnClose>
+      <vdctx:HudPanelChargeEvents.OnClickBtnCharge>
+        <MessageCommand/>
+      </vdctx:HudPanelChargeEvents.OnClickBtnCharge>
+    </vdctx:HudPanelChargeEvents>
+  </vdctx:HudPanelCharge.events>
+</vdctx:HudPanelCharge>

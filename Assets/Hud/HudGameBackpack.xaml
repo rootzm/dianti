@@ -1,0 +1,117 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudGameBackpackData">
+  <noesis:LayoutScaler>
+    <Grid>
+      <Button x:Name="BtnBackpack" Command="{Binding Path=events.OnClickBtnBackpack}" Width="120" Height="120" Margin="770,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="0,0,0,0" Template="{DynamicResource BtnAnimNone}">
+        <Grid Width="120" Height="120">
+          <Image x:Name="BtnBackpackIcon" Source="/Root;component/Assets/UI/hud_game/btn_backpack_icon.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Image x:Name="BtnBackpackTag" RenderTransformOrigin="0.5,0.5" Source="/Root;component/Assets/UI/hud_game/btn_backpack_tag.png" Stretch="None" Margin="1,-20,0,77" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image.RenderTransform>
+              <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="{Binding Path=tagRotation}"/>
+                <TranslateTransform/>
+              </TransformGroup>
+            </Image.RenderTransform>
+          </Image>
+        </Grid>
+      </Button>
+      <StackPanel x:Name="BackpackItems" Orientation="Horizontal" Margin="0,0,0,30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="{Binding Path=showItems}">
+        <Grid x:Name="BackpackItem1" Width="110" Height="110" Margin="0,0,15,0">
+          <Image x:Name="BackpackItem1BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Visibility="{Binding Path=showItem1Blank}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem1Frame1" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem1Quality" ImageSource="{Binding Path=qualityFrame1}" Slices="10,10,10,10" Visibility="{Binding Path=showItem1Quality}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem1Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showItem1Select}"/>
+          <Image x:Name="BackpackItem1Icon" Source="{Binding Path=icon1}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showItem1Icon}"/>
+          <Image x:Name="BackpackItem1BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem1Icon}"/>
+          <TextBlock x:Name="BackpackItem1Text" Text="{Binding Path=text1}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem1Icon}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem1Btn" Command="{Binding Path=events.OnClickBtnItem1}" Template="{DynamicResource BtnAnimNone}">
+            <Button.Background>
+              <SolidColorBrush Color="#FF4B5258" Opacity="0"/>
+            </Button.Background>
+            <Button.Foreground>
+              <SolidColorBrush Color="#FFE4E6E8" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+              <SolidColorBrush Color="#FF6D7378" Opacity="0"/>
+            </Button.BorderBrush>
+          </Button>
+        </Grid>
+        <Grid x:Name="BackpackItem2" Width="110" Height="110" Margin="0,0,15,0">
+          <Image x:Name="BackpackItem2BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Visibility="{Binding Path=showItem2Blank}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem2Frame1" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem2Quality" ImageSource="{Binding Path=qualityFrame2}" Slices="10,10,10,10" Visibility="{Binding Path=showItem2Quality}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem2Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showItem2Select}"/>
+          <Image x:Name="BackpackItem2Icon" Source="{Binding Path=icon2}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showItem2Icon}"/>
+          <Image x:Name="BackpackItem2BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem2Icon}"/>
+          <TextBlock x:Name="BackpackItem2Text" Text="{Binding Path=text2}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem2Icon}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem2Btn" Command="{Binding Path=events.OnClickBtnItem2}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="BackpackItem3" Width="110" Height="110" Margin="0,0,15,0">
+          <Image x:Name="BackpackItem3BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Visibility="{Binding Path=showItem3Blank}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem3Frame1" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem3Quality" ImageSource="{Binding Path=qualityFrame3}" Slices="10,10,10,10" Visibility="{Binding Path=showItem3Quality}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem3Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showItem3Select}"/>
+          <Image x:Name="BackpackItem3Icon" Source="{Binding Path=icon3}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showItem3Icon}"/>
+          <Image x:Name="BackpackItem3BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem3Icon}"/>
+          <TextBlock x:Name="BackpackItem3Text" Text="{Binding Path=text3}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem3Icon}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem3Btn" Command="{Binding Path=events.OnClickBtnItem3}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="BackpackItem4" Width="110" Height="110" Margin="0,0,15,0">
+          <Image x:Name="BackpackItem4BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Visibility="{Binding Path=showItem4Blank}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem4Frame1" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem4Quality" ImageSource="{Binding Path=qualityFrame4}" Slices="10,10,10,10" Visibility="{Binding Path=showItem4Quality}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem4Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showItem4Select}"/>
+          <Image x:Name="BackpackItem4Icon" Source="{Binding Path=icon4}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showItem4Icon}"/>
+          <Image x:Name="BackpackItem4BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem4Icon}"/>
+          <TextBlock x:Name="BackpackItem4Text" Text="{Binding Path=text4}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem4Icon}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem4Btn" Command="{Binding Path=events.OnClickBtnItem4}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="BackpackItem5" Width="110" Height="110" Margin="0,0,0,0">
+          <Image x:Name="BackpackItem5BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Visibility="{Binding Path=showItem5Blank}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem5Frame1" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem5Quality" ImageSource="{Binding Path=qualityFrame5}" Slices="10,10,10,10" Visibility="{Binding Path=showItem5Quality}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem5Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showItem5Select}"/>
+          <Image x:Name="BackpackItem5Icon" Source="{Binding Path=icon5}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showItem5Icon}"/>
+          <Image x:Name="BackpackItem5BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem5Icon}"/>
+          <TextBlock x:Name="BackpackItem5Text" Text="{Binding Path=text5}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showItem5Icon}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem5Btn" Command="{Binding Path=events.OnClickBtnItem5}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+      </StackPanel>
+      <TextBlock x:Name="UseTextHint1" noesis:RichText.Text="{Binding Path=textUseHint1}" Margin="0,0,500,150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="10,10,10,10" Visibility="{Binding Path=showUseHint1}" Foreground="#FFFFFFFF" FontSize="32" TextWrapping="Wrap">
+        <TextBlock.Background>
+          <SolidColorBrush Color="#FF000000" Opacity="0.9"/>
+        </TextBlock.Background>
+      </TextBlock>
+      <TextBlock x:Name="UseTextHint2" noesis:RichText.Text="{Binding Path=textUseHint2}" Margin="0,0,250,150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="10,10,10,10" Visibility="{Binding Path=showUseHint2}" Foreground="#FFFFFFFF" FontSize="32" TextWrapping="Wrap">
+        <TextBlock.Background>
+          <SolidColorBrush Color="#FF000000" Opacity="0.9"/>
+        </TextBlock.Background>
+      </TextBlock>
+      <TextBlock x:Name="UseTextHint3" noesis:RichText.Text="{Binding Path=textUseHint3}" Margin="0,0,0,150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="10,10,10,10" Visibility="{Binding Path=showUseHint3}" Foreground="#FFFFFFFF" FontSize="32" TextWrapping="Wrap">
+        <TextBlock.Background>
+          <SolidColorBrush Color="#FF000000" Opacity="0.9"/>
+        </TextBlock.Background>
+      </TextBlock>
+      <TextBlock x:Name="UseTextHint4" noesis:RichText.Text="{Binding Path=textUseHint4}" Margin="250,0,0,150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="10,10,10,10" Visibility="{Binding Path=showUseHint4}" Foreground="#FFFFFFFF" FontSize="32" TextWrapping="Wrap">
+        <TextBlock.Background>
+          <SolidColorBrush Color="#FF000000" Opacity="0.9"/>
+        </TextBlock.Background>
+      </TextBlock>
+      <TextBlock x:Name="UseTextHint5" noesis:RichText.Text="{Binding Path=textUseHint5}" Margin="500,0,0,150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="10,10,10,10" Visibility="{Binding Path=showUseHint5}" Foreground="#FFFFFFFF" FontSize="32" TextWrapping="Wrap">
+        <TextBlock.Background>
+          <SolidColorBrush Color="#FF000000" Opacity="0.9"/>
+        </TextBlock.Background>
+      </TextBlock>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>

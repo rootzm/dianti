@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "elements": [
+    {"id": "overview_desc_txt", "type": "readonly_text", "value": "Physics-based third-person controller — your blank canvas."}
+  ]
+}

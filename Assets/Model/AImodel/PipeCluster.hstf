@@ -1,0 +1,114 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "7a92c702-eb41-403e-a2d0-5b18b4b82acf",
+            "name": "PipeCluster",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 2.0,
+                                "y": 2.0,
+                                "z": 2.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::NetworkSettingsPlatformComponent",
+                        "version": 1,
+                        "data": {
+                            "isAttainable": true
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": [
+                {
+                    "class": "horizon::NetworkableTemplateEntityAttribute",
+                    "data": {
+                        "isNetworkable": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ef395b1a-96ec-4238-b750-a030b19560ed",
+            "name": "Visuals",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "fb0b009c-6b2b-49f9-8da6-c8f6666df83f",
+            "name": "Collider",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::ColliderBoxPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PhysicsBodyPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "type": "StaticCollision",
+                            "useGravity": false
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "ef395b1a-96ec-4238-b750-a030b19560ed",
+            "destination": "7a92c702-eb41-403e-a2d0-5b18b4b82acf"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "fb0b009c-6b2b-49f9-8da6-c8f6666df83f",
+            "destination": "7a92c702-eb41-403e-a2d0-5b18b4b82acf"
+        }
+    ]
+}

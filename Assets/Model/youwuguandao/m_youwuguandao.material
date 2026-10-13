@@ -1,0 +1,66 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "m_youwuguandao",
+    "attributes": [
+        {
+            "name": "layer0pbrmode",
+            "value": {
+                "type": "String",
+                "stringValue": "ORMTexture"
+            }
+        },
+        {
+            "name": "layer0normalmode",
+            "value": {
+                "type": "String",
+                "stringValue": "On"
+            }
+        },
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "11357127248597103502",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "14260553283319083969",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0ORM",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "12897250456983858631",
+                    "targetId": "1850524962"
+                }
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "33451255657851516",
+        "ingestionId": "12536732106106040758",
+        "targetId": "2708897769"
+    },
+    "variantKeywords": [
+        "layer0normalmode_on",
+        "layer0pbrmode_ormtexture"
+    ]
+}

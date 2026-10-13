@@ -1,0 +1,44 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "m_guangbiao",
+    "attributes": [
+        {
+            "name": "lightingmode",
+            "value": {
+                "type": "String",
+                "stringValue": "Lit"
+            }
+        },
+        {
+            "name": "layer0emissivemode",
+            "value": {
+                "type": "String",
+                "stringValue": "On"
+            }
+        },
+        {
+            "name": "layer0ColorTint",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.11818181723356247
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "33451255657851516",
+        "ingestionId": "12536732106106040758",
+        "targetId": "2708897769"
+    },
+    "variantKeywords": [
+        "layer0emissivemode_on"
+    ]
+}

@@ -1,0 +1,40 @@
+<Class Name="HudPanelCharge">
+  <Property Name="Icon1" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="Icon2" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="Icon3" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="Icon4" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="Icon5" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="Text1" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="Text2" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="Text3" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="Text4" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="Text5" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="showBlank1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBlank2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBlank3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBlank4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBlank5" Type="Enum" SubType="Visibility"/>
+  <Property Name="showIcon1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showIcon2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showIcon3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showIcon4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showIcon5" Type="Enum" SubType="Visibility"/>
+  <Property Name="show1Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="show2Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="show3Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="show4Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="show5Select" Type="Enum" SubType="Visibility"/>
+  <Property Name="OnClickBtnItem1" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnItem2" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnItem3" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnItem4" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnItem5" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnClose" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnCharge" Type="Command" CommandParameterType=""/>
+  <Property Name="showAnimChargeFlash1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showAnimChargeFlash2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showAnimChargeFlash3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showAnimChargeFlash4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showAnimChargeFlash5" Type="Enum" SubType="Visibility"/>
+  <Property Name="showAnimChargeFlashBall" Type="Enum" SubType="Visibility"/>
+</Class>

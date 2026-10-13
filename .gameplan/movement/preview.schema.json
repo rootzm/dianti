@@ -1,0 +1,7 @@
+{
+  "version": "1",
+  "title": "Movement",
+  "elements": [
+    {"id": "movement_preview_img", "type": "image", "src": "~/overview/banner-movement.jpg", "fit": "cover"}
+  ]
+}

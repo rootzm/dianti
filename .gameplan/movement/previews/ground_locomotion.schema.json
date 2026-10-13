@@ -1,0 +1,5 @@
+{
+  "version": "1",
+  "title": "Ground Locomotion Preview",
+  "elements": [{"id": "gl_preview_img", "type": "image", "src": "./ground_locomotion.png", "fit": "cover"}]
+}

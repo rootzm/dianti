@@ -1,0 +1,136 @@
+{
+    "class": "horizon::AssetMetadata",
+    "version": 1,
+    "data": {
+        "id": "12221997092510695749",
+        "pipelineVersion": 1,
+        "assetBuilderSettings": [
+            {
+                "class": "horizon::DccTemplateAssetBuilderSettings",
+                "version": 10009,
+                "data": {
+                    "target": "template",
+                    "sceneCollisionLayer": "Layer2",
+                    "collisionShape": "TriangleMesh",
+                    "retainAllTransforms": false,
+                    "usePackageNameInIds": false,
+                    "templateRootName": "SM_Wooden_Palette_01a",
+                    "retainAllTransformsFixVersion": 2,
+                    "hiddenSceneItemsFixVersion": 1,
+                    "stableRootUuidFixVersion": 2,
+                    "disableRootNodeStringFixVersion": 1
+                }
+            },
+            {
+                "class": "horizon::dcc_asset_processing::DccSceneAssetBuilderSettings",
+                "version": 10015,
+                "data": {
+                    "target": "",
+                    "sourceCoordinateSystem": "RightUpBackward",
+                    "orientationCoordinateSystem": "YUp-RightHanded",
+                    "useNamedBasedLODs": false,
+                    "upsideDownV": false,
+                    "useGlobalScale": true,
+                    "globalScale": 1.0,
+                    "enableAssetReferencing": true,
+                    "importAssetReferencingVersion": 1,
+                    "enableLegacyMaterialConversion": false,
+                    "materialConversionVersion": 1,
+                    "enableFbxUnitConversionAlways": true,
+                    "importErrorHandlingBehavior": 1,
+                    "materialAssignmentHandlingVersion": 1,
+                    "sceneBakingMethod": "UnbakedScene",
+                    "meshPivotMode": "None",
+                    "disableAlwaysCreateDefaultMaterial": true,
+                    "importWindingOrderHandlingVersion": 1,
+                    "uvTransformHandlingVersion": 1
+                }
+            },
+            {
+                "class": "horizon::renderer::tool::MeshAssetBuilderSettings",
+                "version": 10004,
+                "data": {
+                    "target": "mesh",
+                    "lightmapTextureTarget": "",
+                    "materialMapTarget": "materialMap.json",
+                    "streamable": true,
+                    "streamCount": 2,
+                    "instanceGroupID": 0,
+                    "flipBitangent": false,
+                    "meshSettingsList": [
+                        {
+                            "class": "horizon::renderer::tool::MeshAssetBuilderMeshSettings",
+                            "version": 10005,
+                            "data": {
+                                "nodePath": "/dkg_Wooden_Palette_01a/mesh_0",
+                                "lightmapTextureTarget": "",
+                                "cpuReadable": false,
+                                "shouldParameterizeLightMapTexture": false,
+                                "cullFinalLod": false,
+                                "lodSelectionMetric": "Screen Space Ratio",
+                                "lodSettings": [
+                                    {
+                                        "class": "horizon::renderer::tool::LodSettings",
+                                        "data": {
+                                            "distanceRatio": 1.0,
+                                            "reductionFactor": 1.0,
+                                            "targetError": 0.0
+                                        }
+                                    }
+                                ],
+                                "vertexStrippingConfig": {
+                                    "class": "horizon::renderer::tool::VertexStrippingConfig",
+                                    "data": {
+                                        "normals": "Automatic",
+                                        "texcoord0": "Automatic",
+                                        "texcoord1": "Automatic",
+                                        "texcoord2": "Automatic",
+                                        "texcoord3": "Automatic",
+                                        "vertexColor0": "Automatic",
+                                        "vertexColor1": "Automatic"
+                                    }
+                                },
+                                "materials": [
+                                    {
+                                        "packageOrRemoteId": "0",
+                                        "ingestionId": "16973582037122120353",
+                                        "targetId": "157013062"
+                                    }
+                                ],
+                                "originalMaterials": [
+                                    {
+                                        "class": "horizon::AssetId",
+                                        "data": {
+                                            "packageOrRemoteId": "0",
+                                            "ingestionId": "12221997092510695749",
+                                            "targetId": "982958246"
+                                        }
+                                    }
+                                ],
+                                "blendShapes": [],
+                                "originallyExportedBlendShapesHash": 2332714465
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "class": "horizon::physics::PhysXConvexMeshAssetBuilderSettings",
+                "version": 10001,
+                "data": {
+                    "target": "phys_convex_mesh",
+                    "maxNumConvexHulls": 1,
+                    "maxNumVertsPerConvexHull": 128,
+                    "voxelResolution": 400000,
+                    "allowedVolumeErrorPercentage": 1.0,
+                    "recursionDepth": 10,
+                    "minEdgeLength": 2
+                }
+            }
+        ],
+        "docMeta": {
+            "class": "horizon::DocMetadata",
+            "data": {}
+        }
+    }
+}

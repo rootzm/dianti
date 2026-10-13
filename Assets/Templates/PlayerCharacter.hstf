@@ -1,0 +1,917 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "673ce44c-3f30-4600-9838-2359e28a5dc7",
+            "name": "PlayerCharacter",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "AnimationController",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "8566150135441951238",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "animatorEntity": "0f40cbf1-c634-4279-a26a-8ff79a4130cb",
+                            "groundedThreshold": 0.8,
+                            "syncedSpeed": 0.0,
+                            "syncedMovementYaw": 0.0
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::BasePlayerPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "CharacterStateMachine",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "12135020702498722799",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "CharacterUpdateManager",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "4851932768315429213",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "characterSimulatedEntity": "d25e3f48-95a5-4d47-9e97-b43479cb6c14"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "JumpAbility",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "15556645638036780095",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "jumpImpulse": 5.0,
+                            "jumpBufferTime": 150.0,
+                            "coyoteTime": 120.0,
+                            "jumpCooldown": 200.0
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "PlayerActionController",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "16542147163741222211",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "PlayerFlashLight",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "30450136314387021",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "showDebug": false,
+                            "debugLineTemplate": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "8680374330081534412",
+                                "targetId": "2719744159"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "PlayerFootstepAudio",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "10411964372676761334",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "PlayerLogic",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "13370667597937607865",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "maxHealthValue": 100.0,
+                            "invulnerabilityDuration": 1.0,
+                            "maxPowerValue": 100.0,
+                            "powerDrainRate": 0.5
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "PlayerMovementAbility",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "10984702410155692557",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "moveSpeed": 5.0,
+                            "rotationSpeed": 2.0,
+                            "accelerationTime": 0.1,
+                            "airControlFactor": 2.0,
+                            "decelerationFactor": 2.0,
+                            "slideDirectionLockThreshold": 0.3
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "0f40cbf1-c634-4279-a26a-8ff79a4130cb",
+            "name": "Visuals",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 3.1415927410125734,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::MeshPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "mesh": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "1883160312878163452",
+                                "targetId": "3641888952"
+                            },
+                            "shadowParams": {
+                                "class": "horizon::platform_api::ShadowParams",
+                                "data": {
+                                    "castsShadows": true
+                                }
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::MaterialPlatformComponent",
+                        "version": 2,
+                        "data": {
+                            "materials": [
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "1530165366960496926",
+                                    "targetId": "157013062"
+                                }
+                            ]
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::AnimatorPlatformComponent",
+                        "version": 10,
+                        "data": {
+                            "animGraph": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "17478250328369907051",
+                                "targetId": "44653426"
+                            },
+                            "skeleton": {
+                                "packageOrRemoteId": "0",
+                                "ingestionId": "0",
+                                "targetId": "0"
+                            },
+                            "animations": [],
+                            "variables": [
+                                {
+                                    "class": "horizon::animation::VariableFloat",
+                                    "data": {
+                                        "name": "Speed",
+                                        "value": 0.0
+                                    }
+                                },
+                                {
+                                    "class": "horizon::animation::VariableBool",
+                                    "data": {
+                                        "name": "IsGrounded",
+                                        "value": true
+                                    }
+                                },
+                                {
+                                    "class": "horizon::animation::VariableBool",
+                                    "data": {
+                                        "name": "IsRecentlyGrounded",
+                                        "value": true
+                                    }
+                                },
+                                {
+                                    "class": "horizon::animation::VariableBool",
+                                    "data": {
+                                        "name": "IsJumping",
+                                        "value": false
+                                    }
+                                },
+                                {
+                                    "class": "horizon::animation::VariableFloat",
+                                    "data": {
+                                        "name": "MovementDirectionYaw",
+                                        "value": 0.0
+                                    }
+                                }
+                            ],
+                            "sockets": [
+                                {
+                                    "class": "horizon::animation::Socket",
+                                    "data": {
+                                        "socketName": "RightHand",
+                                        "jointName": "hand_r_socket",
+                                        "relativePosition": {
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
+                                        },
+                                        "relativeRotation": {
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0,
+                                            "w": 1.0
+                                        }
+                                    }
+                                },
+                                {
+                                    "class": "horizon::animation::Socket",
+                                    "data": {
+                                        "socketName": "LeftHand",
+                                        "jointName": "hand_l_socket",
+                                        "relativePosition": {
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
+                                        },
+                                        "relativeRotation": {
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0,
+                                            "w": 1.0
+                                        }
+                                    }
+                                },
+                                {
+                                    "class": "horizon::animation::Socket",
+                                    "data": {
+                                        "socketName": "Back",
+                                        "jointName": "spineUpper_joint",
+                                        "relativePosition": {
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
+                                        },
+                                        "relativeRotation": {
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0,
+                                            "w": 1.0
+                                        }
+                                    }
+                                },
+                                {
+                                    "class": "horizon::animation::Socket",
+                                    "data": {
+                                        "socketName": "Head",
+                                        "jointName": "head_joint",
+                                        "relativePosition": {
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
+                                        },
+                                        "relativeRotation": {
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0,
+                                            "w": 1.0
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "382d39b3-6ce4-4f65-b57f-fe801166f904",
+            "name": "RightHand_Socket",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::AnimationSocketPlatformComponent",
+                        "version": 1,
+                        "data": {
+                            "socketName": "RightHand"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "927a97cb-340f-43da-9caa-a7e148ff8952",
+            "name": "LeftHand_Socket",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::AnimationSocketPlatformComponent",
+                        "version": 1,
+                        "data": {
+                            "socketName": "LeftHand"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "d77d70fa-f73c-4a45-918c-4013a43446f8",
+            "name": "Back_Socket",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::AnimationSocketPlatformComponent",
+                        "version": 1,
+                        "data": {
+                            "socketName": "Back"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "8229f6f4-06e6-475d-a77f-d84fbf8b052a",
+            "name": "Head_Socket",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::AnimationSocketPlatformComponent",
+                        "version": 1,
+                        "data": {
+                            "socketName": "Head"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "d25e3f48-95a5-4d47-9e97-b43479cb6c14",
+            "name": "KinematicCharacter",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PhysicsBodyPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "collisionEnabled": true,
+                            "useGravity": false,
+                            "lockedRotationAxes": 5,
+                            "driveMode": "Kinematic"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "CharacterSimulationController",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "11005890443382105778",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "enabled": true
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "KinematicForceController",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "422254991711898809",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::KinematicCharacterPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "center": {
+                                "x": 0.0,
+                                "y": 0.824999988079071,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "WorldsGroundInfoComponent",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "6180829364403813201",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "enabled": true,
+                            "castDistance": 5.0,
+                            "castRadius": 0.3,
+                            "castOrigin": {
+                                "x": 0.0,
+                                "y": 0.30000001192092898,
+                                "z": 0.0
+                            },
+                            "castDirection": {
+                                "x": 0.0,
+                                "y": -1.0,
+                                "z": 0.0
+                            },
+                            "castOriginDepth": 0.0,
+                            "slopeLimit": 45.0,
+                            "groundedThreshold": 0.1,
+                            "upVector": {
+                                "x": 0.0,
+                                "y": 1.0,
+                                "z": 0.0
+                            },
+                            "contactStaticFriction": 0.5,
+                            "contactDynamicFriction": 0.5,
+                            "contactRestitution": 0.1
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "262846dd-0116-4dee-abdf-1d3d5207c558",
+            "name": "Collider",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.824999988079071,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::ColliderCapsulePlatformComponent",
+                        "version": 4,
+                        "data": {
+                            "axis": "Y",
+                            "length": 1.0499999523162842,
+                            "radius": 0.30000001192092898
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "b539a666-1aa2-49db-9437-a7fdec274c43",
+            "name": "RayPoint",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 1.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": 0.0,
+                                "y": 3.1415927410125734,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "58df9cef-a0c9-4fa2-8679-09570f0fdf29",
+            "name": "Flashlight",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 1.649999976158142,
+                                "z": -0.30000001192092898
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SpotLightPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "maxRange": 25.0,
+                            "intensity": 15000.0,
+                            "color": {
+                                "r": 1.0,
+                                "g": 0.8705882430076599,
+                                "b": 0.7215686440467835,
+                                "a": 1.0
+                            },
+                            "outerConeAngle": 25.0,
+                            "blend": 1.0
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "cdbdedd7-b84c-4fcf-844a-12eb7d967802",
+            "name": "PointLight",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 1.25,
+                                "z": 0.5
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": -3.141592502593994,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PointLightPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "maxRange": 0.6499999761581421,
+                            "intensity": 80.0,
+                            "color": {
+                                "r": 0.3921569883823395,
+                                "g": 0.3921569883823395,
+                                "b": 0.3921568691730499,
+                                "a": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "4eb91692-7306-4ec8-8ef4-b5eaf54f3530",
+            "name": "Audio",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "d60dbb41-f070-4ba1-9fac-10c4a61391ef",
+            "name": "SfxFootstep",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "2262882947039546660",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "8d8aec9b-59a3-4e7e-82d6-b6c535f38c56",
+            "name": "SfxHurt",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::SoundPlatformComponent",
+                        "version": 16,
+                        "data": {
+                            "soundAsset": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "7701000051117526108",
+                                "targetId": "1366267635"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "0f40cbf1-c634-4279-a26a-8ff79a4130cb",
+            "destination": "673ce44c-3f30-4600-9838-2359e28a5dc7"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "382d39b3-6ce4-4f65-b57f-fe801166f904",
+            "destination": "0f40cbf1-c634-4279-a26a-8ff79a4130cb"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "927a97cb-340f-43da-9caa-a7e148ff8952",
+            "destination": "0f40cbf1-c634-4279-a26a-8ff79a4130cb"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "d77d70fa-f73c-4a45-918c-4013a43446f8",
+            "destination": "0f40cbf1-c634-4279-a26a-8ff79a4130cb"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "8229f6f4-06e6-475d-a77f-d84fbf8b052a",
+            "destination": "0f40cbf1-c634-4279-a26a-8ff79a4130cb"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "d25e3f48-95a5-4d47-9e97-b43479cb6c14",
+            "destination": "673ce44c-3f30-4600-9838-2359e28a5dc7"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "262846dd-0116-4dee-abdf-1d3d5207c558",
+            "destination": "d25e3f48-95a5-4d47-9e97-b43479cb6c14"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "b539a666-1aa2-49db-9437-a7fdec274c43",
+            "destination": "673ce44c-3f30-4600-9838-2359e28a5dc7"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "58df9cef-a0c9-4fa2-8679-09570f0fdf29",
+            "destination": "673ce44c-3f30-4600-9838-2359e28a5dc7"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "cdbdedd7-b84c-4fcf-844a-12eb7d967802",
+            "destination": "673ce44c-3f30-4600-9838-2359e28a5dc7"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "4eb91692-7306-4ec8-8ef4-b5eaf54f3530",
+            "destination": "673ce44c-3f30-4600-9838-2359e28a5dc7"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "d60dbb41-f070-4ba1-9fac-10c4a61391ef",
+            "destination": "4eb91692-7306-4ec8-8ef4-b5eaf54f3530"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "8d8aec9b-59a3-4e7e-82d6-b6c535f38c56",
+            "destination": "4eb91692-7306-4ec8-8ef4-b5eaf54f3530"
+        }
+    ]
+}

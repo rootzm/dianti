@@ -1,0 +1,226 @@
+{
+    "class": "horizon::AssetMetadata",
+    "version": 1,
+    "data": {
+        "id": "2665701559234673042",
+        "pipelineVersion": 1,
+        "assetBuilderSettings": [
+            {
+                "class": "horizon::DccTemplateAssetBuilderSettings",
+                "version": 10008,
+                "data": {
+                    "target": "template",
+                    "sceneCollisionLayer": "Layer2",
+                    "collisionShape": "TriangleMesh",
+                    "retainAllTransforms": false,
+                    "usePackageNameInIds": false,
+                    "templateRootName": "lens_ring",
+                    "retainAllTransformsFixVersion": 2,
+                    "hiddenSceneItemsFixVersion": 1,
+                    "stableRootUuidFixVersion": 1,
+                    "disableRootNodeStringFixVersion": 1
+                }
+            },
+            {
+                "class": "horizon::dcc_asset_processing::DccSceneAssetBuilderSettings",
+                "version": 10012,
+                "data": {
+                    "target": "",
+                    "sourceCoordinateSystem": "RightUpBackward",
+                    "orientationCoordinateSystem": "YUp-RightHanded",
+                    "useNamedBasedLODs": false,
+                    "upsideDownV": false,
+                    "useGlobalScale": true,
+                    "globalScale": 1.0,
+                    "enableAssetReferencing": true,
+                    "importAssetReferencingVersion": 1,
+                    "enableLegacyMaterialConversion": false,
+                    "materialConversionVersion": 1,
+                    "enableFbxUnitConversionAlways": true,
+                    "importErrorHandlingBehavior": 1,
+                    "materialAssignmentHandlingVersion": 1,
+                    "sceneBakingMethod": "UnbakedScene",
+                    "disableAlwaysCreateDefaultMaterial": true
+                }
+            },
+            {
+                "class": "horizon::renderer::tool::MeshAssetBuilderSettings",
+                "version": 10002,
+                "data": {
+                    "target": "mesh",
+                    "lightmapTextureTarget": "",
+                    "materialMapTarget": "meta/vfx_popcornfx_module@materialMap.json",
+                    "streamable": false,
+                    "streamCount": 2,
+                    "instanceGroupID": 0,
+                    "flipBitangent": false,
+                    "meshSettingsList": [
+                        {
+                            "class": "horizon::renderer::tool::MeshAssetBuilderMeshSettings",
+                            "version": 10003,
+                            "data": {
+                                "nodePath": "/RootNode/Ring",
+                                "lightmapTextureTarget": "",
+                                "shouldParameterizeLightMapTexture": false,
+                                "cullFinalLod": false,
+                                "lodSelectionMetric": "Screen Space Ratio",
+                                "lodSettings": [
+                                    {
+                                        "class": "horizon::renderer::tool::LodSettings",
+                                        "data": {
+                                            "distanceRatio": 0.20000000298023225,
+                                            "reductionFactor": 1.0,
+                                            "targetError": 0.0,
+                                            "simplifyProfile": "Optimized",
+                                            "simplifyParams": {
+                                                "class": "horizon::renderer::tool::SimplifyParams",
+                                                "data": {
+                                                    "allowCollapseAcrossSharpEdges": false,
+                                                    "allowCollapseSmallBoundaries": false,
+                                                    "allowRemoveSmallGeometry": false,
+                                                    "smallGeometryRemovalThresholdRatio": 0.0,
+                                                    "smallGeometryMinFaceCount": 0,
+                                                    "scaleCostByTriangleArea": false,
+                                                    "weldEdges": false,
+                                                    "repairMesh": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "vertexStrippingConfig": {
+                                    "class": "horizon::renderer::tool::VertexStrippingConfig",
+                                    "data": {
+                                        "normals": "Automatic",
+                                        "texcoord0": "Automatic",
+                                        "texcoord1": "Automatic",
+                                        "texcoord2": "Automatic",
+                                        "texcoord3": "Automatic",
+                                        "vertexColor0": "Automatic",
+                                        "vertexColor1": "Automatic"
+                                    }
+                                },
+                                "materials": [
+                                    {
+                                        "packageOrRemoteId": "0",
+                                        "ingestionId": "2665701559234673042",
+                                        "targetId": 724112660
+                                    }
+                                ],
+                                "originalMaterials": [
+                                    {
+                                        "class": "horizon::AssetId",
+                                        "data": {
+                                            "packageOrRemoteId": "0",
+                                            "ingestionId": "2665701559234673042",
+                                            "targetId": 724112660
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "class": "horizon::renderer::tool::TextureAssetBuilderSettings",
+                "version": 10001,
+                "data": {
+                    "target": "tex",
+                    "streamable": false,
+                    "streamCount": 2,
+                    "cpuReadable": false,
+                    "textureSettings": {
+                        "class": "horizon::renderer::tool::TextureAssetBuilderTextureSettings",
+                        "data": {
+                            "equirectangularToCube": false,
+                            "enableRoughnessConvolution": false,
+                            "premultiplyAlpha": false,
+                            "pcSettings": {
+                                "class": "horizon::renderer::tool::TextureAssetBuilderPlatformSettings",
+                                "data": {
+                                    "textureFormat": "R8G8B8A8Srgb",
+                                    "generateMips": true,
+                                    "highQualityCompression": false
+                                }
+                            },
+                            "androidSettings": {
+                                "class": "horizon::renderer::tool::TextureAssetBuilderPlatformSettings",
+                                "data": {
+                                    "textureFormat": "R8G8B8A8Srgb",
+                                    "generateMips": true,
+                                    "highQualityCompression": false
+                                }
+                            },
+                            "linuxSettings": {
+                                "class": "horizon::renderer::tool::TextureAssetBuilderPlatformSettings",
+                                "data": {
+                                    "textureFormat": "R8G8B8A8Srgb",
+                                    "generateMips": true,
+                                    "highQualityCompression": false
+                                }
+                            },
+                            "iosSettings": {
+                                "class": "horizon::renderer::tool::TextureAssetBuilderPlatformSettings",
+                                "data": {
+                                    "textureFormat": "R8G8B8A8Srgb",
+                                    "generateMips": true,
+                                    "highQualityCompression": false
+                                }
+                            }
+                        }
+                    },
+                    "sceneEmbeddedTextureSettingsList": [
+                        {
+                            "class": "horizon::renderer::tool::TextureAssetBuilderSceneEmbeddedTextureSettings",
+                            "data": {
+                                "sceneImageName": "lens_ring_img0.tga",
+                                "sceneImageIndex": 0,
+                                "textureSettings": {
+                                    "class": "horizon::renderer::tool::TextureAssetBuilderTextureSettings",
+                                    "data": {
+                                        "equirectangularToCube": false,
+                                        "enableRoughnessConvolution": false,
+                                        "premultiplyAlpha": false,
+                                        "pcSettings": {
+                                            "class": "horizon::renderer::tool::TextureAssetBuilderPlatformSettings",
+                                            "data": {
+                                                "textureFormat": "BC7Srgb",
+                                                "generateMips": true,
+                                                "highQualityCompression": false
+                                            }
+                                        },
+                                        "androidSettings": {
+                                            "class": "horizon::renderer::tool::TextureAssetBuilderPlatformSettings",
+                                            "data": {
+                                                "textureFormat": "ASTC6x6Srgb",
+                                                "generateMips": true,
+                                                "highQualityCompression": false
+                                            }
+                                        },
+                                        "linuxSettings": {
+                                            "class": "horizon::renderer::tool::TextureAssetBuilderPlatformSettings",
+                                            "data": {
+                                                "textureFormat": "BC7Srgb",
+                                                "generateMips": true,
+                                                "highQualityCompression": false
+                                            }
+                                        },
+                                        "iosSettings": {
+                                            "class": "horizon::renderer::tool::TextureAssetBuilderPlatformSettings",
+                                            "data": {
+                                                "textureFormat": "ASTC6x6Srgb",
+                                                "generateMips": true,
+                                                "highQualityCompression": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

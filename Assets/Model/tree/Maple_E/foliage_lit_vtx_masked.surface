@@ -1,0 +1,16 @@
+// Lit + Masked + Vtx Color
+
+BEGIN_SUBSHADERS
+
+  "meta/shaderkit@stackables/texcoord0_scale_offset.surface"
+
+  "meta/shaderkit@stackables/layer_sample_color_texture.surface"
+
+  "meta/shaderkit@stackables/layer_set_result.surface"
+
+  "meta/shaderkit@stackables/option_masked.surface"
+
+  "meta/shaderkit@stackables/effect_vertex_tint.surface"
+
+END_SUBSHADERS
+

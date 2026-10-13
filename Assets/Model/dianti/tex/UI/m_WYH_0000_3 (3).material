@@ -1,0 +1,58 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "m_jiantou_1",
+    "attributes": [
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "10781088050728353897",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "blendmode",
+            "value": {
+                "type": "String",
+                "stringValue": "Alpha"
+            }
+        },
+        {
+            "name": "uvscale",
+            "value": {
+                "type": "Integers",
+                "intValues": [
+                    "1"
+                ]
+            }
+        },
+        {
+            "name": "scaleOffsetUV0",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "33451255657851516",
+        "ingestionId": "12536732106106040758",
+        "targetId": "2708897769"
+    },
+    "variantKeywords": [
+        "blendmode_alpha",
+        "uvscale_on"
+    ]
+}

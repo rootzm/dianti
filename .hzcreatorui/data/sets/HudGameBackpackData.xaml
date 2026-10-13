@@ -1,0 +1,25 @@
+<vdctx:HudGameBackpack xmlns:vdctx="clr-namespace:NoesisStudioInternals"
+  icon1="studio:///Root;component/Assets/UI/props/flower.png" icon2="studio:///Root;component/Assets/UI/props/flower.png" icon3="studio:///Root;component/Assets/UI/props/flower.png" icon4="studio:///Root;component/Assets/UI/props/flower.png" icon5="studio:///Root;component/Assets/UI/props/flower.png" text1="999" text2="999" text3="999" text4="999" text5="999" showItem1Blank="Visible" showItem2Blank="Visible" showItem3Blank="Visible" showItem4Blank="Visible" showItem5Blank="Visible" showItem1Icon="Visible" showItem2Icon="Visible" showItem3Icon="Visible" showItem4Icon="Visible" showItem5Icon="Visible" showItems="Visible" textUseHint1="[color=#FFFFFF]Recover[/color] [color=#FFFF00]30[/color] [color=#FFFFFF]Energy[/color]" textUseHint2="[color=#FFFFFF]Recover[/color] [color=#FFFF00]30[/color] [color=#FFFFFF]Energy[/color]" textUseHint3="[color=#FFFFFF]Recover[/color] [color=#FFFF00]30[/color] [color=#FFFFFF]Energy[/color]" textUseHint4="[color=#FFFFFF]Recover[/color] [color=#FFFF00]30[/color] [color=#FFFFFF]Energy[/color]" textUseHint5="[color=#FFFFFF]Recover[/color] [color=#FFFF00]30[/color] [color=#FFFFFF]Energy[/color]">
+  <vdctx:HudGameBackpack.events>
+    <vdctx:HudGameBackpackEvents>
+      <vdctx:HudGameBackpackEvents.OnClickBtnBackpack>
+        <MessageCommand/>
+      </vdctx:HudGameBackpackEvents.OnClickBtnBackpack>
+      <vdctx:HudGameBackpackEvents.OnClickBtnItem1>
+        <MessageCommand/>
+      </vdctx:HudGameBackpackEvents.OnClickBtnItem1>
+      <vdctx:HudGameBackpackEvents.OnClickBtnItem2>
+        <MessageCommand/>
+      </vdctx:HudGameBackpackEvents.OnClickBtnItem2>
+      <vdctx:HudGameBackpackEvents.OnClickBtnItem3>
+        <MessageCommand/>
+      </vdctx:HudGameBackpackEvents.OnClickBtnItem3>
+      <vdctx:HudGameBackpackEvents.OnClickBtnItem4>
+        <MessageCommand/>
+      </vdctx:HudGameBackpackEvents.OnClickBtnItem4>
+      <vdctx:HudGameBackpackEvents.OnClickBtnItem5>
+        <MessageCommand/>
+      </vdctx:HudGameBackpackEvents.OnClickBtnItem5>
+    </vdctx:HudGameBackpackEvents>
+  </vdctx:HudGameBackpack.events>
+</vdctx:HudGameBackpack>

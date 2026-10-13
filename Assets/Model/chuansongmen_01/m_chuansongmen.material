@@ -1,0 +1,35 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "M_chuansongmen",
+    "attributes": [
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "0",
+                    "ingestionId": "17008298969063883830",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0MetallicValue",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.5
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

@@ -1,0 +1,114 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "m_wall_7_02",
+    "attributes": [
+        {
+            "name": "layer0pbrmode",
+            "value": {
+                "type": "Floats"
+            }
+        },
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "8645978154605984333",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0normalmode",
+            "value": {
+                "type": "Floats"
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "17676945354553096981",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0NormalStrength",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.800000011920929
+                ]
+            }
+        },
+        {
+            "name": "cullmode",
+            "value": {
+                "type": "Floats"
+            }
+        },
+        {
+            "name": "layer0ORM",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "17616741137413444216",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "uvscale",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    1.0
+                ]
+            }
+        },
+        {
+            "name": "scaleOffsetUV0",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.20000000298023225,
+                    0.699999988079071,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        {
+            "name": "layer0MetallicMultiplier",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    1.0
+                ]
+            }
+        },
+        {
+            "name": "layer0RoughnessMultiplier",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    1.2
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

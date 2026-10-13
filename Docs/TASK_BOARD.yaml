@@ -1,0 +1,138 @@
+tasks:
+  - name: Corroded Concrete-Metal Material
+    status: in_progress
+
+  - name: Roof Material
+    status: in_progress
+  - name: Weathered Wooden Furniture
+    status: in_progress
+  - name: HudGameControls BtnUse
+    status: done
+  - name: Radioactive Barrel Mesh
+    status: done
+
+
+
+
+
+done:
+  - Cutscene Audio Muting -- non-cutscene audio silenced during cutscene playback
+  - GameAudio Memory Leak Fix -- destroy cleanup for recursive setTimeout
+  - EntityPool Memory Leak Fix -- clearPool() on level reset/transition
+  - Remove PickupType -- all props unified to manual pickup
+  - Scavenger Robot Player Model -- replaced player visuals with ScavengerRobot mesh + retargeted anims
+  - Flashlight Lookup Fix -- search from root entity instead of Visuals child
+  - Generate Model from Reference Image -- tree.fbx in Assets/Model/tree
+  - Zombie Enemy Model -- ghoul mesh + 15 retargeted anims on EnemyCharacter
+  - Enemy Zombie Audio -- SfxZombie plays every 3s on EnemyCharacter
+  - HudPropCount Deletion -- all files, entities, and doc refs removed
+  - 传送门贴图关联 -- m_chuansongmen独立材质指向t_chuansongmen_ba
+  - Sync nodes to level_0 -- 8 entities synced from space.hstf, Env preserved
+  - Manual Pickup Prompt -- hand+propItemBgS+lineBg image-based layout
+  - Pickup Notification UI -- top-left toast shows item name+desc for 3.5s
+  - Remove Spawn Point System -- single SpawnPoint1, no assignment logic
+  - Gem Prop Creation -- client-local spawn via PropManager, LocalOnly mode
+  - MysticGem Pickup Config -- client-local destroy, no RPC
+  - Props System Foundation -- config/base/manager in scripts/props/
+  - HudGame UI -- debug bottom-left
+  - Enemy Animation Sync -- @property bridge syncs animator vars to clients
+  - Enemy FOV Detection -- uses RayPoint child for ray origin and target
+  - EnemyLogic Refactor -- client-local AI with NavMesh patrol
+  - Enemy Debug Text -- EnemyDebug.ts component controls billboard with state/dist/pos
+  - Billboard -- always-face-camera template in Templates/
+  - Enemy Spawn Manager -- client-local spawning, LocalOnly mode
+  - Scene Lighting -- moody ambient with directional moonlight, bloom, color grading
+  - Shadow Casting -- enabled on player, enemies, floor, walls
+  - Flashlight -- spot light on player head, intensity 2000, range 22
+  - Walls to Planes -- 13 walls switched from Cube to Plane mesh
+  - MovementAbility Refactor -- abstract base + Player/Enemy subclasses
+  - GamePhaseManager -- Initialization phase with loading screen, then Prep/Explore/Settle loop
+  - Camera-Synced Rotation -- player always faces camera forward direction
+  - Enemy AI Stop State -- freezes in place, skips FOV detection
+  - HudLoading -- full-black screen with centered Loading text
+  - Enemy Melee Attack -- 2m range, 2s cooldown, 5 dmg via PlayerLogic
+  - Merge Health into PlayerLogic -- all HP logic consolidated, HealthComponent deleted
+  - Merge HealthBar into HudMain -- HP bar XAML moved into HudGame panel
+  - HudGame HP Fix -- deleted stale ViewModel causing binding collision
+  - Prop UI Icons -- gem.png and flower.png 65x65 transparent icons
+  - Flower Pickup Icon -- flower.png overlaid on propItemBgS in prompt
+  - Gem Pickup Icon -- gem.png overlaid on propItemBgS in prompt
+  - Backpack UI -- mounted in space.hstf, screen-space overlay with slots
+  - Backpack Slot 9-Slice -- propItemBgNS NineGrid slices=16 thin border
+  - Backpack Slot Click Fix -- transparent hittable buttons, empty slots disabled
+  - Backpack Power Icon -- propPowerIcon.png + baseValue in slot bottom-left
+  - Elevator Script -- double-door controller on Elevator.hstf
+  - Backpack Use Button -- consume item, notify top-left, sync count
+  - Backpack propsBg -- 80x80 image with selected icon overlay 60x60
+  - Prop Use Heals -- removed, baseValue no longer heals on consume
+  - Backpack Interaction Polish -- no press white frame, bag.png toggles slots
+  - Flashlight Power System -- drain only during Exploration phase, auto-off at 0
+  - Flashlight Toggle Fix -- SpotLight intensity 0/10000 replaces setEnabled
+  - Fixed Joystick Position -- anchored to bottom-left screen area
+  - PropManager Spawn Points -- spawn point entities, overflow stays empty
+  - Dagger Template -- gothic dagger with manual pickup, spawns at points
+  - Elevator Energy Formula -- level-scaled weighted formula, min 1
+  - Unified Weight Spawning -- removed rarity tiers, spawnWeight drives selection
+  - Depot Management System -- GameDepotManager Component on Systems entity
+  - Depot UI -- 120x120 slots, floating detail popup with withdraw
+  - Depot Double-Click Withdraw -- double-tap slot moves item to backpack, full=notify
+  - Bilingual Project Report -- full CN/EN report in report/ directory (updated)
+  - Backpack Store Update -- propsBg=use, double-click=store to depot
+  - Crate Opens Depot -- hand+打开 only, no propItemBgS background
+  - Backpack+Depot in level_0 -- HudBackpack & HudDepot entities added
+  - Depot Hidden Default -- level_0 HudDepot starts invisible
+  - Arena Structure -- 20x20 ground with 8x8x6 pit and 20x8 walls
+  - Level 1 Ceiling -- 20x20 plane at y=8, flipped down, with collider
+  - Ceiling Corroded Metal -- rusty PBR material in Assets/Model/M_wall
+  - Oil Pipe Model -- grimy pipe cluster mesh in Assets/Model/youwuguandao
+  - M_wall_2 Duplicates -- copied to M_wall_2_01 and M_wall_2_02
+  - m_wall_9 Material -- corroded metal PBR applied
+  - m_xiushijinshu Duplicates -- copied to _01 and _02
+  - M_dimian Duplicates -- copied to M_dimian_01 and M_dimian_02
+  - m_wall_5 Duplicate -- copied to m_wall_5_02
+  - m_wall_4 Lighting Fix -- switched Uber to Lit PBR shader
+  - m_wall_5 Lighting Fix -- switched Uber to Lit PBR shader
+  - m_wall_7 Lighting Fix -- switched Uber to Lit PBR shader
+  - m_lajixiang Lighting Fix -- switched Uber to Lit PBR shader
+  - m_wall_10 Lighting Fix -- switched Uber to Lit PBR shader
+  - Batch Lighting Fix 2 -- 9 materials switched Uber to Lit PBR
+  - Batch Lighting Fix -- 12 entities switched Uber to Lit PBR
+  - m_wall_11 Duplicates -- copied to m_wall_11_01 and m_wall_11_02
+  - Bush Collider Removal -- WispyWeedBush_V1 and shrub_05 physics removed
+  - level_0 Inventory Fix -- maxInventorySize=5, maxCarryWeight=100
+  - Tree Collider Removal -- 8 tree entities stripped of physics
+  - cables_grouped Lighting Fix -- switched Uber to Lit PBR shader
+  - damaged_crafting_table Lighting Fix -- rebound to Lit PBR material
+  - m_jinshuwangge Fix -- RenderGroup set to opaque, no longer transparent
+  - Code Style Enforcement -- optional chaining + strict equality applied project-wide
+  - BMFont Rendering Fix -- binding syntax fix + offsetX/offsetY/letterSpacing params
+  - HudGameControls BtnFlash -- toggle flashlight with on/off icon switch
+  - Sprint System -- 1.5x speed toggle, power drain on movement only
+  - HudGameBackpack -- full inventory, defaults to open state
+  - UI Compile Fix -- Visibility enum to string literals in 4 HUD files
+  - Backpack Full Blocks Pickup -- >=5 items blocks pickup, prop stays on ground
+  - Backpack Double-Clear Fix -- data-driven rebuildSlotsFromInventory on every event
+  - pojiuxiangzi Material Fix -- Lit PBR shader, roughness 1.0, metallic 0
+  - crashed_spaceship Lighting Fix -- Uber to Lit PBR shader
+  - Chemical_Machinery_01d Lighting Fix -- Uber to Lit PBR, 4 instances
+  - HudGamePower Logic -- binds textCur/textNeed to elevator energy state
+  - Remove propName -- deleted property, UI no longer shows prop names
+  - Elevator Energy Formula -- baseValue(256) × levelId², energy preserved on level pass
+  - Hide HudPanelTips -- invisible on game start via onStart
+  - Player Footstep Audio -- distance accumulator with grace-period grounded check
+  - Enemy Spawn Delay -- level-based delay formula with configurable properties
+  - Enemy Spawn Count -- level*2+1 formula, random spawn point selection
+  - Elevator Door in Init Flow -- 2x 1s delays + openDoors() as step 9
+  - Init Phase Fix -- physics unlock after teleport, joystick hidden until doors open
+  - HudPanelFail Death System -- death state, enemy ignore, fail UI with restart
+  - SfxChargeDone Hookup -- plays when elevator energy reaches requirement
+  - debugEnergyEnable -- maxEnergy used as requirement when true
+
+chopping_block:
+  disabled_systems: []
+  temp_scaffolding: []
+  failed_attempts: []
+
+notes:
+  - Player prefers dark/flashlight atmosphere
+  - Event Files Reorganization -- all events in scripts/events/, 21 imports updated

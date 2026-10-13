@@ -1,0 +1,79 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "M_jiegouguang_03",
+    "attributes": [
+        {
+            "name": "blendmode",
+            "value": {
+                "type": "String",
+                "stringValue": "Alpha"
+            }
+        },
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "17910069607942025489",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0emissivemode",
+            "value": {
+                "type": "String",
+                "stringValue": "On"
+            }
+        },
+        {
+            "name": "layer0Emissive",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "11529939876988237302",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0ColorTint",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.7681511640548706,
+                    0.7681511640548706,
+                    0.7681511640548706,
+                    0.15000000596046449
+                ]
+            }
+        },
+        {
+            "name": "layer0EmissiveTint",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "33451255657851516",
+        "ingestionId": "12536732106106040758",
+        "targetId": "2708897769"
+    },
+    "variantKeywords": [
+        "blendmode_alpha",
+        "layer0emissivemode_on"
+    ]
+}

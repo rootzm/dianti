@@ -1,0 +1,192 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudPanelDepotData">
+  <noesis:LayoutScaler>
+    <Grid>
+      <Image x:Name="Mask" Source="/Root;component/Assets/UI/hud_game/blank_black.png" Stretch="Fill" Opacity="0.99"/>
+      <Image x:Name="Panel" Source="/Root;component/Assets/UI/hud_panel_depot/panel.png" Stretch="None" Margin="0,0,0,168" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      <Image x:Name="Title" Source="/Root;component/Assets/UI/hud_panel_depot/title.png" Stretch="None" Margin="0,0,0,679" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      <Button x:Name="BtnClose" Command="{Binding Path=events.OnClickBtnClose}" Width="100" Height="100" Margin="1218,0,0,642" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,0" Template="{DynamicResource BtnAnimNone}">
+        <Grid Width="100" Height="100" d:IsLocked="True">
+          <Image Source="/Root;component/Assets/UI/hud_panel_depot/btn_close.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+      </Button>
+      <Grid x:Name="DepotItems" Width="1162" Height="456" Margin="0,0,0,98" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <!-- Row 0: Items 1-6 -->
+        <Grid x:Name="DepotItem1" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0">
+          <Image x:Name="DepotItem1Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem1BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank1}"/>
+          <Image x:Name="DepotItem1Icon" Source="{Binding Path=depotIcon1}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon1}"/>
+          <Image x:Name="DepotItem1Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect1}"/>
+          <Image x:Name="DepotItem1BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon1}"/>
+          <TextBlock x:Name="DepotItem1Text" Text="{Binding Path=depotText1}" Margin="69,0,0,14" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon1}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem1Btn" Command="{Binding Path=events.OnClickBtnDepotItem1}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem2" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="197,0,0,0">
+          <Image x:Name="DepotItem2Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem2BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank2}"/>
+          <Image x:Name="DepotItem2Icon" Source="{Binding Path=depotIcon2}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon2}"/>
+          <Image x:Name="DepotItem2Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect2}"/>
+          <Image x:Name="DepotItem2BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon2}"/>
+          <TextBlock x:Name="DepotItem2Text" Text="{Binding Path=depotText2}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon2}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem2Btn" Command="{Binding Path=events.OnClickBtnDepotItem2}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem3" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="394,0,0,0">
+          <Image x:Name="DepotItem3Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem3BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank3}"/>
+          <Image x:Name="DepotItem3Icon" Source="{Binding Path=depotIcon3}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon3}"/>
+          <Image x:Name="DepotItem3Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect3}"/>
+          <Image x:Name="DepotItem3BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon3}"/>
+          <TextBlock x:Name="DepotItem3Text" Text="{Binding Path=depotText3}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon3}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem3Btn" Command="{Binding Path=events.OnClickBtnDepotItem3}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem4" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="591,0,0,0">
+          <Image x:Name="DepotItem4Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem4BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank4}"/>
+          <Image x:Name="DepotItem4Icon" Source="{Binding Path=depotIcon4}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon4}"/>
+          <Image x:Name="DepotItem4Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect4}"/>
+          <Image x:Name="DepotItem4BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon4}"/>
+          <TextBlock x:Name="DepotItem4Text" Text="{Binding Path=depotText4}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon4}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem4Btn" Command="{Binding Path=events.OnClickBtnDepotItem4}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem5" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="788,0,0,0">
+          <Image x:Name="DepotItem5Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem5BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank5}"/>
+          <Image x:Name="DepotItem5Icon" Source="{Binding Path=depotIcon5}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon5}"/>
+          <Image x:Name="DepotItem5Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect5}"/>
+          <Image x:Name="DepotItem5BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon5}"/>
+          <TextBlock x:Name="DepotItem5Text" Text="{Binding Path=depotText5}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon5}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem5Btn" Command="{Binding Path=events.OnClickBtnDepotItem5}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem6" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="985,0,0,0">
+          <Image x:Name="DepotItem6Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem6BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank6}"/>
+          <Image x:Name="DepotItem6Icon" Source="{Binding Path=depotIcon6}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon6}"/>
+          <Image x:Name="DepotItem6Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect6}"/>
+          <Image x:Name="DepotItem6BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon6}"/>
+          <TextBlock x:Name="DepotItem6Text" Text="{Binding Path=depotText6}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon6}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem6Btn" Command="{Binding Path=events.OnClickBtnDepotItem6}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <!-- Row 1: Items 7-12 -->
+        <Grid x:Name="DepotItem7" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,243,0,0">
+          <Image x:Name="DepotItem7Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem7BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank7}"/>
+          <Image x:Name="DepotItem7Icon" Source="{Binding Path=depotIcon7}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon7}"/>
+          <Image x:Name="DepotItem7Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect7}"/>
+          <Image x:Name="DepotItem7BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon7}"/>
+          <TextBlock x:Name="DepotItem7Text" Text="{Binding Path=depotText7}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon7}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem7Btn" Command="{Binding Path=events.OnClickBtnDepotItem7}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem8" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="197,243,0,0">
+          <Image x:Name="DepotItem8Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem8BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank8}"/>
+          <Image x:Name="DepotItem8Icon" Source="{Binding Path=depotIcon8}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon8}"/>
+          <Image x:Name="DepotItem8Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect8}"/>
+          <Image x:Name="DepotItem8BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon8}"/>
+          <TextBlock x:Name="DepotItem8Text" Text="{Binding Path=depotText8}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon8}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem8Btn" Command="{Binding Path=events.OnClickBtnDepotItem8}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem9" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="394,243,0,0">
+          <Image x:Name="DepotItem9Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem9BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank9}"/>
+          <Image x:Name="DepotItem9Icon" Source="{Binding Path=depotIcon9}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon9}"/>
+          <Image x:Name="DepotItem9Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect9}"/>
+          <Image x:Name="DepotItem9BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon9}"/>
+          <TextBlock x:Name="DepotItem9Text" Text="{Binding Path=depotText9}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon9}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem9Btn" Command="{Binding Path=events.OnClickBtnDepotItem9}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem10" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="591,243,0,0">
+          <Image x:Name="DepotItem10Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem10BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank10}"/>
+          <Image x:Name="DepotItem10Icon" Source="{Binding Path=depotIcon10}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon10}"/>
+          <Image x:Name="DepotItem10Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect10}"/>
+          <Image x:Name="DepotItem10BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon10}"/>
+          <TextBlock x:Name="DepotItem10Text" Text="{Binding Path=depotText10}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon10}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem10Btn" Command="{Binding Path=events.OnClickBtnDepotItem10}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem11" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="788,243,0,0">
+          <Image x:Name="DepotItem11Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem11BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank11}"/>
+          <Image x:Name="DepotItem11Icon" Source="{Binding Path=depotIcon11}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon11}"/>
+          <Image x:Name="DepotItem11Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect11}"/>
+          <Image x:Name="DepotItem11BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon11}"/>
+          <TextBlock x:Name="DepotItem11Text" Text="{Binding Path=depotText11}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon11}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem11Btn" Command="{Binding Path=events.OnClickBtnDepotItem11}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="DepotItem12" Width="177" Height="213" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="985,243,0,0">
+          <Image x:Name="DepotItem12Back" Source="/Root;component/Assets/UI/hud_panel_depot/item_back.png" Stretch="None"/>
+          <Image x:Name="DepotItem12BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="48,45,47,85" Visibility="{Binding Path=showDepotBlank12}"/>
+          <Image x:Name="DepotItem12Icon" Source="{Binding Path=depotIcon12}" Width="98" Height="98" Margin="0,0,0,38" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon12}"/>
+          <Image x:Name="DepotItem12Select" Source="/Root;component/Assets/UI/hud_panel_depot/select.png" Stretch="None" Margin="0,-4,-2,36" Visibility="{Binding Path=showDepotSelect12}"/>
+          <Image x:Name="DepotItem12BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="45,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon12}"/>
+          <TextBlock x:Name="DepotItem12Text" Text="{Binding Path=depotText12}" Margin="69,0,0,15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showDepotIcon12}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="DepotItem12Btn" Command="{Binding Path=events.OnClickBtnDepotItem12}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+      </Grid>
+      <StackPanel x:Name="BackpackItems" Orientation="Horizontal" Margin="0,0,0,30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="{Binding Path=showItems}">
+        <Grid x:Name="BackpackItem1" Width="110" Height="110" Margin="0,0,15,0">
+          <Image x:Name="BackpackItem1BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Margin="14,15,14,13" Visibility="{Binding Path=showBackpackBlank1}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem1Frame" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem1Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showBackpackSelect1}"/>
+          <Image x:Name="BackpackItem1Icon" Source="{Binding Path=backpackIcon1}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBackpackIcon1}"/>
+          <Image x:Name="BackpackItem1BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon1}"/>
+          <TextBlock x:Name="BackpackItem1Text" Text="{Binding Path=backpackText1}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon1}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem1Btn" Command="{Binding Path=events.OnClickBtnBackpackItem1}" Template="{DynamicResource BtnAnimNone}">
+            <Button.Background>
+              <SolidColorBrush Color="#FF4B5258" Opacity="0"/>
+            </Button.Background>
+            <Button.Foreground>
+              <SolidColorBrush Color="#FFE4E6E8" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+              <SolidColorBrush Color="#FF6D7378" Opacity="0"/>
+            </Button.BorderBrush>
+          </Button>
+        </Grid>
+        <Grid x:Name="BackpackItem2" Width="110" Height="110" Margin="0,0,15,0">
+          <Image x:Name="BackpackItem2BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Visibility="{Binding Path=showBackpackBlank2}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem2Frame" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem2Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showBackpackSelect2}"/>
+          <Image x:Name="BackpackItem2Icon" Source="{Binding Path=backpackIcon2}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBackpackIcon2}"/>
+          <Image x:Name="BackpackItem2BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon2}"/>
+          <TextBlock x:Name="BackpackItem2Text" Text="{Binding Path=backpackText2}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon2}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem2Btn" Command="{Binding Path=events.OnClickBtnBackpackItem2}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="BackpackItem3" Width="110" Height="110" Margin="0,0,15,0">
+          <Image x:Name="BackpackItem3BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Visibility="{Binding Path=showBackpackBlank3}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem3Frame" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem3Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showBackpackSelect3}"/>
+          <Image x:Name="BackpackItem3Icon" Source="{Binding Path=backpackIcon3}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBackpackIcon3}"/>
+          <Image x:Name="BackpackItem3BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon3}"/>
+          <TextBlock x:Name="BackpackItem3Text" Text="{Binding Path=backpackText3}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon3}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem3Btn" Command="{Binding Path=events.OnClickBtnBackpackItem3}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="BackpackItem4" Width="110" Height="110" Margin="0,0,15,0">
+          <Image x:Name="BackpackItem4BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Visibility="{Binding Path=showBackpackBlank4}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem4Frame" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem4Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showBackpackSelect4}"/>
+          <Image x:Name="BackpackItem4Icon" Source="{Binding Path=backpackIcon4}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBackpackIcon4}"/>
+          <Image x:Name="BackpackItem4BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon4}"/>
+          <TextBlock x:Name="BackpackItem4Text" Text="{Binding Path=backpackText4}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon4}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem4Btn" Command="{Binding Path=events.OnClickBtnBackpackItem4}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="BackpackItem5" Width="110" Height="110" Margin="0,0,0,0">
+          <Image x:Name="BackpackItem5BlankIcon" Source="/Root;component/Assets/UI/hud_game/backpack_blank_icon.png" Stretch="None" Visibility="{Binding Path=showBackpackBlank5}"/>
+          <noesis:NineSliceImage x:Name="BackpackItem5Frame" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_1.png" Slices="10,10,10,10"/>
+          <noesis:NineSliceImage x:Name="BackpackItem5Select" ImageSource="/Root;component/Assets/UI/hud_game/backpack_frame_2.png" Slices="10,10,10,10" Visibility="{Binding Path=showBackpackSelect5}"/>
+          <Image x:Name="BackpackItem5Icon" Source="{Binding Path=backpackIcon5}" Width="98" Height="98" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBackpackIcon5}"/>
+          <Image x:Name="BackpackItem5BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon5}"/>
+          <TextBlock x:Name="BackpackItem5Text" Text="{Binding Path=backpackText5}" Margin="30,0,0,8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showBackpackIcon5}" Foreground="#FFFFFFFF" FontSize="20" TextWrapping="Wrap"/>
+          <Button x:Name="BackpackItem5Btn" Command="{Binding Path=events.OnClickBtnBackpackItem5}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+      </StackPanel>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>

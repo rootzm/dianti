@@ -1,0 +1,5 @@
+<Class Name="HudPanelFail">
+  <Property Name="textFloor" Type="Number" NumberMinValue="0" NumberMaxValue="100" NumberDecimalCount="0"/>
+  <Property Name="textPower" Type="Number" NumberMinValue="0" NumberMaxValue="100" NumberDecimalCount="0"/>
+  <Property Name="OnClickBtnRestart" Type="Command" CommandParameterType=""/>
+</Class>

@@ -1,0 +1,191 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "b1e8c755-cbb3-4827-873f-00e92863cd0d",
+            "name": "FX_cursor",
+            "type": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "15889300449309307773",
+                "targetId": "2719744159"
+            },
+            "deltas": [
+                {
+                    "sourceId": "6e11fcce-485e-fc06-2a88-925cd3061efc",
+                    "components": [
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "horizon::platform_api::TransformPlatformComponent",
+                                "version": 3,
+                                "data": {
+                                    "localRotation": {
+                                        "x": -0.0,
+                                        "y": 1.5707964897155762,
+                                        "z": 0.0
+                                    },
+                                    "localScale": {
+                                        "x": 55.989078521728519,
+                                        "y": 55.989078521728519,
+                                        "z": 55.989078521728519
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "FloatingRotateAnimation",
+                                "definitionAsset": {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "11203058897374010755",
+                                    "targetId": "4237980480"
+                                },
+                                "data": {
+                                    "floatAmplitude": 0.15,
+                                    "floatSpeed": 1.0,
+                                    "rotateSpeed": 90.0
+                                }
+                            }
+                        }
+                    ],
+                    "attributes": []
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "30906e70-f3fe-4082-b5f5-103d8da73104",
+            "name": "SM_jiegouguang_02",
+            "type": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "2638676937083155682",
+                "targetId": "2719744159"
+            },
+            "deltas": [
+                {
+                    "sourceId": "6e11fcce-485e-fc06-2a88-925cd3061efc",
+                    "components": [
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "horizon::platform_api::TransformPlatformComponent",
+                                "version": 3,
+                                "data": {
+                                    "localPosition": {
+                                        "x": -0.0010266639292240143,
+                                        "y": -0.035458825528621677,
+                                        "z": -0.0004547983407974243
+                                    },
+                                    "localRotation": {
+                                        "x": -0.0,
+                                        "y": -1.5707964897155762,
+                                        "z": 0.0
+                                    },
+                                    "localScale": {
+                                        "x": 0.04087401553988457,
+                                        "y": 0.019597269594669343,
+                                        "z": 0.04087401553988457
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "horizon::platform_api::MaterialPlatformComponent",
+                                "version": 2,
+                                "data": {
+                                    "materials": [
+                                        {
+                                            "packageOrRemoteId": "26782873481315084",
+                                            "ingestionId": "747816589208185645",
+                                            "targetId": "157013062"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "attributes": []
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "0a988292-e1d5-4766-bf74-0f7a272c5800",
+            "name": "TriggerCollider",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 0.026751885190606118,
+                                "y": 0.026751883327960969,
+                                "z": 0.026751885190606118
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PhysicsBodyPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "type": "Trigger"
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::ColliderSpherePlatformComponent",
+                        "version": 4,
+                        "data": {
+                            "radius": 1.5
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "GuideWaypointTrigger",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "17138534471960735368",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "30906e70-f3fe-4082-b5f5-103d8da73104",
+            "destination": "b1e8c755-cbb3-4827-873f-00e92863cd0d/6e11fcce-485e-fc06-2a88-925cd3061efc"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "0a988292-e1d5-4766-bf74-0f7a272c5800",
+            "destination": "b1e8c755-cbb3-4827-873f-00e92863cd0d/6e11fcce-485e-fc06-2a88-925cd3061efc"
+        }
+    ]
+}

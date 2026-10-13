@@ -1,0 +1,116 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+	xmlns:local="clr-namespace:horizon.ui_noesis;assembly=ui_noesis"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudPanelChargeData">
+  <noesis:LayoutScaler>
+    <Grid>
+      <Image x:Name="Mask" Source="/Root;component/Assets/UI/hud_game/blank_black.png" Stretch="Fill" Opacity="0.99"/>
+      <Image x:Name="Panel" Source="/Root;component/Assets/UI/hud_panel_charge/panel.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      <StackPanel x:Name="Items" Orientation="Horizontal" Height="256" Margin="0,245,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid x:Name="Item1" Width="254" Height="256" Margin="0,0,0,0">
+          <Image x:Name="Item1Back1" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_1.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showIcon1}"/>
+          <Image x:Name="Item1Back2" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_2.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBlank1}"/>
+          <Image x:Name="Item1BlankIcon" Source="/Root;component/Assets/UI/hud_panel_charge/blank_icon.png" Stretch="None" Margin="1,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBlank1}"/>
+          <Image x:Name="Item1Icon" Source="{Binding Path=Icon1}" Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showIcon1}"/>
+          <Image x:Name="Item1BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="44,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showIcon1}"/>
+          <TextBlock x:Name="Item1Text" Text="{Binding Path=Text1}" Margin="69,0,0,41" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#FFFFFFFF" FontSize="24" TextWrapping="Wrap" Visibility="{Binding Path=showIcon1}"/>
+          <Image x:Name="Item1Select" Source="/Root;component/Assets/UI/hud_panel_charge/select.png" Stretch="None" Margin="0,0,0,1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=show1Select}"/>
+          <Image x:Name="Item1Flag" Source="/Root;component/Assets/UI/hud_panel_charge/select_flag.png" Stretch="None" Margin="0,-10,-10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="{Binding Path=show1Select}"/>
+          <Button x:Name="Item1Btn" Command="{Binding Path=events.OnClickBtnItem1}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="Item2" Width="254" Height="256" Margin="0,0,0,0">
+          <Image x:Name="Item2Back1" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_1.png" Stretch="None" Visibility="{Binding Path=showIcon2}"/>
+          <Image x:Name="Item2Back2" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_2.png" Stretch="None" Visibility="{Binding Path=showBlank2}"/>
+          <Image x:Name="Item2BlankIcon" Source="/Root;component/Assets/UI/hud_panel_charge/blank_icon.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBlank2}"/>
+          <Image x:Name="Item2Icon" Source="{Binding Path=Icon2}" Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showIcon2}"/>
+          <Image x:Name="Item2BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="44,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showIcon2}"/>
+          <TextBlock x:Name="Item2Text" Text="{Binding Path=Text2}" Margin="69,0,0,41" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#FFFFFFFF" FontSize="24" TextWrapping="Wrap" Visibility="{Binding Path=showIcon2}"/>
+          <Image x:Name="Item2Select" Source="/Root;component/Assets/UI/hud_panel_charge/select.png" Stretch="None" Margin="0,0,0,1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=show2Select}"/>
+          <Image x:Name="Item2Flag" Source="/Root;component/Assets/UI/hud_panel_charge/select_flag.png" Stretch="None" Margin="0,-10,-10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="{Binding Path=show2Select}"/>
+          <Button x:Name="Item2Btn" Command="{Binding Path=events.OnClickBtnItem2}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="Item3" Width="254" Height="256" Margin="0,0,0,0">
+          <Image x:Name="Item3Back1" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_1.png" Stretch="None" Visibility="{Binding Path=showIcon3}"/>
+          <Image x:Name="Item3Back2" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_2.png" Stretch="None" Visibility="{Binding Path=showBlank3}"/>
+          <Image x:Name="Item3BlankIcon" Source="/Root;component/Assets/UI/hud_panel_charge/blank_icon.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBlank3}"/>
+          <Image x:Name="Item3Icon" Source="{Binding Path=Icon3}" Width="180" Height="180" Margin="0,0,0,1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showIcon3}"/>
+          <Image x:Name="Item3BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="44,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showIcon3}"/>
+          <TextBlock x:Name="Item3Text" Text="{Binding Path=Text3}" Margin="69,0,0,41" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#FFFFFFFF" FontSize="24" TextWrapping="Wrap" Visibility="{Binding Path=showIcon3}"/>
+          <Image x:Name="Item3Select" Source="/Root;component/Assets/UI/hud_panel_charge/select.png" Stretch="None" Margin="0,0,0,1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=show3Select}"/>
+          <Image x:Name="Item3Flag" Source="/Root;component/Assets/UI/hud_panel_charge/select_flag.png" Stretch="None" Margin="0,-10,-10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="{Binding Path=show3Select}"/>
+          <Button x:Name="Item3Btn" Command="{Binding Path=events.OnClickBtnItem3}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="Item4" Width="254" Height="256" Margin="0,0,0,0">
+          <Image x:Name="Item4Back1" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_1.png" Stretch="None" Visibility="{Binding Path=showIcon4}"/>
+          <Image x:Name="Item4Back2" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_2.png" Stretch="None" Visibility="{Binding Path=showBlank4}"/>
+          <Image x:Name="Item4BlankIcon" Source="/Root;component/Assets/UI/hud_panel_charge/blank_icon.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBlank4}"/>
+          <Image x:Name="Item4Icon" Source="{Binding Path=Icon4}" Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showIcon4}"/>
+          <Image x:Name="Item4BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="44,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showIcon4}"/>
+          <TextBlock x:Name="Item4Text" Text="{Binding Path=Text4}" Margin="69,0,0,41" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#FFFFFFFF" FontSize="24" TextWrapping="Wrap" Visibility="{Binding Path=showIcon4}"/>
+          <Image x:Name="Item4Select" Source="/Root;component/Assets/UI/hud_panel_charge/select.png" Stretch="None" Margin="0,0,0,1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=show4Select}"/>
+          <Image x:Name="Item4Flag" Source="/Root;component/Assets/UI/hud_panel_charge/select_flag.png" Stretch="None" Margin="0,-10,-10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="{Binding Path=show4Select}"/>
+          <Button x:Name="Item4Btn" Command="{Binding Path=events.OnClickBtnItem4}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+        <Grid x:Name="Item5" Width="254" Height="256" Margin="0,0,0,0">
+          <Image x:Name="Item5Back1" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_1.png" Stretch="None" Visibility="{Binding Path=showIcon5}"/>
+          <Image x:Name="Item5Back2" Source="/Root;component/Assets/UI/hud_panel_charge/item_back_2.png" Stretch="None" Visibility="{Binding Path=showBlank5}"/>
+          <Image x:Name="Item5BlankIcon" Source="/Root;component/Assets/UI/hud_panel_charge/blank_icon.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showBlank5}"/>
+          <Image x:Name="Item5Icon" Source="{Binding Path=Icon5}" Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showIcon5}"/>
+          <Image x:Name="Item5BatteryIcon" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="44,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="{Binding Path=showIcon5}"/>
+          <TextBlock x:Name="Item5Text" Text="{Binding Path=Text5}" Margin="69,0,0,41" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#FFFFFFFF" FontSize="24" TextWrapping="Wrap" Visibility="{Binding Path=showIcon5}"/>
+          <Image x:Name="Item5Select" Source="/Root;component/Assets/UI/hud_panel_charge/select.png" Stretch="None" Margin="0,0,0,1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=show5Select}"/>
+          <Image x:Name="Item5Flag" Source="/Root;component/Assets/UI/hud_panel_charge/select_flag.png" Stretch="None" Margin="0,-10,-10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="{Binding Path=show5Select}"/>
+          <Button x:Name="Item5Btn" Command="{Binding Path=events.OnClickBtnItem5}" Template="{DynamicResource BtnAnimNone}"/>
+        </Grid>
+      </StackPanel>
+      <Grid x:Name="AnimEye" Width="756" Height="310" Margin="0,0,5,764" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<local:DrawingSurface Width="756" Height="310" Commands="{Binding Path=drawCommandsAnimEye}" />
+        <Image x:Name="TestEye" Source="/Root;component/Assets/UI/hud_panel_charge/test_eye.png" Visibility="Hidden"/>
+			</Grid>
+      <Grid x:Name="AnimChargeFlash1" Width="560" Height="313" Margin="0,0,788,284" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showAnimChargeFlash1}">
+				<local:DrawingSurface Width="560" Height="313" Commands="{Binding Path=drawCommandsAnimChargeFlash1}" />
+        <Image Source="/Root;component/Assets/UI/hud_panel_charge/test_flash_1.png" Visibility="Hidden"/>
+			</Grid>
+      <Grid x:Name="AnimChargeFlash2" Width="333" Height="333" Margin="0,0,306,280" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showAnimChargeFlash2}">
+				<local:DrawingSurface Width="333" Height="333" Commands="{Binding Path=drawCommandsAnimChargeFlash2}" />
+        <Image Source="/Root;component/Assets/UI/hud_panel_charge/test_flash_2.png" Visibility="Hidden"/>
+			</Grid>
+      <Grid x:Name="AnimChargeFlash3" Width="198" Height="221" Margin="4,0,0,228" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showAnimChargeFlash3}">
+				<local:DrawingSurface Width="198" Height="221" Commands="{Binding Path=drawCommandsAnimChargeFlash3}" />
+        <Image Source="/Root;component/Assets/UI/hud_panel_charge/test_flash_3.png" Visibility="Hidden"/>
+			</Grid>
+      <Grid x:Name="AnimChargeFlash4" Width="324" Height="260" Margin="330,0,0,230" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showAnimChargeFlash4}">
+				<local:DrawingSurface Width="324" Height="260" Commands="{Binding Path=drawCommandsAnimChargeFlash4}" />
+        <Image Source="/Root;component/Assets/UI/hud_panel_charge/test_flash_4.png" Visibility="Hidden"/>
+			</Grid>
+      <Grid x:Name="AnimChargeFlash5" Width="509" Height="382" Margin="630,0,0,327" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showAnimChargeFlash5}">
+				<local:DrawingSurface Width="509" Height="382" Commands="{Binding Path=drawCommandsAnimChargeFlash5}" />
+        <Image Source="/Root;component/Assets/UI/hud_panel_charge/test_flash_5.png" Visibility="Hidden"/>
+			</Grid>
+      <Grid x:Name="AnimChargeFlashBall" Width="280" Height="280" Margin="0,0,0,782" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=showAnimChargeFlashBall}">
+				<local:DrawingSurface Width="280" Height="280" Commands="{Binding Path=drawCommandsAnimChargeFlashBall}" />
+        <Image Source="/Root;component/Assets/UI/hud_panel_charge/test_flash_ball.png" Visibility="Hidden"/>
+			</Grid>
+      <Button x:Name="BtnClose" Command="{Binding Path=events.OnClickBtnClose}" Width="120" Height="120" Margin="1390,0,0,760" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,0" Template="{DynamicResource BtnAnimNone}">
+        <Grid Width="120" Height="120" d:IsLocked="True">
+          <Image Source="/Root;component/Assets/UI/hud_panel_charge/btn_close.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+      </Button>
+      <Button x:Name="BtnCharge" Command="{Binding Path=events.OnClickBtnCharge}" Width="502" Height="183" Margin="0,795,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,0" Template="{DynamicResource BtnAnimNone}">
+        <Grid Width="502" Height="183">
+          <Image Source="/Root;component/Assets/UI/hud_panel_charge/btn_charge.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <TextBlock Text="CHARGE" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF503202" FontSize="48" FontWeight="Bold" TextWrapping="Wrap"/>
+        </Grid>
+      </Button>
+      <!-- Transparent overlay that blocks all interactions during charge animation playback -->
+      <Grid x:Name="BlockInput" Background="#01000000" IsHitTestVisible="True" Visibility="{Binding Path=showInteractionBlocker}"/>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>

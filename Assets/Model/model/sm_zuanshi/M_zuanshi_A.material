@@ -1,0 +1,92 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "M_zuanshi_A",
+    "attributes": [
+        {
+            "name": "layer0normalmode",
+            "value": {
+                "type": "String",
+                "stringValue": "Off"
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "7414916024934655943",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0ColorTint",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.33716362714767458,
+                    0.6938717365264893,
+                    0.9734452962875366,
+                    0.949999988079071
+                ]
+            }
+        },
+        {
+            "name": "blendmode",
+            "value": {
+                "type": "String",
+                "stringValue": "Alpha"
+            }
+        },
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "15239828405024964909",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0RoughnessValue",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.10440000146627426
+                ]
+            }
+        },
+        {
+            "name": "layer0MetallicValue",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    0.5109999775886536
+                ]
+            }
+        },
+        {
+            "name": "lightingmode",
+            "value": {
+                "type": "String",
+                "stringValue": "Unlit"
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "33451255657851516",
+        "ingestionId": "12536732106106040758",
+        "targetId": "2708897769"
+    },
+    "variantKeywords": [
+        "blendmode_alpha",
+        "lightingmode_unlit"
+    ]
+}

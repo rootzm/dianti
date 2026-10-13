@@ -1,0 +1,160 @@
+{
+  "packages": {
+    "meta/Board_Wall_01c/0.0.3": {
+      "author": "meta",
+      "folderName": "Assets/Model/level_4/rishi_gonggaolan/Board_Wall_01c",
+      "name": "Board_Wall_01c",
+      "version": "0.0.3"
+    },
+    "meta/Ceiling_Vent_Set_01d/0.0.4": {
+      "author": "meta",
+      "folderName": "Ceiling_Vent_Set_01d",
+      "name": "Ceiling_Vent_Set_01d",
+      "version": "0.0.4"
+    },
+    "meta/Chemical_Machinery_01d/0.0.2": {
+      "author": "meta",
+      "folderName": "Chemical_Machinery_01d",
+      "name": "Chemical_Machinery_01d",
+      "version": "0.0.2"
+    },
+    "meta/Door_Glass_Sliding_01a/0.0.1": {
+      "author": "meta",
+      "folderName": "Assets/Model/level_4/rishi_yimeng/Door_Glass_Sliding_01a",
+      "name": "Door_Glass_Sliding_01a",
+      "version": "0.0.1"
+    },
+    "meta/Generator_Large_04a/0.0.2": {
+      "author": "meta",
+      "folderName": "Generator_Large_04a",
+      "name": "Generator_Large_04a",
+      "version": "0.0.2"
+    },
+    "meta/Hanging_Light_01a/0.0.3": {
+      "author": "meta",
+      "folderName": "Hanging_Light_01a",
+      "name": "Hanging_Light_01a",
+      "version": "0.0.3"
+    },
+    "meta/Light_Outdoor_Industrial_Set_01c/0.0.2": {
+      "author": "meta",
+      "folderName": "Light_Outdoor_Industrial_Set_01c",
+      "name": "Light_Outdoor_Industrial_Set_01c",
+      "version": "0.0.2"
+    },
+    "meta/Maple_E/0.0.4": {
+      "author": "meta",
+      "folderName": "Maple_E",
+      "name": "Maple_E",
+      "version": "0.0.4"
+    },
+    "meta/Metal_Fence_02a/0.0.2": {
+      "author": "meta",
+      "folderName": "Metal_Fence_02a",
+      "name": "Metal_Fence_02a",
+      "version": "0.0.2"
+    },
+    "meta/Pipe_Group_01h/0.0.2": {
+      "author": "meta",
+      "folderName": "Pipe_Group_01h",
+      "name": "Pipe_Group_01h",
+      "version": "0.0.2"
+    },
+    "meta/Shelf_Stool_01a/0.0.1": {
+      "author": "meta",
+      "folderName": "Shelf_Stool_01a",
+      "name": "Shelf_Stool_01a",
+      "version": "0.0.1"
+    },
+    "meta/Student_Desk_01a/0.0.2": {
+      "author": "meta",
+      "folderName": "Assets/Model/level_4/rishi_kezhuo/Student_Desk_01a",
+      "name": "Student_Desk_01a",
+      "version": "0.0.2"
+    },
+    "meta/bush_summer/0.0.2": {
+      "author": "meta",
+      "folderName": "bush_summer",
+      "name": "bush_summer",
+      "version": "0.0.2"
+    },
+    "meta/cables_grouped/0.0.1": {
+      "author": "meta",
+      "folderName": "cables_grouped",
+      "name": "cables_grouped",
+      "version": "0.0.1"
+    },
+    "meta/combat_boxer_superman_punch_01/0.0.4": {
+      "author": "meta",
+      "folderName": "combat_boxer_superman_punch_01",
+      "name": "combat_boxer_superman_punch_01",
+      "version": "0.0.4"
+    },
+    "meta/crashed_spaceship/0.0.2": {
+      "author": "meta",
+      "folderName": "crashed_spaceship",
+      "name": "crashed_spaceship",
+      "version": "0.0.2"
+    },
+    "meta/cyberpunk_billboard/0.0.3": {
+      "author": "meta",
+      "folderName": "Assets/Model/model/sm_touyingban/cyberpunk_billboard",
+      "name": "cyberpunk_billboard",
+      "version": "0.0.3"
+    },
+    "meta/damaged_crafting_table/0.0.2": {
+      "author": "meta",
+      "folderName": "damaged_crafting_table",
+      "name": "damaged_crafting_table",
+      "version": "0.0.2"
+    },
+    "meta/electric_sparks/0.0.3": {
+      "author": "meta",
+      "folderName": "popcornfx/electric_sparks",
+      "name": "electric_sparks",
+      "version": "0.0.3"
+    },
+    "meta/ghoul_a_degenerate_creature_driven__182357d/0.0.1": {
+      "author": "meta",
+      "folderName": "ghoul_a_degenerate_creature_driven__182357d",
+      "name": "ghoul_a_degenerate_creature_driven__182357d",
+      "version": "0.0.1"
+    },
+    "meta/hor_pipe_cluster_4/0.0.3": {
+      "author": "meta",
+      "folderName": "hor_pipe_cluster_4",
+      "name": "hor_pipe_cluster_4",
+      "version": "0.0.3"
+    },
+    "meta/shelf_s/0.0.2": {
+      "author": "meta",
+      "folderName": "Assets/Model/level_4/rishi_shugui/shelf_s",
+      "name": "shelf_s",
+      "version": "0.0.2"
+    },
+    "meta/shrub_05/0.0.1": {
+      "author": "meta",
+      "folderName": "shrub_05",
+      "name": "shrub_05",
+      "version": "0.0.1"
+    },
+    "meta/tropical_palm_tree_fc3323a/0.0.4": {
+      "author": "meta",
+      "folderName": "tropical_palm_tree_fc3323a",
+      "name": "tropical_palm_tree_fc3323a",
+      "version": "0.0.4"
+    },
+    "meta/tv_02/0.0.2": {
+      "author": "meta",
+      "folderName": "Assets/Model/model/sm_quanxitouyingban/tv_02",
+      "name": "tv_02",
+      "version": "0.0.2"
+    },
+    "meta/wooden_chair_02/0.0.1": {
+      "author": "meta",
+      "folderName": "wooden_chair_02",
+      "name": "wooden_chair_02",
+      "version": "0.0.1"
+    }
+  }
+}

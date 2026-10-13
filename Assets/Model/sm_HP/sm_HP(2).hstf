@@ -1,0 +1,76 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "653db168-3de0-4724-b1f3-d2bb3b0022f0",
+            "name": "sm_HP (2)",
+            "type": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "6666526653269611606",
+                "targetId": "2719744159"
+            },
+            "deltas": [],
+            "attributes": []
+        },
+        {
+            "id": "8b25628d-3a09-427c-b8d9-05ddc5f60691",
+            "name": "SM_jiegouguang_02",
+            "type": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "2638676937083155682",
+                "targetId": "2719744159"
+            },
+            "deltas": [
+                {
+                    "sourceId": "6e11fcce-485e-fc06-2a88-925cd3061efc",
+                    "components": [
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "horizon::platform_api::TransformPlatformComponent",
+                                "version": 3,
+                                "data": {
+                                    "localPosition": {
+                                        "x": -0.02251720428466797,
+                                        "y": 4.5196475184638987e-7,
+                                        "z": 0.06327629089355469
+                                    },
+                                    "localScale": {
+                                        "x": 2.5344104766845705,
+                                        "y": 2.5344104766845705,
+                                        "z": 2.5344104766845705
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "dataType": "horizon::DataDefinitionAsset",
+                            "data": {
+                                "class": "horizon::platform_api::MaterialPlatformComponent",
+                                "version": 2,
+                                "data": {
+                                    "materials": [
+                                        {
+                                            "packageOrRemoteId": "26782873481315084",
+                                            "ingestionId": "5132276953558110098",
+                                            "targetId": "157013062"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "attributes": []
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "8b25628d-3a09-427c-b8d9-05ddc5f60691",
+            "destination": "653db168-3de0-4724-b1f3-d2bb3b0022f0/6e11fcce-485e-fc06-2a88-925cd3061efc"
+        }
+    ]
+}

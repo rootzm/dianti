@@ -1,0 +1,5 @@
+{
+  "version": "1",
+  "title": "Air Control Preview",
+  "elements": [{"id": "ac_preview_img", "type": "image", "src": "./air_control.png", "fit": "cover"}]
+}

@@ -1,0 +1,78 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "M_daixiedimian",
+    "attributes": [
+        {
+            "name": "layer0normalmode",
+            "value": {
+                "type": "String",
+                "stringValue": "On"
+            }
+        },
+        {
+            "name": "layer0Normal",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "13795455193123827072",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "5702528832172859474",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "vertexcolortint",
+            "value": {
+                "type": "Integers",
+                "intValues": [
+                    "0"
+                ]
+            }
+        },
+        {
+            "name": "uvscale",
+            "value": {
+                "type": "Integers",
+                "intValues": [
+                    "1"
+                ]
+            }
+        },
+        {
+            "name": "scaleOffsetUV0",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    2.0,
+                    2.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "33451255657851516",
+        "ingestionId": "12536732106106040758",
+        "targetId": "2708897769"
+    },
+    "variantKeywords": [
+        "layer0normalmode_on",
+        "uvscale_on"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": "1",
+  "title": "Air Control",
+  "elements": [
+    {"id": "ac_app_heading", "type": "heading", "value": "Appearance", "variant": "caption"},
+    {"id": "ac_appearance_grid", "type": "grid", "columns": 3, "minItemWidth": 300, "items": [
+      {
+        "label": "", "value": "dynamic",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Dynamic art style to Air Control. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "ac_style_dynamic", "type": "image", "src": "./style-air_control-dynamic.jpg", "fit": "cover", "label": "Dynamic"}]
+      },
+      {
+        "label": "", "value": "smooth",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Smooth art style to Air Control. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "ac_style_smooth", "type": "image", "src": "./style-air_control-smooth.jpg", "fit": "cover", "label": "Smooth"}]
+      },
+      {
+        "label": "", "value": "precise",
+        "onChange": {"type": "prompt", "template": "[Category: movement] Apply the Precise art style to Air Control. After applying, update the gameplan to reflect the new appearance."},
+        "elements": [{"id": "ac_style_precise", "type": "image", "src": "./style-air_control-precise.jpg", "fit": "cover", "label": "Precise"}]
+      }
+    ]},
+    {"id": "acc_heading", "type": "heading", "value": "Customize", "variant": "caption"},
+    {"id": "acc_feel", "type": "toggle_multisegment", "label": "Air Steering Feel",
+      "value": "standard",
+      "options": [{"label": "Tight", "value": "tight"}, {"label": "Standard", "value": "standard"}, {"label": "Loose", "value": "loose"}],
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/air_control.schema.json, set acc_feel to {{acc_feel}}]\nSet air control feel to {{acc_feel}} by adjusting airControlFactor in MovementAbility. Tight=1.0, Standard=2.0, Loose=4.0."}},
+    {"id": "act_heading", "type": "heading", "value": "Tune", "variant": "caption"},
+    {"id": "act_air_control_factor", "type": "slider", "label": "Air Control Factor", "value": 2.0, "min": 0.5, "max": 8.0, "step": 0.25,
+      "onChange": {"type": "prompt", "template": "[Gameplan: update .gameplan/movement/properties/air_control.schema.json, set act_air_control_factor to {{act_air_control_factor}}]\nSet airControlFactor to {{act_air_control_factor}} in MovementAbility. Higher = harder to steer mid-air."}}
+  ]
+}

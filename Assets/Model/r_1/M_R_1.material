@@ -1,0 +1,55 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "M_R_1",
+    "attributes": [
+        {
+            "name": "RenderGroup",
+            "value": {
+                "type": "String",
+                "stringValue": "opaque"
+            }
+        },
+        {
+            "name": "baseColorAndRoughnessTex",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "12348517208796236150",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "metalnessEmissiveOcclusionTex",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "1032153322841631005",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "normalTex",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "6275695044743086131",
+                    "targetId": "1850524962"
+                }
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "10800945673246108250",
+        "targetId": "2708897769"
+    }
+}

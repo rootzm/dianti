@@ -1,0 +1,206 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "30d88dcc-c156-40c3-91c9-fb1b25dd8ff7",
+            "name": "Item",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::PhysicsBodyPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "type": "Trigger",
+                            "useGravity": false
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::NetworkSettingsPlatformComponent",
+                        "version": 1,
+                        "data": {
+                            "isAttainable": true
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "PropPickupHandler",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "8940930298597608148",
+                            "targetId": "4237980480"
+                        },
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "PropData",
+                        "definitionAsset": {
+                            "packageOrRemoteId": "26782873481315084",
+                            "ingestionId": "15523819848462804207",
+                            "targetId": "4237980480"
+                        },
+                        "data": {
+                            "propName": "item_xiaodianchi",
+                            "weight": 2.0,
+                            "spawnWeight": 38.0,
+                            "usable": true,
+                            "baseValue": 30.0,
+                            "useValue": 30.0,
+                            "icon": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "997415648918503358",
+                                "targetId": "1850524962"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": [
+                {
+                    "class": "horizon::NetworkableTemplateEntityAttribute",
+                    "data": {
+                        "isNetworkable": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": "16c6ffbc-172f-4367-a503-9a5818b24f0c",
+            "name": "Visuals",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localScale": {
+                                "x": 20.0,
+                                "y": 20.0,
+                                "z": 20.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::MeshPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "mesh": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "2911304805904002058",
+                                "targetId": "3354605491"
+                            },
+                            "shadowParams": {
+                                "class": "horizon::platform_api::ShadowParams",
+                                "data": {
+                                    "castsShadows": true
+                                }
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::MaterialPlatformComponent",
+                        "version": 2,
+                        "data": {
+                            "materials": [
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "6896832190632737665",
+                                    "targetId": "157013062"
+                                }
+                            ],
+                            "perPartInstancedConstantParameterLists": [
+                                {
+                                    "class": "horizon::renderer::InstancedConstantMaterialParameterList",
+                                    "data": {
+                                        "parameters": []
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "1a1e44d1-ba0a-41aa-86ae-545a448bef09",
+            "name": "Collider",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::ColliderBoxPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "halfExtents": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "16c6ffbc-172f-4367-a503-9a5818b24f0c",
+            "destination": "30d88dcc-c156-40c3-91c9-fb1b25dd8ff7"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "1a1e44d1-ba0a-41aa-86ae-545a448bef09",
+            "destination": "30d88dcc-c156-40c3-91c9-fb1b25dd8ff7"
+        }
+    ]
+}

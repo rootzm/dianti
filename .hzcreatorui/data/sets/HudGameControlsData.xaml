@@ -1,0 +1,22 @@
+<vdctx:HudGameControls xmlns:vdctx="clr-namespace:NoesisStudioInternals"
+  showIconFlashOn="Visible" showActionRun="Visible" showBtnOpenDepot="Visible" showBtnPickup="Visible" btnPickupIcon="studio:///Root;component/Assets/UI/props/flower.png" btnPickupTextPower="999" btnPickupTextName="Gem" showBtnUse="Visible" btnUseIcon="studio:///Root;component/Assets/UI/icon/prop_dachilun.png">
+  <vdctx:HudGameControls.events>
+    <vdctx:HudGameControlsEvents>
+      <vdctx:HudGameControlsEvents.OnClickBtnFlash>
+        <MessageCommand/>
+      </vdctx:HudGameControlsEvents.OnClickBtnFlash>
+      <vdctx:HudGameControlsEvents.OnClickBtnAction>
+        <MessageCommand/>
+      </vdctx:HudGameControlsEvents.OnClickBtnAction>
+      <vdctx:HudGameControlsEvents.OnClickBtnOpenDepot>
+        <MessageCommand/>
+      </vdctx:HudGameControlsEvents.OnClickBtnOpenDepot>
+      <vdctx:HudGameControlsEvents.OnClickBtnPickup>
+        <MessageCommand/>
+      </vdctx:HudGameControlsEvents.OnClickBtnPickup>
+      <vdctx:HudGameControlsEvents.OnClickBtnUse>
+        <MessageCommand/>
+      </vdctx:HudGameControlsEvents.OnClickBtnUse>
+    </vdctx:HudGameControlsEvents>
+  </vdctx:HudGameControls.events>
+</vdctx:HudGameControls>

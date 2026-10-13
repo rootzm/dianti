@@ -1,0 +1,5 @@
+<Class Name="HudPanelLevelInfo">
+  <Property Name="textFloor" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="textEnergy" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="OnClickBtnClose" Type="Command" CommandParameterType=""/>
+</Class>

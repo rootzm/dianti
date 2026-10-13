@@ -1,0 +1,5 @@
+{
+  "version": "1",
+  "title": "Rotation Preview",
+  "elements": [{"id": "rot_preview_img", "type": "image", "src": "./rotation.png", "fit": "cover"}]
+}

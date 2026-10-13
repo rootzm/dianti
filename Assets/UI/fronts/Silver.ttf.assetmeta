@@ -1,0 +1,28 @@
+{
+    "class": "horizon::AssetMetadata",
+    "version": 2,
+    "data": {
+        "id": "17425636028463328590",
+        "pipelineVersion": 1,
+        "assetBuilderSettings": [
+            {
+                "class": "horizon::renderer::tool::FontInfoAssetBuilderSettings",
+                "version": 10001,
+                "data": {
+                    "target": "",
+                    "asciiOnly": true,
+                    "pixelHeight": 64,
+                    "signedDistanceField": false,
+                    "signedDistanceFieldPadding": 5,
+                    "signedDistanceFieldOnEdgeValue": 180,
+                    "requirePowerOf2": true,
+                    "sdfAlphaHybridMipmap": false
+                }
+            }
+        ],
+        "docMeta": {
+            "class": "horizon::DocMetadata",
+            "data": {}
+        }
+    }
+}

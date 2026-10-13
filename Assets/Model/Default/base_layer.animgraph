@@ -1,0 +1,102 @@
+{
+    "version": 2,
+    "graphs": [
+        {
+            "name": "main",
+            "type": "stateMachine",
+            "outputs": [
+                {
+                    "name": "pose",
+                    "type": "pose"
+                }
+            ],
+            "startingState": "human_idle_neutral",
+            "states": [
+                {
+                    "name": "human_idle_neutral",
+                    "graph": "human_idle_neutral",
+                    "looping": true,
+                    ".editor": {
+                        "position": [
+                            -100,
+                            150
+                        ]
+                    }
+                }
+            ],
+            "transitions": []
+        },
+        {
+            "name": "human_idle_neutral",
+            "type": "dataflow",
+            "inputs": [
+                {
+                    "name": "inputStatePhase",
+                    "type": "float"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "pose",
+                    "type": "pose"
+                }
+            ],
+            "nodes": [
+                {
+                    "name": "human_idle_neutral",
+                    "type": "getAnimationVariable",
+                    "members": {
+                        "variable": "human_idle_neutral"
+                    },
+                    ".editor": {
+                        "position": [
+                            50,
+                            100
+                        ]
+                    }
+                },
+                {
+                    "name": "sampleAnim",
+                    "type": "sampleAnim",
+                    ".editor": {
+                        "position": [
+                            400,
+                            250
+                        ]
+                    }
+                }
+            ],
+            "links": [
+                [
+                    "human_idle_neutral:outputAnim",
+                    "sampleAnim:inputClip"
+                ],
+                [
+                    ":inputStatePhase",
+                    "sampleAnim:inputPhase"
+                ],
+                [
+                    "sampleAnim:outputPose",
+                    ":pose"
+                ]
+            ]
+        }
+    ],
+    "variables": [
+        {
+            "type": "assetId",
+            "name": "human_idle_neutral",
+            "source": "remap",
+            "default": {
+                "packageOrRemoteId": "26782873481315084",
+                "ingestionId": "13792118736689503787",
+                "targetId": "3699104677"
+            }
+        }
+    ],
+    "hierarchy": {
+        "packageOrRemoteId": "26782873481315084",
+        "ingestionId": "4494789261054954399",
+        "targetId": "4167543802"
+    }
+}

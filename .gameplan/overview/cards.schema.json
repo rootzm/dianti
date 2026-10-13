@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "elements": [
+    {
+      "id": "overview_cards_grid",
+      "type": "grid",
+      "columns": 3,
+      "minItemWidth": 300,
+      "items": [
+        {
+          "label": "", "value": "movement",
+          "onSelect": {"_view": "movement"},
+          "elements": [{"id": "card_movement", "type": "image", "src": "./banner-movement.jpg", "fit": "cover", "label": "Movement", "value": "Ground locomotion & control"}]
+        },
+        {
+          "label": "", "value": "abilities",
+          "onSelect": {"_view": "abilities"},
+          "elements": [{"id": "card_abilities", "type": "image", "src": "./banner-abilities.jpg", "fit": "cover", "label": "Abilities", "value": "Jump, dash & ability gating"}]
+        },
+        {
+          "label": "", "value": "camera",
+          "onSelect": {"_view": "camera"},
+          "elements": [{"id": "card_camera", "type": "image", "src": "./banner-camera.jpg", "fit": "cover", "label": "Camera", "value": "Third-person orbit & smoothing"}]
+        },
+        {
+          "label": "", "value": "physics",
+          "onSelect": {"_view": "physics"},
+          "elements": [{"id": "card_physics", "type": "image", "src": "./banner-physics.jpg", "fit": "cover", "label": "Physics", "value": "Gravity, friction & mass"}]
+        },
+        {
+          "label": "", "value": "animation",
+          "onSelect": {"_view": "animation"},
+          "elements": [{"id": "card_animation", "type": "image", "src": "./banner-animation.jpg", "fit": "cover", "label": "Animation", "value": "Graph variables & blending"}]
+        },
+        {
+          "label": "", "value": "world",
+          "onSelect": {"_view": "world"},
+          "elements": [{"id": "card_world", "type": "image", "src": "./banner-world.jpg", "fit": "cover", "label": "World", "value": "Environment & lighting"}]
+        }
+      ]
+    }
+  ]
+}

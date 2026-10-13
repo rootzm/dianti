@@ -1,0 +1,131 @@
+{
+    "class": "horizon::AssetMetadata",
+    "data": {
+        "assetBuilderSettings": [
+            {
+                "class": "horizon::DccTemplateAssetBuilderSettings",
+                "data": {
+                    "collisionShape": "TriangleMesh",
+                    "disableRootNodeStringFixVersion": 1,
+                    "hiddenSceneItemsFixVersion": 1,
+                    "retainAllTransforms": false,
+                    "retainAllTransformsFixVersion": 2,
+                    "sceneCollisionLayer": "Layer2",
+                    "stableRootUuidFixVersion": 2,
+                    "target": "template",
+                    "templateRootName": "damaged_crafting_table",
+                    "usePackageNameInIds": false
+                },
+                "version": 10009
+            },
+            {
+                "class": "horizon::dcc_asset_processing::DccSceneAssetBuilderSettings",
+                "data": {
+                    "disableAlwaysCreateDefaultMaterial": true,
+                    "enableAssetReferencing": true,
+                    "enableFbxUnitConversionAlways": true,
+                    "enableLegacyMaterialConversion": false,
+                    "globalScale": 1,
+                    "importAssetReferencingVersion": 1,
+                    "importErrorHandlingBehavior": 1,
+                    "importWindingOrderHandlingVersion": 1,
+                    "materialAssignmentHandlingVersion": 1,
+                    "materialConversionVersion": 1,
+                    "orientationCoordinateSystem": "YUp-RightHanded",
+                    "sceneBakingMethod": "UnbakedScene",
+                    "sourceCoordinateSystem": "RightUpBackward",
+                    "target": "",
+                    "upsideDownV": false,
+                    "useGlobalScale": true,
+                    "useNamedBasedLODs": false,
+                    "uvTransformHandlingVersion": 1
+                },
+                "version": 10014
+            },
+            {
+                "class": "horizon::renderer::tool::MeshAssetBuilderSettings",
+                "data": {
+                    "flipBitangent": false,
+                    "instanceGroupID": 0,
+                    "lightmapTextureTarget": "",
+                    "materialMapTarget": "materialMap.json",
+                    "meshSettingsList": [
+                        {
+                            "class": "horizon::renderer::tool::MeshAssetBuilderMeshSettings",
+                            "data": {
+                                "blendShapes": [],
+                                "cpuReadable": false,
+                                "cullFinalLod": false,
+                                "lightmapTextureTarget": "",
+                                "lodSelectionMetric": "Screen Space Ratio",
+                                "lodSettings": [
+                                    {
+                                        "class": "horizon::renderer::tool::LodSettings",
+                                        "data": {
+                                            "distanceRatio": 1.0,
+                                            "reductionFactor": 1.0,
+                                            "targetError": 0.0
+                                        }
+                                    }
+                                ],
+                                "materials": [
+                                    {
+                                        "ingestionId": "12959895752771708973",
+                                        "packageOrRemoteId": "26782873481315084",
+                                        "targetId": "157013062"
+                                    }
+                                ],
+                                "nodePath": "/RootNode/mesh_node",
+                                "originalMaterials": [
+                                    {
+                                        "class": "horizon::AssetId",
+                                        "data": {
+                                            "ingestionId": "1551959269956340147",
+                                            "packageOrRemoteId": "0",
+                                            "targetId": "1604685701"
+                                        }
+                                    }
+                                ],
+                                "originallyExportedBlendShapesHash": 4238263450,
+                                "shouldParameterizeLightMapTexture": false,
+                                "vertexStrippingConfig": {
+                                    "class": "horizon::renderer::tool::VertexStrippingConfig",
+                                    "data": {
+                                        "normals": "Automatic",
+                                        "texcoord0": "Automatic",
+                                        "texcoord1": "Automatic",
+                                        "texcoord2": "Automatic",
+                                        "texcoord3": "Automatic",
+                                        "vertexColor0": "Automatic",
+                                        "vertexColor1": "Automatic"
+                                    }
+                                }
+                            },
+                            "version": 10005
+                        }
+                    ],
+                    "streamCount": 2,
+                    "streamable": true,
+                    "target": "mesh"
+                },
+                "version": 10004
+            },
+            {
+                "class": "horizon::physics::PhysXConvexMeshAssetBuilderSettings",
+                "data": {
+                    "allowedVolumeErrorPercentage": 1,
+                    "maxNumConvexHulls": 1,
+                    "maxNumVertsPerConvexHull": 128,
+                    "minEdgeLength": 2,
+                    "recursionDepth": 10,
+                    "target": "phys_convex_mesh",
+                    "voxelResolution": 400000
+                },
+                "version": 10001
+            }
+        ],
+        "id": "1551959269956340147",
+        "pipelineVersion": 1
+    },
+    "version": 1
+}

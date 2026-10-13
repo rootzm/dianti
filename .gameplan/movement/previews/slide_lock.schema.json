@@ -1,0 +1,5 @@
+{
+  "version": "1",
+  "title": "Slide Direction Lock Preview",
+  "elements": [{"id": "sl_preview_img", "type": "image", "src": "./slide_lock.png", "fit": "cover"}]
+}

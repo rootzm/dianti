@@ -1,0 +1,28 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudPanelFailData">
+  <noesis:LayoutScaler>
+    <Grid>
+      <Image x:Name="Mask" Source="/Root;component/Assets/UI/hud_game/blank_black.png" Stretch="Fill" Opacity="0.99"/>
+      <Image x:Name="TextFail" Source="/Root;component/Assets/UI/hud_panel_fail/text_fail.png" Stretch="None" Margin="0,0,0,200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      <TextBlock x:Name="TextFloor1" Text="Floor:" Margin="0,194,970,0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FFFFFFFF" FontSize="48" TextAlignment="Right" TextWrapping="Wrap"/>
+      <TextBlock x:Name="TextFloor2" Text="{Binding Path=textFloor}" Margin="970,194,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFFFDC50" FontSize="48" TextWrapping="Wrap"/>
+      <TextBlock x:Name="TextPower1" Text="Max Energy:" Margin="0,360,970,0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FFFFFFFF" FontSize="48" TextAlignment="Right" TextWrapping="Wrap"/>
+      <TextBlock x:Name="TextPower2" Text="{Binding Path=textPower}" Margin="1010,360,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFFFDC50" FontSize="48" TextWrapping="Wrap"/>
+      <Image x:Name="IconBattery" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Stretch="None" Margin="974,360,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+      <Button x:Name="BtnRestart" Command="{Binding Path=events.OnClickBtnRestart}" Width="502" Height="183" Margin="0,700,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,0" Template="{DynamicResource BtnAnimNone}">
+        <Grid Width="502" Height="183">
+          <Image Source="/Root;component/Assets/UI/hud_panel_charge/btn_charge.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <TextBlock Text="RESTART" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF503202" FontSize="48" FontWeight="Bold" TextWrapping="Wrap"/>
+        </Grid>
+      </Button>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>

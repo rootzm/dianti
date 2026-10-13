@@ -1,0 +1,4 @@
+<Class Name="HudGamePower">
+  <Property Name="textCur" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="textNeed" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+</Class>

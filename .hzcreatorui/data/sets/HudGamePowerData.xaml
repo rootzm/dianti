@@ -1,0 +1,6 @@
+<vdctx:HudGamePower xmlns:vdctx="clr-namespace:NoesisStudioInternals"
+                    textNeed="300" textCur="50">
+  <vdctx:HudGamePower.events>
+    <vdctx:HudGamePowerEvents/>
+  </vdctx:HudGamePower.events>
+</vdctx:HudGamePower>

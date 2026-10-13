@@ -1,0 +1,10 @@
+<vdctx:HudPanelFail xmlns:vdctx="clr-namespace:NoesisStudioInternals"
+                    textFloor="2" textPower="1000">
+  <vdctx:HudPanelFail.events>
+    <vdctx:HudPanelFailEvents>
+      <vdctx:HudPanelFailEvents.OnClickBtnRestart>
+        <MessageCommand/>
+      </vdctx:HudPanelFailEvents.OnClickBtnRestart>
+    </vdctx:HudPanelFailEvents>
+  </vdctx:HudPanelFail.events>
+</vdctx:HudPanelFail>

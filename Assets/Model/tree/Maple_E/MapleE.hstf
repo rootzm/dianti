@@ -1,0 +1,114 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "id": "c35d48f9-cbd3-42aa-b141-d2729eeca8ed",
+            "name": "Root",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "757d166d-32a0-4643-90c7-3962526f413e",
+            "name": "MapleE",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {
+                            "localPosition": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localRotation": {
+                                "x": -0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "localScale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "id": "48429541-7f96-48cd-b5b8-344a6f0bb9fb",
+            "name": "Tree",
+            "components": [
+                {
+                    "data": {
+                        "class": "horizon::platform_api::TransformPlatformComponent",
+                        "version": 3,
+                        "data": {}
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::MeshPlatformComponent",
+                        "version": 11,
+                        "data": {
+                            "mesh": {
+                                "packageOrRemoteId": "26782873481315084",
+                                "ingestionId": "94273356267366548",
+                                "targetId": "951947124"
+                            }
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                },
+                {
+                    "data": {
+                        "class": "horizon::platform_api::MaterialPlatformComponent",
+                        "version": 2,
+                        "data": {
+                            "materials": [
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "17104384313211866690",
+                                    "targetId": "157013062"
+                                },
+                                {
+                                    "packageOrRemoteId": "26782873481315084",
+                                    "ingestionId": "17780703112369365170",
+                                    "targetId": "157013062"
+                                }
+                            ],
+                            "perPartInstancedConstantParameterLists": []
+                        }
+                    },
+                    "dataType": "horizon::DataDefinitionAsset"
+                }
+            ],
+            "attributes": []
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "757d166d-32a0-4643-90c7-3962526f413e",
+            "destination": "c35d48f9-cbd3-42aa-b141-d2729eeca8ed"
+        },
+        {
+            "relationshipType": "RelationChildOf",
+            "source": "48429541-7f96-48cd-b5b8-344a6f0bb9fb",
+            "destination": "757d166d-32a0-4643-90c7-3962526f413e"
+        }
+    ]
+}

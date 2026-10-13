@@ -1,0 +1,22 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+	xmlns:local="clr-namespace:horizon.ui_noesis;assembly=ui_noesis"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudPanelTipsData">
+  <noesis:LayoutScaler>
+    <Grid>
+      <Grid x:Name="Tips" Width="1920" Height="200" Margin="0,100,0,0" VerticalAlignment="Top">
+        <noesis:NineSliceImage x:Name="Back" ImageSource="/Root;component/Assets/UI/hud_panel_tips/tips_back.png" Slices="80,0,80,0" Width="{Binding Path=width}" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid x:Name="Text" Width="1920" Height="200">
+          <local:DrawingSurface Width="1920" Height="200" Commands="{Binding Path=drawCommandsText}" />
+        </Grid>
+      </Grid>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>

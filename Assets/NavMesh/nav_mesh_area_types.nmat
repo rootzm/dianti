@@ -1,0 +1,1 @@
+{"areaTypes":[{"areaName":"Walkable","areaCost":1.0,"areaColor":{"r":0.0,"g":1.0,"b":0.0,"a":1.0}},{"areaName":"NotWalkable","areaCost":1000000000.0,"areaColor":{"r":1.0,"g":0.0,"b":0.0,"a":1.0}},{"areaName":"Jump","areaCost":1.0,"areaColor":{"r":0.0,"g":0.0,"b":1.0,"a":1.0}}]}

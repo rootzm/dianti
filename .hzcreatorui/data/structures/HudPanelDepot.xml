@@ -1,0 +1,105 @@
+<Class Name="HudPanelDepot">
+  <Property Name="depotIcon1" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon2" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon3" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon4" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon5" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon6" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon7" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon8" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon9" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon10" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon11" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotIcon12" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="backpackIcon1" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="backpackIcon2" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="backpackIcon3" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="backpackIcon4" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="backpackIcon5" Type="Object" SubType="ImageSource" ImageSourcePath=""/>
+  <Property Name="depotText1" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText2" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText3" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText4" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText5" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText6" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText7" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText8" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText9" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText10" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText11" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="depotText12" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="backpackText1" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="backpackText2" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="backpackText3" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="backpackText4" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="backpackText5" Type="String" StringMinWordCount="0" StringMaxWordCount="10"/>
+  <Property Name="showDepotBlank1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank5" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank6" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank7" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank8" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank9" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank10" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank11" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotBlank12" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon5" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon6" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon7" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon8" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon9" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon10" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon11" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotIcon12" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect5" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect6" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect7" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect8" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect9" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect10" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect11" Type="Enum" SubType="Visibility"/>
+  <Property Name="showDepotSelect12" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackBlank1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackBlank2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackBlank3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackBlank4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackBlank5" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackIcon1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackIcon2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackIcon3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackIcon4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackIcon5" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackSelect1" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackSelect2" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackSelect3" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackSelect4" Type="Enum" SubType="Visibility"/>
+  <Property Name="showBackpackSelect5" Type="Enum" SubType="Visibility"/>
+  <Property Name="OnClickBtnClose" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem1" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem2" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem3" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem4" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem5" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem6" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem7" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem8" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem9" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem10" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem11" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnDepotItem12" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnBackpackItem1" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnBackpackItem2" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnBackpackItem3" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnBackpackItem4" Type="Command" CommandParameterType=""/>
+  <Property Name="OnClickBtnBackpackItem5" Type="Command" CommandParameterType=""/>
+</Class>

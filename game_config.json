@@ -1,0 +1,52 @@
+{
+  "enemySpawning": {
+    "_description": "GameEnemyManager - Enemy spawn timing and count formula",
+    "baseDelay": 100,
+    "delayReduction": 20,
+    "spawnMultiplier": 2,
+    "spawnBase": 1
+  },
+  "enemyAI": {
+    "_description": "EnemyLogic - AI behavior parameters",
+    "patrolSpeed": 0.5,
+    "chaseSpeed": 1.0,
+    "arrivalThreshold": 1.0,
+    "loseChaseDist": 15,
+    "attackRange": 1.0,
+    "attackDisengageRange": 3.0,
+    "attackCooldown": 2.0,
+    "attackDamage": 20
+  },
+  "enemyFov": {
+    "_description": "EnemyFov - Detection cone parameters",
+    "fovAngle": 120,
+    "detectionRange": 12
+  },
+  "player": {
+    "_description": "PlayerLogic - Health and flashlight power",
+    "maxHealthValue": 100,
+    "invulnerabilityDuration": 0,
+    "maxPowerValue": 300,
+    "powerDrainRate": 0.5
+  },
+  "props": {
+    "_description": "PropConfig / GamePropManager / GamePlayerPropManager - Item system parameters",
+    "maxInventorySize": 5,
+    "maxTotalProps": 40,
+    "spawnYOffset": 0.5,
+    "propCountFormula": {
+      "_description": "Total = min(base + level * perLevel, max)",
+      "base": 6,
+      "perLevel": 4,
+      "max": 40
+    },
+    "energyFormula": {
+      "_description": "energy = max(1, floor(baseValue * levelId^2 / totalPropCount * divisor))",
+      "divisor": 6
+    }
+  },
+  "elevatorEnergy": {
+    "_description": "GamePhaseManager - Energy requirement = baseValue * levelId^2",
+    "baseValue": 256
+  }
+}

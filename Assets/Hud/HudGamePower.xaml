@@ -1,0 +1,30 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudGamePowerData">
+  <noesis:LayoutScaler>
+    <Grid>
+      <StackPanel Orientation="Horizontal" Height="100" Margin="0,20,260,0" HorizontalAlignment="Right" VerticalAlignment="Top">
+        <Image x:Name="Icon" RenderTransformOrigin="0.5,0.5" Source="/Root;component/Assets/UI/hud_game/battery_icon.png" Width="40" Height="62" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="{Binding Path=showDepotIcon3}">
+          <Image.RenderTransform>
+            <TransformGroup>
+              <ScaleTransform/>
+              <SkewTransform/>
+              <RotateTransform/>
+              <TranslateTransform/>
+            </TransformGroup>
+          </Image.RenderTransform>
+        </Image>
+        <TextBlock x:Name="Text1" Text="{Binding Path=textCur}" Margin="0,0,2,0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FFFFFFFF" FontSize="80" TextAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="Text2" Text="/" Margin="0,20,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" FlowDirection="RightToLeft" Foreground="#FF9E9E9E" FontSize="40" TextAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="Text3" Text="{Binding Path=textNeed}" Margin="0,20,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" FlowDirection="RightToLeft" Foreground="#FF9E9E9E" FontSize="40" TextAlignment="Center" TextWrapping="Wrap"/>
+      </StackPanel>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>

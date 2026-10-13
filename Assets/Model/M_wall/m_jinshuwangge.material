@@ -1,0 +1,45 @@
+{
+    "__attr__": {
+        "__version__": {
+            "version": 1
+        }
+    },
+    "name": "m_jinshuwangge",
+    "attributes": [
+        {
+            "name": "layer0ColorAndAlpha",
+            "value": {
+                "type": "assetId",
+                "assetIdValue": {
+                    "packageOrRemoteId": "26782873481315084",
+                    "ingestionId": "4588787886065009929",
+                    "targetId": "1850524962"
+                }
+            }
+        },
+        {
+            "name": "scaleOffsetUV0",
+            "value": {
+                "type": "Floats",
+                "floatValues": [
+                    5.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        {
+            "name": "RenderGroup",
+            "value": {
+                "type": "String",
+                "stringValue": "opaque"
+            }
+        }
+    ],
+    "shaderAssetId": {
+        "packageOrRemoteId": "7245573779283516004",
+        "ingestionId": "644542633345636670",
+        "targetId": "2708897769"
+    }
+}

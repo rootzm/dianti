@@ -1,0 +1,25 @@
+{
+    "class": "horizon::AssetMetadata",
+    "version": 1,
+    "data": {
+        "id": "5405597669011758741",
+        "pipelineVersion": 1,
+        "assetBuilderSettings": [
+            {
+                "class": "horizon::audio_fmod::SoundAssetBuilderSettings",
+                "version": 10002,
+                "data": {
+                    "target": "sound",
+                    "format": "Vorbis",
+                    "quality": "Default",
+                    "resamplingMode": "Optimize Sample Rate",
+                    "desiredSampleRate": 48000
+                }
+            }
+        ],
+        "docMeta": {
+            "class": "horizon::DocMetadata",
+            "data": {}
+        }
+    }
+}

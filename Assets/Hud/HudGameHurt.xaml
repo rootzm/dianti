@@ -1,0 +1,37 @@
+<Grid
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:noesis="clr-namespace:NoesisGUIExtensions"
+  mc:Ignorable="d"
+  d:DesignWidth="1920"
+  d:DesignHeight="1080"
+  x:Name="ComponentRoot" d:DataContext="HudGameHurtData">
+  <b:Interaction.Triggers>
+    <b:PropertyChangedTrigger Binding="{Binding Path=playHurt}">
+      <b:ControlStoryboardAction Storyboard="{DynamicResource HudGameHurt}"/>
+    </b:PropertyChangedTrigger>
+  </b:Interaction.Triggers>
+  <Grid.Resources>
+    <ResourceDictionary>
+      <Storyboard x:Key="HudGameHurt">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="HurtFlash" Storyboard.TargetProperty="(UIElement.Opacity)">
+          <LinearDoubleKeyFrame KeyTime="00:00:00" Value="0.5"/>
+          <LinearDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+          <LinearDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+        </DoubleAnimationUsingKeyFrames>
+      </Storyboard>
+    </ResourceDictionary>
+  </Grid.Resources>
+  <noesis:LayoutScaler>
+    <Grid>
+      <noesis:NineSliceImage x:Name="HurtFlash" ImageSource="/Root;component/Assets/UI/hud_game/hurt_flash.png" Slices="170,170,170,170" Opacity="0">
+        <noesis:NineSliceImage.Foreground>
+          <SolidColorBrush Color="#FF000000"/>
+        </noesis:NineSliceImage.Foreground>
+      </noesis:NineSliceImage>
+    </Grid>
+  </noesis:LayoutScaler>
+</Grid>
